@@ -93,9 +93,6 @@ WORK=/Users/brandonhopkins/Projects/CLIENT_NAME/agents/design-agent MODEL="sonne
 WORK=/Users/brandonhopkins/Projects/CLIENT_NAME/agents/cro-agent MODEL="sonnet" MAX_LOOPS=3 bash ~/Projects/claude-lab/ENGINE/run.sh
 ```
 ```
-WORK=/Users/brandonhopkins/Projects/CLIENT_NAME/agents/content-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/Projects/claude-lab/ENGINE/run.sh
-```
-```
 WORK=/Users/brandonhopkins/Projects/CLIENT_NAME/agents/seo-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/Projects/claude-lab/ENGINE/run.sh
 ```
 ```
@@ -174,7 +171,6 @@ Spawn a **general-purpose** agent (`model="sonnet"`) with this exact prompt (sub
 | `CLAUDE.md` | Project rules for Claude Code |
 | `agents/design-agent/` | Visual improvement agent |
 | `agents/cro-agent/` | Headlines, CTAs, microtext, hero contrast, ticker speed, logo legibility |
-| `agents/content-agent/` | Content creation agent |
 | `agents/seo-agent/` | SEO optimization agent |
 | `agents/pagespeed-agent/` | Performance optimization agent |
 | `EMAIL.md` | How contact forms and Resend email work across all clients |
