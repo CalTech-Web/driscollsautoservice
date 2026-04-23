@@ -90,6 +90,9 @@ Run these four bash commands one at a time, in order. Wait for each to finish be
 WORK=/Users/brandonhopkins/Projects/CLIENT_NAME/agents/design-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/Projects/claude-lab/ENGINE/run.sh
 ```
 ```
+WORK=/Users/brandonhopkins/Projects/CLIENT_NAME/agents/cro-agent MODEL="sonnet" MAX_LOOPS=3 bash ~/Projects/claude-lab/ENGINE/run.sh
+```
+```
 WORK=/Users/brandonhopkins/Projects/CLIENT_NAME/agents/content-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/Projects/claude-lab/ENGINE/run.sh
 ```
 ```
@@ -170,6 +173,7 @@ Spawn a **general-purpose** agent (`model="sonnet"`) with this exact prompt (sub
 | `SITE_FACTS.md` | Completed site data (created in Step 2) |
 | `CLAUDE.md` | Project rules for Claude Code |
 | `agents/design-agent/` | Visual improvement agent |
+| `agents/cro-agent/` | Headlines, CTAs, microtext, hero contrast, ticker speed, logo legibility |
 | `agents/content-agent/` | Content creation agent |
 | `agents/seo-agent/` | SEO optimization agent |
 | `agents/pagespeed-agent/` | Performance optimization agent |
