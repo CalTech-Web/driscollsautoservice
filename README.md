@@ -18,8 +18,9 @@ Spawn a **general-purpose** agent (`model="sonnet"`) with this exact prompt (sub
 > 1. Copy the entire directory `/Users/brandonhopkins/Projects/WEBSITETEMPLATE/` to `/Users/brandonhopkins/Projects/CLIENT_NAME/`
 > 2. Inside the new folder, rename `SITE_FACTS_TEMPLATE.md` to `SITE_FACTS.md`
 > 3. In `CLAUDE.md`, replace `[Project Name]` with `CLIENT_NAME` and `[YYYY-MM-DD]` with today's date
-> 4. Verify the copy succeeded by listing all files in `/Users/brandonhopkins/Projects/CLIENT_NAME/`
-> 5. Return exactly: `SETUP_COMPLETE`
+> 4. In `README.md`, replace every occurrence of `CLIENT_NAME` with the actual client name
+> 5. Verify the copy succeeded by listing all files in `/Users/brandonhopkins/Projects/CLIENT_NAME/`
+> 6. Return exactly: `SETUP_COMPLETE`
 
 **Do not proceed to Step 2 until the agent returns `SETUP_COMPLETE`.**
 
