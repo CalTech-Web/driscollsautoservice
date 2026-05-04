@@ -214,3 +214,56 @@ Run #3 is complete. Here's what shipped:
 ### Commit
 Pushed to main on 2026-05-04
 [2026-05-04 10:57:47] Run #4 finished
+Run #4 is complete and pushed (`4110aaf`).
+
+**What shipped:**
+
+**Technical crawl infrastructure (highest-impact fixes):**
+- `sitemap.ts`: Removed `/privacy-policy/` and `/terms-of-service/` from the sitemap — legal pages should never be submitted to Google for indexing
+- `robots.ts`: Added explicit `disallow` for both legal paths
+- `privacy-policy/page.tsx` + `terms-of-service/page.tsx`: Added `robots: { index: false, follow: false }` — belt-and-suspenders with the robots disallow rule
+
+**LocalBusiness schema enrichment (`layout.tsx`):**
+- `image` is now an array of 3 shop photos instead of a single string — Google can surface multiple images in local listings
+- Google Maps CID URL added to `sameAs` — this links the schema entity to the verified Google Maps listing, strengthening entity disambiguation
+- Added `currenciesAccepted: "USD"`
+- Added `makesOffer` with 6 specific service offers — directly connects the business entity to its services in the Knowledge Graph
+
+**About page (`about/page.tsx`):**
+- Added a full `Person` schema for **Kirk Richard Driscoll** with `birthDate`, `deathDate`, `jobTitle: "Founder"`, description, `worksFor`, and address — the About page is where his story lives, making it the correct place to declare the founder entity
+- Added `description` to Kaleb Driscoll's existing `Person` schema
+[2026-05-04 11:03:02] Run #4 finished
+[2026-05-04 11:03:07] Run #5 starting (model: sonnet)
+[2026-05-04 11:03:07] Run #5 complete
+
+## SEO Run #5 Summary (2026-05-04)
+
+### Changes Made
+
+**site/app/layout.tsx (LocalBusiness schema enrichment)**
+- Added `"@id": "https://driscollsautoservice.com/#business"` to the LocalBusiness schema — creates a named entity anchor that all other schemas on the site can reference via `@id`, forming a proper linked entity graph for Google's Knowledge Graph
+- Added `alternateName: "Driscoll's Auto"` — catches queries using the informal name
+- Added `foundingDate: "2013"` — earliest confirmed date from Wayback Machine records; signals business longevity to Google
+- Added `description` to WebSite schema — completes the site entity definition
+
+**site/app/page.tsx (Home)**
+- Added `HowTo` JSON-LD schema for the "How It Works" 5-step process section (`Call or Come In → Full Evaluation → Honest Assessment → Quality Repair → Drive Away Safe`) — Google can surface HowTo rich results in SERPs for relevant queries; this is the clearest structured data gap that existed
+
+**site/app/services/page.tsx**
+- Simplified `provider` in the Service schema from a full repeated address block to `{"@type": "AutoRepair", "@id": "https://driscollsautoservice.com/#business"}` — correctly references the central entity rather than creating a disconnected duplicate
+- Added "Also at Driscoll's" cross-service navigation strip before the final CTA, linking to Diesel & Heavy Equipment and Specialty Services pages — improves internal linking signals and distributes PageRank across service pages
+
+**site/app/diesel-heavy-equipment/page.tsx**
+- Simplified `provider` to use `@id` entity reference (same as above)
+- Added "Also at Driscoll's" cross-service navigation strip linking to Auto Repair Services and Specialty Services
+
+**site/app/specialty-services/page.tsx**
+- Simplified `provider` to use `@id` entity reference
+
+**site/app/contact/page.tsx**
+- Fixed telephone format in ContactPoint schema from `"+1-218-773-7809"` to `"+12187737809"` (E.164 format without dashes — Google's recommended format for telephone in structured data)
+- Updated AutoRepair entity to use `@id` reference instead of `name` + `url` inline definition
+
+### Commit
+`1eb05b9` — pushed to main on 2026-05-04
+[2026-05-04 11:03:07] Run #5 finished
