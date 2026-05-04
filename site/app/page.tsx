@@ -40,15 +40,44 @@ const steps = [
   { step: "05", title: "Drive Away Safe", desc: "You leave with confidence. Safer vehicle, personal service, and people who know your name." },
 ];
 
-const differentiators = [
-  "Diesel and heavy equipment specialists",
-  "Family-owned with community roots",
-  "Full-service: oil change to engine rebuild",
-  "Cutting-edge computer diagnostics",
-  "Ignition interlock and remote start installs",
-  "Saturday appointments available",
-  "Serving Grand Forks ND and Crookston MN",
-  "Treating every customer like family",
+const whyChoose = [
+  {
+    title: "Diesel & Heavy Equipment",
+    desc: "Our specialty from day one. Diesel trucks and heavy equipment of all makes and models, with state-of-the-art computer diagnostics built for diesel.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
+        <path d="M3 17h1v1a1 1 0 002 0v-1h12v1a1 1 0 002 0v-1h1a1 1 0 000-2H3a1 1 0 000 2zM20 8h-1V6a2 2 0 00-2-2H3a2 2 0 00-2 2v8h2V6h14v2h-4a1 1 0 00-1 1v4H3v2h18V9a1 1 0 00-1-1zm-2 4h-3v-2h3v2z"/>
+        <path d="M1 11h2v3H1zM21 11h2v3h-2z" opacity="0.4"/>
+      </svg>
+    ),
+  },
+  {
+    title: "Family-Owned, Neighbor-Run",
+    desc: "Kirk Driscoll built this shop from farming-family roots. His son Kaleb carries those same values to every vehicle that comes through the door.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
+        <path d="M12 2L2 7l1.09 1.09L12 4.12l8.91 4.97L22 7 12 2zM2 17l10 5 10-5v-2L12 20 2 15v2zm10-5.88L4 7.54v2l8 4.46 8-4.46v-2l-8 3.58z"/>
+      </svg>
+    ),
+  },
+  {
+    title: "Full-Service, All Makes",
+    desc: "Oil changes to full engine rebuilds. Gas or diesel, domestic or import. Ignition interlock, remote start, and services most shops will not offer.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
+        <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+      </svg>
+    ),
+  },
+  {
+    title: "Honest, No-Pressure Work",
+    desc: "We diagnose, explain clearly, and let you decide. No surprises, no upselling. Straight talk from people who have been treating customers like family for over a decade.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
+        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+      </svg>
+    ),
+  },
 ];
 
 export default function HomePage() {
@@ -235,17 +264,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* DIFFERENTIATORS */}
+      {/* WHY DRISCOLL'S */}
       <section className="bg-[#F5D000] py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="font-display text-[#1a1a1a] text-3xl md:text-5xl uppercase mb-8">
-            Why Driscoll&apos;s
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
-            {differentiators.map((d) => (
-              <div key={d} className="bg-[#1a1a1a] text-white px-4 py-4 flex items-center gap-3">
-                <span className="w-2 h-2 bg-[#F5D000] rounded-full flex-shrink-0" />
-                <span className="text-sm font-semibold">{d}</span>
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+            <h2 className="font-display text-[#1a1a1a] text-3xl md:text-5xl uppercase leading-none">
+              Why Driscoll&apos;s
+            </h2>
+            <p className="text-[#1a1a1a]/70 text-sm font-semibold uppercase tracking-widest">
+              East Grand Forks, MN &bull; Est. 2013
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {whyChoose.map((item) => (
+              <div key={item.title} className="bg-[#1a1a1a] p-6 flex gap-5 group hover:bg-[#0f0f0f] transition-colors">
+                <div className="flex-shrink-0 w-14 h-14 bg-[#F5D000] flex items-center justify-center text-[#1a1a1a]">
+                  {item.icon}
+                </div>
+                <div>
+                  <h3 className="font-display text-white text-xl uppercase mb-2 group-hover:text-[#F5D000] transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
