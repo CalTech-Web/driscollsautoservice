@@ -30,3 +30,18 @@ All four CRO tasks are complete and pushed. Here's what was done:
 - **Microtext (inner pages)**: Added one-line supporting sentences under four headings missed in Run #1: "Built on Hard Work and Family Values" (homepage about strip), "Repair Services" (services page), "Send Us a Message" (contact page form header), and "Community Roots" (about page).
 - **CTAs (services page)**: Added secondary "Schedule Service" button to the services page hero alongside the phone number, matching the pattern established on the diesel and homepage heroes.
 [2026-05-04] Run #2 finished
+Run #2 complete. Here's what was done:
+
+- **Microtext (inner pages)**: Added one-line supporting sentences under four H2/H3s that Run #1 missed: "Built on Hard Work and Family Values" (homepage about strip), "Repair Services" (services page), "Send Us a Message" (contact page, directly above the form), and "Community Roots" (about page).
+- **CTAs**: Added a secondary "Schedule Service" button to the services page hero, matching the two-button pattern already in place on the diesel and homepage heroes.
+
+All changes committed and pushed.
+[2026-05-04 10:40:41] Run #2 finished
+[2026-05-04 10:40:46] Run #3 starting (model: sonnet)
+
+## Run #3 — 2026-05-04
+
+- **CTAs (hero pages)**: Added phone + "Schedule Service" CTA buttons to the About page hero and the Service Areas page hero, both of which had no call-to-action in the hero section.
+- **CTAs (secondary)**: Added secondary "Schedule Service" button to the Specialty Services hero (previously phone-only) and to the Diesel page final CTA section (previously phone-only), consistent with the two-button pattern used across the rest of the site.
+- **Microtext**: Added one-line supporting sentence under "Where We Serve" on the service areas page, the last H2 on the site without microtext.
+[2026-05-04] Run #3 finished
