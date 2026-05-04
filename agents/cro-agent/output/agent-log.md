@@ -45,3 +45,12 @@ All changes committed and pushed.
 - **CTAs (secondary)**: Added secondary "Schedule Service" button to the Specialty Services hero (previously phone-only) and to the Diesel page final CTA section (previously phone-only), consistent with the two-button pattern used across the rest of the site.
 - **Microtext**: Added one-line supporting sentence under "Where We Serve" on the service areas page, the last H2 on the site without microtext.
 [2026-05-04] Run #3 finished
+Run #3 complete. Here's what was done:
+
+- **CTAs (hero pages)**: Added phone + "Schedule Service" button pair to the About and Service Areas page heroes, which had no CTAs at all.
+- **CTAs (secondary)**: Added "Schedule Service" secondary button to the Specialty Services hero and the Diesel page final CTA, both of which were phone-only, bringing them in line with the two-button pattern used across the rest of the site.
+- **Microtext**: Added supporting sentence under "Where We Serve" on the service areas page, the last remaining H2 without microtext.
+
+All changes committed and pushed.
+[2026-05-04 10:43:02] Run #3 finished
+[2026-05-04 10:43:02] Reached max loops (3). Stopping.

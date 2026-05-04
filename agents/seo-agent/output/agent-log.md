@@ -267,3 +267,21 @@ Run #4 is complete and pushed (`4110aaf`).
 ### Commit
 `1eb05b9` — pushed to main on 2026-05-04
 [2026-05-04 11:03:07] Run #5 finished
+SEO Run 5 is complete and pushed (`53bf9e7`).
+
+**What shipped:**
+
+**HowTo schema (home page)** — The "How It Works" 5-step process is now marked up as a `HowTo` schema with named steps. Google can surface this as a rich result for queries like "how to get a car repaired" or "auto shop process."
+
+**Entity `@id` graph (layout.tsx + 4 service pages)** — The LocalBusiness now has a stable `"@id": "https://driscollsautoservice.com/#business"` anchor. All three Service schemas (services, diesel, specialty) and the contact page's AutoRepair node now reference this entity via `@id` instead of repeating a full address block. This creates a proper linked entity graph that Google's Knowledge Graph can merge cleanly.
+
+**LocalBusiness enrichments (layout.tsx):**
+- `alternateName: "Driscoll's Auto"` — catches informal name queries
+- `foundingDate: "2013"` — signals longevity from the earliest confirmed Wayback Machine date
+- WebSite schema gets `description`
+
+**Cross-service internal links (services + diesel pages)** — Both pages now have an "Also at Driscoll's" strip before their CTA linking to sibling service pages. This distributes PageRank across service pages and helps Google understand the site's service breadth.
+
+**Telephone format fix (contact page)** — ContactPoint `"+1-218-773-7809"` corrected to E.164 `"+12187737809"`.
+[2026-05-04 11:12:54] Run #5 finished
+[2026-05-04 11:12:54] Reached max loops (5). Stopping.

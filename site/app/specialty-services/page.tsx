@@ -127,7 +127,7 @@ const specialtyFaqSchema = {
       name: "Do you install backup cameras and trailer wiring?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We install backup cameras, dash cameras, trailer wiring, lighting upgrades, GPS systems, and other aftermarket vehicle electronics. We do not provide car audio services.",
+        text: "Yes. We install backup cameras, dash cameras, trailer wiring, lighting upgrades, GPS systems, and other aftermarket vehicle electronics.",
       },
     },
   ],
@@ -227,18 +227,6 @@ export default function SpecialtyServicesPage() {
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Note / exclusion */}
-      <div className="hazard-stripe h-6 w-full" />
-      <section className="bg-[#0f0f0f] py-10">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="border border-[#F5D000]/30 p-6 bg-[#1a1a1a] max-w-2xl">
-            <p className="text-white/60 text-sm leading-relaxed">
-              <strong className="text-[#F5D000]">Note:</strong> Our aftermarket electronics services cover cameras, lighting, trailer wiring, GPS, and similar vehicle electronics. We do not provide car audio services. Call us if you have questions about whether we can help with your specific project.
-            </p>
-          </div>
         </div>
       </section>
 

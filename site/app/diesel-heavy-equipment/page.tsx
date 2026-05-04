@@ -67,7 +67,7 @@ const whyDiesel = [
   "Complete computer diagnostics, not just guesswork",
   "East Grand Forks's diesel specialist since day one",
   "Serving Grand Forks ND and Crookston MN",
-  "No big-rigs or semi-trucks; focused on trucks and equipment you rely on daily",
+  "Focused on the trucks and equipment you rely on daily",
 ];
 
 const dieselServiceSchema = {
@@ -108,7 +108,7 @@ const dieselFaqSchema = {
       name: "Do you repair diesel trucks of all makes and models?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We repair diesel trucks of all makes and models, excluding big-rig and semi-trucks. This includes Ford Power Stroke, Chevy/GMC Duramax, Ram Cummins, and other diesel pickups and light trucks.",
+        text: "Yes. We repair diesel pickups and light trucks of all makes and models, including Ford Power Stroke, Chevy/GMC Duramax, Ram Cummins, and similar platforms.",
       },
     },
     {
