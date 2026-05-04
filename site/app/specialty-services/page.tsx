@@ -18,6 +18,24 @@ export const metadata: Metadata = {
     "remote start system Crookston MN",
     "aftermarket vehicle electronics East Grand Forks",
   ],
+  alternates: {
+    canonical: "https://driscollsautoservice.com/specialty-services/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://driscollsautoservice.com/specialty-services/",
+    title: "Specialty Services: Ignition Interlock, Remote Start & Electronics | East Grand Forks, MN",
+    description:
+      "Ignition interlock installation, Astro Start remote start systems, and aftermarket electronics in East Grand Forks, MN. Services most shops send you elsewhere for. Call (218) 773-7809.",
+    images: [
+      {
+        url: "/gallery/shop-03-full.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Specialty automotive services at Driscoll's Auto Service East Grand Forks MN",
+      },
+    ],
+  },
 };
 
 const services = [
@@ -55,9 +73,90 @@ const services = [
   },
 ];
 
+const specialtyServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Specialty Automotive Services",
+  name: "Ignition Interlock, Remote Start, and Aftermarket Electronics Installation",
+  description:
+    "Professional ignition interlock (breathalyzer) installation, Astro Start remote start system installation, and aftermarket vehicle electronics installation in East Grand Forks, MN.",
+  provider: {
+    "@type": "AutoRepair",
+    name: "Driscoll's Auto Service",
+    telephone: "+12187737809",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "622 10th Street NE",
+      addressLocality: "East Grand Forks",
+      addressRegion: "MN",
+      postalCode: "56721",
+      addressCountry: "US",
+    },
+  },
+  areaServed: [
+    { "@type": "City", name: "East Grand Forks", addressRegion: "MN" },
+    { "@type": "City", name: "Grand Forks", addressRegion: "ND" },
+    { "@type": "City", name: "Crookston", addressRegion: "MN" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Specialty Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ignition Interlock Installation and Service" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Remote Start System Installation" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Backup Camera Installation" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Trailer Wiring Installation" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Aftermarket Electronics Installation" } },
+    ],
+  },
+};
+
+const specialtyFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Where can I get an ignition interlock installed near Grand Forks, ND?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Driscoll's Auto Service in East Grand Forks, MN installs and services ignition interlock devices (breathalyzers) for court-ordered and voluntary installations. We are located just across the Red River from Grand Forks, ND at 622 10th Street NE. Call (218) 773-7809 to schedule.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What remote start system do you install?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We install the Astro Start 2 Way RSS S5225 remote start system. This two-way system confirms your vehicle started from inside. Professional installation ensures your factory warranty and safety systems stay intact.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you install backup cameras and trailer wiring?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We install backup cameras, dash cameras, trailer wiring, lighting upgrades, GPS systems, and other aftermarket vehicle electronics. We do not provide car audio services.",
+      },
+    },
+  ],
+};
+
+const specialtyBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://driscollsautoservice.com" },
+    { "@type": "ListItem", position: 2, name: "Specialty Services", item: "https://driscollsautoservice.com/specialty-services/" },
+  ],
+};
+
 export default function SpecialtyServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(specialtyServiceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(specialtyFaqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(specialtyBreadcrumb) }} />
       {/* Hero */}
       <section className="relative bg-[#0f0f0f] py-20 overflow-hidden">
         <div className="absolute inset-0 blueprint-grid" />
@@ -97,7 +196,7 @@ export default function SpecialtyServicesPage() {
       <div className="w-full h-56 md:h-72 relative overflow-hidden">
         <Image
           src="/gallery/shop-03-full.jpg"
-          alt="Specialty work at Driscoll's Auto Service"
+          alt="Ignition interlock and specialty electronics installation at Driscoll's Auto Service East Grand Forks MN"
           fill
           className="object-cover"
         />

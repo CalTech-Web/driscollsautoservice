@@ -18,6 +18,24 @@ export const metadata: Metadata = {
     "Crookston diesel repair shop",
     "diesel specialist East Grand Forks",
   ],
+  alternates: {
+    canonical: "https://driscollsautoservice.com/diesel-heavy-equipment/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://driscollsautoservice.com/diesel-heavy-equipment/",
+    title: "Diesel & Heavy Equipment Repair | Driscoll's Auto Service | East Grand Forks, MN",
+    description:
+      "Diesel truck and heavy equipment repair specialists in East Grand Forks, MN. Complete computer diagnostics, engine repair, and drivability solutions. Serving Grand Forks ND and Crookston MN.",
+    images: [
+      {
+        url: "/gallery/shop-06-full.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Diesel and heavy equipment repair at Driscoll's Auto Service East Grand Forks MN",
+      },
+    ],
+  },
 };
 
 const capabilities = [
@@ -52,9 +70,98 @@ const whyDiesel = [
   "No big-rigs or semi-trucks; focused on trucks and equipment you rely on daily",
 ];
 
+const dieselServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Diesel Truck and Heavy Equipment Repair",
+  name: "Diesel and Heavy Equipment Repair",
+  description:
+    "Specialized diesel truck and heavy equipment repair in East Grand Forks, MN. Complete computer diagnostics, engine repair, drivability diagnosis, and farm and construction equipment servicing for all makes and models.",
+  provider: {
+    "@type": "AutoRepair",
+    name: "Driscoll's Auto Service",
+    telephone: "+12187737809",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "622 10th Street NE",
+      addressLocality: "East Grand Forks",
+      addressRegion: "MN",
+      postalCode: "56721",
+      addressCountry: "US",
+    },
+  },
+  areaServed: [
+    { "@type": "City", name: "East Grand Forks", addressRegion: "MN" },
+    { "@type": "City", name: "Grand Forks", addressRegion: "ND" },
+    { "@type": "City", name: "Crookston", addressRegion: "MN" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Diesel Repair Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Diesel Truck Repair and Diagnostics" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Heavy Equipment Repair and Servicing" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Farm Equipment Repair" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Diesel Computer Diagnostics" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Diesel Drivability Problem Diagnosis" } },
+    ],
+  },
+};
+
+const dieselFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Do you repair diesel trucks of all makes and models?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We repair diesel trucks of all makes and models, excluding big-rig and semi-trucks. This includes Ford Power Stroke, Chevy/GMC Duramax, Ram Cummins, and other diesel pickups and light trucks.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you work on farm and heavy equipment?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We repair and service farm equipment and heavy construction equipment of all makes and models. We understand how critical this equipment is to your livelihood and work quickly to get you back in the field.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is there a diesel repair shop near Crookston, MN?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Driscoll's Auto Service in East Grand Forks, MN is the nearest diesel repair shop to Crookston, MN, about 45 miles north on Highway 2. We regularly serve diesel truck and equipment owners from Crookston who make the trip for reliable diesel work.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you diagnose diesel drivability problems?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We use complete computer diagnostic equipment designed for diesel vehicles to trace drivability issues including rough running, power loss, hard starts, black smoke, and warning lights to their root cause.",
+      },
+    },
+  ],
+};
+
+const dieselBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://driscollsautoservice.com" },
+    { "@type": "ListItem", position: 2, name: "Diesel & Heavy Equipment Repair", item: "https://driscollsautoservice.com/diesel-heavy-equipment/" },
+  ],
+};
+
 export default function DieselPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dieselServiceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dieselFaqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dieselBreadcrumb) }} />
       {/* Page hero */}
       <section className="relative bg-[#0f0f0f] py-20 overflow-hidden">
         <div className="absolute inset-0 blueprint-grid" />

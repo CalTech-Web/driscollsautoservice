@@ -18,6 +18,24 @@ export const metadata: Metadata = {
     "full service auto repair Grand Forks ND",
     "mechanic East Grand Forks",
   ],
+  alternates: {
+    canonical: "https://driscollsautoservice.com/services/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://driscollsautoservice.com/services/",
+    title: "Auto Repair, All Makes & Models | Driscoll's Auto Service | East Grand Forks, MN",
+    description:
+      "Full-service auto repair in East Grand Forks, MN. Engine, transmission, brakes, electrical, suspension, alignments, and routine maintenance. Call (218) 773-7809.",
+    images: [
+      {
+        url: "/gallery/shop-02-full.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Auto repair bays at Driscoll's Auto Service East Grand Forks MN",
+      },
+    ],
+  },
 };
 
 const repairs = [
@@ -40,9 +58,101 @@ const maintenance = [
   "Manufacturer-recommended maintenance schedules",
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Auto Repair",
+  name: "Auto Repair and Routine Maintenance",
+  description:
+    "Full-service auto repair for all makes and models in East Grand Forks, MN. Engine repair, transmission service, brake repair, electrical diagnosis, alignments, and routine maintenance.",
+  provider: {
+    "@type": "AutoRepair",
+    name: "Driscoll's Auto Service",
+    telephone: "+12187737809",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "622 10th Street NE",
+      addressLocality: "East Grand Forks",
+      addressRegion: "MN",
+      postalCode: "56721",
+      addressCountry: "US",
+    },
+  },
+  areaServed: [
+    { "@type": "City", name: "East Grand Forks", addressRegion: "MN" },
+    { "@type": "City", name: "Grand Forks", addressRegion: "ND" },
+    { "@type": "City", name: "Crookston", addressRegion: "MN" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Auto Repair Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Engine Repair and Replacement" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Transmission Service and Repair" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Brake Inspection and Repair" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Electrical System Diagnosis" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Steering and Suspension Repair" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Wheel Alignment" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Oil Change and Safety Inspection" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Computer Diagnostics" } },
+    ],
+  },
+};
+
+const servicesFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Do you work on both gas and diesel vehicles?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We service gas and diesel vehicles of all makes and models. Our shop handles everything from routine oil changes to full engine rebuilds for both fuel types.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you do oil changes and routine maintenance?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We provide oil changes with a service and safety inspection, tune-ups, transmission fluid service, brake checks, and manufacturer-recommended maintenance schedules.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you repair my transmission in East Grand Forks?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We handle transmission fluid service, repairs, and full replacement when needed, for both automatic and manual transmissions on all makes and models.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer brake repair near Grand Forks, ND?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We are located in East Grand Forks, MN, just across the river from Grand Forks, ND. We provide full brake system inspection, pad replacement, rotor service, and brake line repair.",
+      },
+    },
+  ],
+};
+
+const servicesBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://driscollsautoservice.com" },
+    { "@type": "ListItem", position: 2, name: "Auto Repair Services", item: "https://driscollsautoservice.com/services/" },
+  ],
+};
+
 export default function ServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesFaqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesBreadcrumb) }} />
       {/* Page hero */}
       <section className="relative bg-[#0f0f0f] py-20 overflow-hidden">
         <div className="absolute inset-0 blueprint-grid" />
@@ -80,7 +190,7 @@ export default function ServicesPage() {
       <div className="w-full h-64 md:h-80 relative overflow-hidden">
         <Image
           src="/gallery/shop-02-full.jpg"
-          alt="Driscoll's Auto Service repair bays"
+          alt="Full-service auto repair bays at Driscoll's Auto Service East Grand Forks MN"
           fill
           className="object-cover"
         />
@@ -134,7 +244,7 @@ export default function ServicesPage() {
           <div className="polaroid">
             <Image
               src="/gallery/maintenance-banner.jpg"
-              alt="Vehicle maintenance at Driscoll's Auto Service"
+              alt="Oil change and routine vehicle maintenance at Driscoll's Auto Service East Grand Forks MN"
               width={600}
               height={400}
               className="w-full object-cover"

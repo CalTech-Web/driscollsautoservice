@@ -17,11 +17,39 @@ export const metadata: Metadata = {
     "get directions auto shop East Grand Forks",
     "Driscoll's Auto Service contact",
   ],
+  alternates: {
+    canonical: "https://driscollsautoservice.com/contact/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://driscollsautoservice.com/contact/",
+    title: "Contact Driscoll's Auto Service | East Grand Forks, MN | (218) 773-7809",
+    description:
+      "Contact Driscoll's Auto Service at 622 10th Street NE, East Grand Forks, MN. Call (218) 773-7809 or send a message to schedule auto repair, diesel service, or specialty installations.",
+    images: [
+      {
+        url: "/gallery/shop-01-full.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Driscoll's Auto Service at 622 10th Street NE East Grand Forks MN",
+      },
+    ],
+  },
+};
+
+const contactBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://driscollsautoservice.com" },
+    { "@type": "ListItem", position: 2, name: "Contact", item: "https://driscollsautoservice.com/contact/" },
+  ],
 };
 
 export default function ContactPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactBreadcrumb) }} />
       {/* Hero */}
       <section className="relative bg-[#0f0f0f] py-16 overflow-hidden">
         <div className="absolute inset-0 blueprint-grid" />

@@ -18,6 +18,24 @@ export const metadata: Metadata = {
     "remote start installation East Grand Forks",
     "Driscoll's Auto Service",
   ],
+  alternates: {
+    canonical: "https://driscollsautoservice.com",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://driscollsautoservice.com",
+    title: "Driscoll's Auto Service | Diesel & Auto Repair | East Grand Forks, MN",
+    description:
+      "East Grand Forks's trusted diesel and heavy equipment repair shop. Family-owned, full-service. Serving Grand Forks ND and Crookston MN. Call (218) 773-7809.",
+    images: [
+      {
+        url: "/gallery/shop-01-full.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Driscoll's Auto Service diesel and auto repair shop in East Grand Forks, MN",
+      },
+    ],
+  },
 };
 
 const services = [
@@ -134,6 +152,22 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "Yes. We are located just across the river in East Grand Forks, MN, and we regularly serve customers from Grand Forks, ND and Crookston, MN.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you install ignition interlocks (breathalyzers)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We install and service ignition interlock devices (breathalyzers) in East Grand Forks, MN. Call (218) 773-7809 to schedule an installation appointment.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you a family-owned business?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Driscoll's Auto Service was founded by Kirk Driscoll, who grew up farming in East Grand Forks. Kirk passed away in October 2025, and his son Kaleb now carries the business forward with the same integrity and work ethic.",
       },
     },
   ],

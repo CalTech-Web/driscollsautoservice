@@ -17,6 +17,24 @@ export const metadata: Metadata = {
     "East Grand Forks auto service",
     "Red River Valley auto repair",
   ],
+  alternates: {
+    canonical: "https://driscollsautoservice.com/service-areas/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://driscollsautoservice.com/service-areas/",
+    title: "Service Areas: East Grand Forks, Grand Forks & Crookston | Driscoll's Auto Service",
+    description:
+      "Driscoll's Auto Service serves East Grand Forks MN, Grand Forks ND, and Crookston MN with diesel and auto repair. The closest diesel specialist to Crookston, MN. Call (218) 773-7809.",
+    images: [
+      {
+        url: "/gallery/shop-01-full.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Driscoll's Auto Service serving East Grand Forks, Grand Forks ND, and Crookston MN",
+      },
+    ],
+  },
 };
 
 const areas = [
@@ -46,9 +64,19 @@ const areas = [
   },
 ];
 
+const serviceAreasBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://driscollsautoservice.com" },
+    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://driscollsautoservice.com/service-areas/" },
+  ],
+};
+
 export default function ServiceAreasPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceAreasBreadcrumb) }} />
       {/* Hero */}
       <section className="relative bg-[#0f0f0f] py-20 overflow-hidden">
         <div className="absolute inset-0 blueprint-grid" />

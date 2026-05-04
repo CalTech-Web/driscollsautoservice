@@ -18,11 +18,39 @@ export const metadata: Metadata = {
     "family mechanic East Grand Forks",
     "honest auto repair shop Minnesota",
   ],
+  alternates: {
+    canonical: "https://driscollsautoservice.com/about/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://driscollsautoservice.com/about/",
+    title: "About Driscoll's Auto Service | Family-Owned | East Grand Forks, MN",
+    description:
+      "Founded by Kirk Driscoll and now run by his son Kaleb, Driscoll's Auto Service is East Grand Forks's family-owned auto repair shop built on hard work, honesty, and community. Call (218) 773-7809.",
+    images: [
+      {
+        url: "/gallery/shop-01-full.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Driscoll's Auto Service family-owned shop in East Grand Forks MN",
+      },
+    ],
+  },
+};
+
+const aboutBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://driscollsautoservice.com" },
+    { "@type": "ListItem", position: 2, name: "About Us", item: "https://driscollsautoservice.com/about/" },
+  ],
 };
 
 export default function AboutPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutBreadcrumb) }} />
       {/* Hero */}
       <section className="relative bg-[#0f0f0f] py-20 overflow-hidden">
         <div className="absolute inset-0 blueprint-grid" />
