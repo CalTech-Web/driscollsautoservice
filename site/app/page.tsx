@@ -4,7 +4,7 @@ import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Grand Forks Diesel & Heavy Equipment Repair",
+  title: "Grand Forks Diesel & Heavy Equipment Repair | Driscoll's Auto Service",
   description:
     "Diesel and heavy equipment repair in Grand Forks. Family-owned full-service shop in East Grand Forks. Honest diagnostics, fair prices. Call (218) 773-7809.",
   keywords: [
