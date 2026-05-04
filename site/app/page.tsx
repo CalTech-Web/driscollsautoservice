@@ -114,6 +114,35 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-[#1a1a1a]" style={{ clipPath: "polygon(0 100%, 100% 0, 100% 100%)" }} />
       </section>
 
+      {/* MARQUEE TICKER */}
+      <div className="bg-[#F5D000] overflow-hidden border-y-4 border-[#1a1a1a]">
+        <div className="marquee-track py-3">
+          {[0, 1].map((copy) => (
+            <div key={copy} className="flex items-center gap-0 select-none" aria-hidden={copy === 1}>
+              {[
+                "Diesel & Heavy Equipment Repair",
+                "All Makes & Models",
+                "Family Owned & Operated",
+                "10+ Years in East Grand Forks",
+                "Honest Work, Fair Prices",
+                "Computer Diagnostics",
+                "Remote Start Installation",
+                "Ignition Interlock Service",
+                "Saturday Appointments Available",
+                "Serving Grand Forks ND & Crookston MN",
+              ].map((item) => (
+                <span key={item} className="flex items-center">
+                  <span className="font-display text-[#1a1a1a] text-sm md:text-base uppercase tracking-widest whitespace-nowrap px-6">
+                    {item}
+                  </span>
+                  <span className="text-[#1a1a1a]/40 text-xs" aria-hidden="true">◆</span>
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* SERVICES */}
       <section className="bg-[#1a1a1a] py-20">
         <div className="max-w-7xl mx-auto px-4">
