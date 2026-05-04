@@ -157,8 +157,8 @@ export default function SpecialtyServicesPage() {
             Services Others Don&apos;t Offer
           </div>
           <h1 className="font-display text-white text-5xl md:text-7xl uppercase leading-none mb-6">
-            Grand Forks<br />
-            <span style={{ color: "#E11D2D" }}>Specialty Services</span>
+            <span className="block">Grand Forks</span>
+            <span className="block" style={{ color: "#E11D2D" }}>Specialty Services</span>
           </h1>
           <p className="text-white/70 text-lg max-w-xl leading-relaxed">
             Ignition interlock installation. Remote start systems. Aftermarket electronics. Services most Grand Forks shops send you somewhere else for. We do them right here.

@@ -164,9 +164,9 @@ export default function DieselPage() {
             Our Lead Specialty
           </div>
           <h1 className="font-display text-white leading-none uppercase" style={{ fontSize: "clamp(2.5rem, 7vw, 6.5rem)" }}>
-            GRAND FORKS<br />
-            <span style={{ color: "#E11D2D" }}>DIESEL &amp; HEAVY</span><br />
-            EQUIPMENT REPAIR
+            <span className="block">Grand Forks</span>
+            <span className="block" style={{ color: "#E11D2D" }}>Diesel &amp; Heavy</span>
+            <span className="block">Equipment Repair</span>
           </h1>
           <p className="text-white/70 text-xl mt-6 max-w-xl leading-relaxed">
             This is what we are built for. When your diesel truck or heavy equipment needs expert care, Driscoll&apos;s is the Grand Forks area shop that knows how to handle it.

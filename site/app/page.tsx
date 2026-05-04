@@ -187,12 +187,11 @@ export default function HomePage() {
               Greater Grand Forks Diesel Specialist
             </div>
             <h1 className="font-display text-white mb-2" style={{ fontSize: "clamp(3rem, 8vw, 7rem)", lineHeight: "0.95", letterSpacing: "-0.02em" }}>
-              GRAND FORKS
-              <br />
-              <span style={{ color: "#E11D2D" }}>DIESEL &amp; HEAVY</span>
-              <br />
-              EQUIPMENT REPAIR.
+              <span className="block">Grand Forks</span>
+              <span className="block" style={{ color: "#E11D2D" }}>Diesel &amp; Heavy</span>
+              <span className="block">Equipment Repair.</span>
             </h1>
+            <p className="sr-only">Grand Forks diesel and heavy equipment repair from Driscoll&apos;s Auto Service in East Grand Forks, MN.</p>
             <p className="font-display text-xl md:text-2xl uppercase tracking-wider mt-6 mb-2 text-white/80">
               Driscoll&apos;s Auto Service · East Grand Forks, MN
             </p>
@@ -299,10 +298,11 @@ export default function HomePage() {
                 alt="Kirk Driscoll, founder of Driscoll's Auto Service"
                 width={800}
                 height={1200}
-                className="w-full h-80 object-cover object-top"
+                className="w-full h-96 object-cover"
+                style={{ objectPosition: "center 35%" }}
               />
               <p className="text-white/70 text-xs uppercase tracking-widest text-center pt-2 pb-1 font-bold">
-                Kirk Driscoll, 1961 - 2025
+                Kirk Driscoll, 1961 to 2025
               </p>
             </div>
             <div className="polaroid">

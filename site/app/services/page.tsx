@@ -153,9 +153,9 @@ export default function ServicesPage() {
             Full-Service Shop
           </div>
           <h1 className="font-display text-white text-5xl md:text-7xl uppercase leading-none">
-            Grand Forks<br />
-            <span style={{ color: "#E11D2D" }}>Auto Repair</span><br />
-            All Makes &amp; Models
+            <span className="block">Grand Forks</span>
+            <span className="block" style={{ color: "#E11D2D" }}>Auto Repair</span>
+            <span className="block">All Makes &amp; Models</span>
           </h1>
           <p className="text-white/70 text-lg mt-6 max-w-xl leading-relaxed">
             Gas or diesel, domestic or import, we service every vehicle that rolls through our door. The full-service auto shop serving Greater Grand Forks from East Grand Forks, MN.
