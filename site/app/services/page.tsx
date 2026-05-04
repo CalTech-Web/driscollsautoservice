@@ -250,7 +250,7 @@ export default function ServicesPage() {
           <p className="text-white/40 text-xs uppercase tracking-widest mb-4 font-bold">Also at Driscoll&apos;s</p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/diesel-heavy-equipment/"
+              href="/"
               className="flex items-center gap-3 border border-[#F5D000]/30 px-5 py-3 text-[#F5D000] hover:bg-[#F5D000] hover:text-[#1a1a1a] transition-colors font-bold uppercase text-sm tracking-wider"
             >
               Diesel &amp; Heavy Equipment Repair

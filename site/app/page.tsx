@@ -41,33 +41,18 @@ export const metadata: Metadata = {
 const services = [
   {
     number: "01",
-    title: "Diesel & Heavy Equipment",
-    desc: "Our specialty. Diesel trucks and heavy equipment of all makes and models. Complete computer diagnostics, engine repair, drivability diagnosis.",
-    href: "/diesel-heavy-equipment/",
+    title: "All Makes & Models",
+    desc: "Engine, transmission, brakes, electrical, steering, suspension, alignments, and routine maintenance for gas and diesel vehicles, domestic or import.",
+    href: "/services/",
     accent: "#F5D000",
   },
   {
     number: "02",
-    title: "Auto Repair, All Makes",
-    desc: "Engine, transmission, brakes, electrical, steering, suspension, alignments. If it's broken, we fix it right.",
-    href: "/services/",
+    title: "Other Services",
+    desc: "Ignition interlock installation, remote start systems, and aftermarket electronics. Specialty work most shops will not touch.",
+    href: "/specialty-services/",
     accent: "#D14C2B",
   },
-  {
-    number: "03",
-    title: "Specialty Services",
-    desc: "Ignition interlock installation, remote start systems, and aftermarket electronics. Services most shops don't offer.",
-    href: "/specialty-services/",
-    accent: "#F5D000",
-  },
-];
-
-const steps = [
-  { step: "01", title: "Call or Come In", desc: "Call (218) 773-7809 or stop by 622 10th Street NE. Tell us what's going on." },
-  { step: "02", title: "Full Evaluation", desc: "Complete inspection using state-of-the-art computer diagnostics to pinpoint the problem." },
-  { step: "03", title: "Honest Assessment", desc: "We walk through the findings with you. No pressure, no upselling. Just what your vehicle actually needs." },
-  { step: "04", title: "Quality Repair", desc: "Work done with the best tools and equipment to restore your vehicle and increase its value." },
-  { step: "05", title: "Drive Away Safe", desc: "You leave with confidence. Safer vehicle, personal service, and people who know your name." },
 ];
 
 const whyChoose = [
@@ -109,41 +94,6 @@ const whyChoose = [
     ),
   },
 ];
-
-const howToSchema = {
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  name: "How to Get Your Vehicle Repaired at Driscoll's Auto Service",
-  description:
-    "Five steps from your first call to driving away safe at Driscoll's Auto Service in East Grand Forks, MN.",
-  step: [
-    {
-      "@type": "HowToStep",
-      name: "Call or Come In",
-      text: "Call (218) 773-7809 or stop by 622 10th Street NE, East Grand Forks, MN. Describe what is going on with your vehicle.",
-    },
-    {
-      "@type": "HowToStep",
-      name: "Full Evaluation",
-      text: "Our technicians perform a complete inspection using state-of-the-art computer diagnostics to pinpoint the exact problem.",
-    },
-    {
-      "@type": "HowToStep",
-      name: "Honest Assessment",
-      text: "We walk through the diagnostic findings with you. No pressure, no upselling. An honest explanation of what your vehicle actually needs.",
-    },
-    {
-      "@type": "HowToStep",
-      name: "Quality Repair",
-      text: "Work is performed with the best tools and equipment available to restore your vehicle and increase its value.",
-    },
-    {
-      "@type": "HowToStep",
-      name: "Drive Away Safe",
-      text: "You leave with confidence. A safer vehicle, personal service, and the assurance of working with a shop that treats you like family.",
-    },
-  ],
-};
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -211,10 +161,6 @@ const faqSchema = {
 export default function HomePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -317,12 +263,12 @@ export default function HomePage() {
             </h2>
             <p className="text-white/60 text-base mt-3">From oil changes to full engine rebuilds, we service diesel and gas vehicles of all makes and models.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 border border-[#F5D000]/20">
+          <div className="grid grid-cols-1 md:grid-cols-2 border border-[#F5D000]/20">
             {services.map((svc, i) => (
               <Link
                 key={svc.number}
                 href={svc.href}
-                className={`group relative p-8 hover:bg-[#0f0f0f] transition-colors flex flex-col gap-4 ${i < 2 ? "md:border-r border-[#F5D000]/20" : ""} ${i < 2 ? "border-b border-[#F5D000]/20 md:border-b-0" : ""}`}
+                className={`group relative p-8 hover:bg-[#0f0f0f] transition-colors flex flex-col gap-4 ${i === 0 ? "border-b border-[#F5D000]/20 md:border-b-0 md:border-r" : ""}`}
               >
                 <span className="font-display text-8xl font-bold leading-none" style={{ color: svc.accent, opacity: 0.15 }}>
                   {svc.number}
@@ -385,50 +331,6 @@ export default function HomePage() {
               Our Story
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* HOW IT WORKS */}
-      <div className="hazard-stripe-orange h-6 w-full opacity-60" />
-      <section className="bg-[#1a1a1a] blueprint-grid py-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="font-display text-white text-4xl md:text-6xl uppercase mb-3">
-            How It <span style={{ color: "#F5D000" }}>Works</span>
-          </h2>
-          <p className="text-white/60 text-base mb-12">Five steps from your first call to driving away safe.</p>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-0">
-            {steps.map((p, i) => (
-              <div key={p.step} className={`relative p-6 border-t-4 border-[#F5D000] bg-[#0f0f0f] ${i < 4 ? "md:border-r border-[#F5D000]/20" : ""}`}>
-                <div className="font-display text-5xl opacity-40 mb-3" style={{ color: "#F5D000" }}>{p.step}</div>
-                <h3 className="font-display text-white text-lg uppercase mb-2">{p.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{p.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* STATS STRIP */}
-      <section className="bg-[#0f0f0f] border-y border-[#F5D000]/20">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-[#F5D000]/20">
-          {[
-            { value: "10+", label: "Years Serving East Grand Forks" },
-            { value: "3", label: "Cities Covered" },
-            { value: "All", label: "Makes & Models" },
-            { value: "5", label: "Days a Week, Mon–Fri" },
-          ].map((stat) => (
-            <div key={stat.label} className="flex flex-col items-center justify-center py-12 px-6 text-center gap-2">
-              <span
-                className="font-display leading-none"
-                style={{ fontSize: "clamp(3.5rem, 8vw, 6rem)", color: "#F5D000", letterSpacing: "-0.03em" }}
-              >
-                {stat.value}
-              </span>
-              <span className="text-white/60 text-sm uppercase tracking-widest font-semibold max-w-[12ch] leading-snug">
-                {stat.label}
-              </span>
-            </div>
-          ))}
         </div>
       </section>
 
@@ -496,90 +398,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* HAZARD DIVIDER */}
-      <div className="hazard-stripe h-6 w-full" />
-
-      {/* SERVICE AREAS */}
-      <section className="bg-[#1a1a1a] py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="mb-10">
-            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-3">
-              <h2 className="font-display text-white text-3xl md:text-5xl uppercase leading-none">
-                We Serve <span style={{ color: "#F5D000" }}>Your Area</span>
-              </h2>
-              <Link
-                href="/service-areas/"
-                className="text-[#F5D000] text-sm font-bold uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 self-start sm:self-auto"
-              >
-                Full Coverage Details
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-            <p className="text-white/60 text-base">East Grand Forks is home. We also serve Grand Forks, ND and Crookston, MN, the nearest diesel repair option for 45 miles south.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 border border-[#F5D000]/20">
-            {[
-              {
-                label: "Home Base",
-                city: "East Grand Forks",
-                state: "MN",
-                stateColor: "#F5D000",
-                labelBg: "#F5D000",
-                labelText: "#1a1a1a",
-                desc: "Our shop is at 622 10th Street NE. We have served this community since the beginning.",
-                note: "622 10th Street NE · (218) 773-7809",
-              },
-              {
-                label: "Cross-River",
-                city: "Grand Forks",
-                state: "ND",
-                stateColor: "#D14C2B",
-                labelBg: "#D14C2B",
-                labelText: "#ffffff",
-                desc: "Just across the Red River. A short drive for diesel and auto work you can trust.",
-                note: null,
-              },
-              {
-                label: "45 Miles South",
-                city: "Crookston",
-                state: "MN",
-                stateColor: "#F5D000",
-                labelBg: "#F5D000",
-                labelText: "#1a1a1a",
-                desc: "No local diesel shop in Crookston. Driscoll's is the closest diesel specialist in the area.",
-                note: null,
-              },
-            ].map((area, i) => (
-              <div
-                key={area.city}
-                className={`p-8 bg-[#0f0f0f] hover:bg-[#111111] transition-colors flex flex-col gap-3 ${i < 2 ? "border-b md:border-b-0 md:border-r border-[#F5D000]/20" : ""}`}
-              >
-                <div
-                  className="inline-block self-start text-xs font-bold uppercase tracking-widest px-3 py-1"
-                  style={{ background: area.labelBg, color: area.labelText }}
-                >
-                  {area.label}
-                </div>
-                <div>
-                  <h3 className="font-display text-white text-2xl md:text-3xl uppercase leading-none">
-                    {area.city}
-                  </h3>
-                  <p className="font-display text-xl uppercase mt-1" style={{ color: area.stateColor }}>
-                    {area.state}
-                  </p>
-                </div>
-                <p className="text-white/60 text-sm leading-relaxed flex-1">{area.desc}</p>
-                {area.note && (
-                  <p className="text-white/30 text-xs mt-1">{area.note}</p>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* TESTIMONIALS */}
       <section className="bg-[#0f0f0f] py-16">
         <div className="max-w-7xl mx-auto px-4">
@@ -634,32 +452,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="bg-[#1a1a1a] py-16">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="font-display text-white text-3xl md:text-5xl uppercase mb-3">
-            Common <span style={{ color: "#F5D000" }}>Questions</span>
-          </h2>
-          <p className="text-white/60 text-base mb-10">Answers to what we hear most often. If your question is not here, just call us.</p>
-          <div className="space-y-4">
-            {[
-              { q: "Do you work on diesel vehicles?", a: "Yes, diesel repair is our specialty. We service diesel trucks and heavy equipment of all makes and models. If it runs on diesel, we have the tools and training to diagnose and fix it." },
-              { q: "Do you service all makes and models?", a: "Yes. We service gas and diesel vehicles of all makes and models. Whether you drive a domestic truck or an imported car, our technicians have the equipment and expertise to help." },
-              { q: "Do you install remote starters?", a: "Yes. We install remote start systems including the Astro Start 2 Way RSS S5225. Call us to ask about scheduling an installation appointment." },
-              { q: "What are your hours?", a: "Monday through Friday, 8:00 AM to 5:00 PM. Saturday appointments are available by appointment only. We are closed on Sunday." },
-              { q: "Do you serve Grand Forks, ND?", a: "Yes. We are located just across the river in East Grand Forks, MN, and we regularly serve customers from Grand Forks, ND and Crookston, MN." },
-            ].map((faq) => (
-              <details key={faq.q} className="group border border-[#F5D000]/20 bg-[#0f0f0f]">
-                <summary className="flex items-center justify-between p-5 cursor-pointer list-none font-bold text-white hover:text-[#F5D000] transition-colors">
-                  {faq.q}
-                  <span className="text-[#F5D000] text-xl ml-4 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <p className="px-5 pb-5 text-white/70 leading-relaxed">{faq.a}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* FINAL CTA */}
       <section className="bg-[#D14C2B] py-16">

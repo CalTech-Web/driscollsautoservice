@@ -5,9 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 const nav = [
-  { label: "Services", href: "/services/" },
-  { label: "Diesel & Equipment", href: "/diesel-heavy-equipment/" },
-  { label: "Specialty", href: "/specialty-services/" },
+  { label: "All Makes & Models", href: "/services/" },
+  { label: "Other Services", href: "/specialty-services/" },
   { label: "Service Areas", href: "/service-areas/" },
   { label: "About", href: "/about/" },
   { label: "Contact", href: "/contact/" },
