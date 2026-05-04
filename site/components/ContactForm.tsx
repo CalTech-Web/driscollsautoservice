@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Script from "next/script";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
@@ -14,6 +15,7 @@ export default function ContactForm() {
     setErrorMsg("");
 
     const form = e.currentTarget;
+    const turnstileField = form.elements.namedItem("cf-turnstile-response") as HTMLInputElement | null;
     const data = {
       site: "driscollsautoservice.com",
       name: (form.elements.namedItem("name") as HTMLInputElement).value,
@@ -22,6 +24,7 @@ export default function ContactForm() {
       vehicle: (form.elements.namedItem("vehicle") as HTMLInputElement).value,
       service: (form.elements.namedItem("service") as HTMLSelectElement).value,
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+      turnstileToken: turnstileField?.value || "",
     };
 
     try {
@@ -142,6 +145,14 @@ export default function ContactForm() {
           className={inputClass + " resize-y"}
         />
       </div>
+
+      <Script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+        strategy="afterInteractive"
+        async
+        defer
+      />
+      <div className="cf-turnstile" data-sitekey="0x4AAAAAACyy0OTX5mR2xETR" data-theme="dark" />
 
       {state === "error" && (
         <div className="border border-[#D14C2B] bg-[#D14C2B]/10 p-4 text-[#D14C2B] text-sm">
