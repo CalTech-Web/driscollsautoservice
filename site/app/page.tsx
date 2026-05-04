@@ -344,6 +344,87 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* HAZARD DIVIDER */}
+      <div className="hazard-stripe h-6 w-full" />
+
+      {/* SERVICE AREAS */}
+      <section className="bg-[#1a1a1a] py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+            <h2 className="font-display text-white text-3xl md:text-5xl uppercase leading-none">
+              We Serve <span style={{ color: "#F5D000" }}>Your Area</span>
+            </h2>
+            <Link
+              href="/service-areas/"
+              className="text-[#F5D000] text-sm font-bold uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 self-start sm:self-auto"
+            >
+              Full Coverage Details
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 border border-[#F5D000]/20">
+            {[
+              {
+                label: "Home Base",
+                city: "East Grand Forks",
+                state: "MN",
+                stateColor: "#F5D000",
+                labelBg: "#F5D000",
+                labelText: "#1a1a1a",
+                desc: "Our shop is at 622 10th Street NE. We have served this community since the beginning.",
+                note: "622 10th Street NE · (218) 773-7809",
+              },
+              {
+                label: "Cross-River",
+                city: "Grand Forks",
+                state: "ND",
+                stateColor: "#D14C2B",
+                labelBg: "#D14C2B",
+                labelText: "#ffffff",
+                desc: "Just across the Red River. A short drive for diesel and auto work you can trust.",
+                note: null,
+              },
+              {
+                label: "45 Miles South",
+                city: "Crookston",
+                state: "MN",
+                stateColor: "#F5D000",
+                labelBg: "#F5D000",
+                labelText: "#1a1a1a",
+                desc: "No local diesel shop in Crookston. Driscoll's is the closest diesel specialist in the area.",
+                note: null,
+              },
+            ].map((area, i) => (
+              <div
+                key={area.city}
+                className={`p-8 bg-[#0f0f0f] hover:bg-[#111111] transition-colors flex flex-col gap-3 ${i < 2 ? "border-b md:border-b-0 md:border-r border-[#F5D000]/20" : ""}`}
+              >
+                <div
+                  className="inline-block self-start text-xs font-bold uppercase tracking-widest px-3 py-1"
+                  style={{ background: area.labelBg, color: area.labelText }}
+                >
+                  {area.label}
+                </div>
+                <div>
+                  <h3 className="font-display text-white text-2xl md:text-3xl uppercase leading-none">
+                    {area.city}
+                  </h3>
+                  <p className="font-display text-xl uppercase mt-1" style={{ color: area.stateColor }}>
+                    {area.state}
+                  </p>
+                </div>
+                <p className="text-white/60 text-sm leading-relaxed flex-1">{area.desc}</p>
+                {area.note && (
+                  <p className="text-white/30 text-xs mt-1">{area.note}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="bg-[#1a1a1a] py-16">
         <div className="max-w-4xl mx-auto px-4">
