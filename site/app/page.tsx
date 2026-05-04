@@ -119,7 +119,7 @@ export default function HomePage() {
               East Grand Forks, MN
             </p>
             <p className="text-white/70 text-lg md:text-xl max-w-xl mt-4 mb-8 leading-relaxed">
-              Family-owned. Full-service. Honest work. Treating every customer like family since day one.
+              Diesel trucks, heavy equipment, and daily drivers. Honest diagnostics and quality repairs for East Grand Forks, Grand Forks, and Crookston.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-start">
               <a
@@ -135,7 +135,7 @@ export default function HomePage() {
                 href="/contact/"
                 className="border-2 border-white/40 text-white font-display text-lg px-6 py-4 hover:border-[#F5D000] hover:text-[#F5D000] transition-colors uppercase tracking-wider"
               >
-                Get a Quote
+                Schedule Service
               </Link>
             </div>
           </div>
@@ -179,6 +179,7 @@ export default function HomePage() {
             <h2 className="font-display text-white text-4xl md:text-6xl uppercase">
               What We <span style={{ color: "#F5D000" }}>Fix</span>
             </h2>
+            <p className="text-white/60 text-base mt-3">From oil changes to full engine rebuilds, we service diesel and gas vehicles of all makes and models.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 border border-[#F5D000]/20">
             {services.map((svc, i) => (
@@ -196,7 +197,7 @@ export default function HomePage() {
                 </h3>
                 <p className="text-white/60 text-sm leading-relaxed flex-1">{svc.desc}</p>
                 <span className="text-[#F5D000] text-sm font-bold uppercase tracking-widest flex items-center gap-2">
-                  Learn More
+                  View Services
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                   </svg>
@@ -249,9 +250,10 @@ export default function HomePage() {
       <div className="hazard-stripe-orange h-6 w-full opacity-60" />
       <section className="bg-[#1a1a1a] blueprint-grid py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="font-display text-white text-4xl md:text-6xl uppercase mb-12">
+          <h2 className="font-display text-white text-4xl md:text-6xl uppercase mb-3">
             How It <span style={{ color: "#F5D000" }}>Works</span>
           </h2>
+          <p className="text-white/60 text-base mb-12">Five steps from your first call to driving away safe.</p>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-0">
             {steps.map((p, i) => (
               <div key={p.step} className={`relative p-6 border-t-4 border-[#F5D000] bg-[#0f0f0f] ${i < 4 ? "md:border-r border-[#F5D000]/20" : ""}`}>
@@ -291,13 +293,16 @@ export default function HomePage() {
       {/* WHY DRISCOLL'S */}
       <section className="bg-[#F5D000] py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
-            <h2 className="font-display text-[#1a1a1a] text-3xl md:text-5xl uppercase leading-none">
-              Why Driscoll&apos;s
-            </h2>
-            <p className="text-[#1a1a1a]/70 text-sm font-semibold uppercase tracking-widest">
-              East Grand Forks, MN &bull; Est. 2013
-            </p>
+          <div className="mb-10">
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-3">
+              <h2 className="font-display text-[#1a1a1a] text-3xl md:text-5xl uppercase leading-none">
+                Why Driscoll&apos;s
+              </h2>
+              <p className="text-[#1a1a1a]/70 text-sm font-semibold uppercase tracking-widest">
+                East Grand Forks, MN &bull; Est. 2013
+              </p>
+            </div>
+            <p className="text-[#1a1a1a]/70 text-base">Four reasons drivers in East Grand Forks, Grand Forks, and Crookston trust us first.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {whyChoose.map((item) => (
@@ -320,9 +325,10 @@ export default function HomePage() {
       {/* GALLERY STRIP */}
       <section className="bg-[#0f0f0f] py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="font-display text-white text-3xl md:text-5xl uppercase mb-8">
+          <h2 className="font-display text-white text-3xl md:text-5xl uppercase mb-3">
             The <span style={{ color: "#F5D000" }}>Shop</span>
           </h2>
+          <p className="text-white/60 text-base mb-8">A working shop in East Grand Forks with 10+ years of trusted repairs behind it.</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {[6, 7, 8].map((n) => (
               <div key={n} className="aspect-square overflow-hidden">
@@ -350,19 +356,22 @@ export default function HomePage() {
       {/* SERVICE AREAS */}
       <section className="bg-[#1a1a1a] py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
-            <h2 className="font-display text-white text-3xl md:text-5xl uppercase leading-none">
-              We Serve <span style={{ color: "#F5D000" }}>Your Area</span>
-            </h2>
-            <Link
-              href="/service-areas/"
-              className="text-[#F5D000] text-sm font-bold uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 self-start sm:self-auto"
-            >
-              Full Coverage Details
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
+          <div className="mb-10">
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-3">
+              <h2 className="font-display text-white text-3xl md:text-5xl uppercase leading-none">
+                We Serve <span style={{ color: "#F5D000" }}>Your Area</span>
+              </h2>
+              <Link
+                href="/service-areas/"
+                className="text-[#F5D000] text-sm font-bold uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 self-start sm:self-auto"
+              >
+                Full Coverage Details
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+            <p className="text-white/60 text-base">East Grand Forks is home. We also serve Grand Forks, ND and Crookston, MN, the nearest diesel repair option for 45 miles south.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 border border-[#F5D000]/20">
             {[
@@ -428,13 +437,16 @@ export default function HomePage() {
       {/* TESTIMONIALS */}
       <section className="bg-[#0f0f0f] py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
-            <h2 className="font-display text-white text-3xl md:text-5xl uppercase leading-none">
-              What Customers <span style={{ color: "#F5D000" }}>Say</span>
-            </h2>
-            <p className="text-white/40 text-sm font-semibold uppercase tracking-widest">
-              Real Reviews
-            </p>
+          <div className="mb-10">
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-3">
+              <h2 className="font-display text-white text-3xl md:text-5xl uppercase leading-none">
+                What Customers <span style={{ color: "#F5D000" }}>Say</span>
+              </h2>
+              <p className="text-white/40 text-sm font-semibold uppercase tracking-widest">
+                Real Reviews
+              </p>
+            </div>
+            <p className="text-white/60 text-base">Real people from Grand Forks, Crookston, and East Grand Forks who brought us their vehicles and came back.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
@@ -479,9 +491,10 @@ export default function HomePage() {
       {/* FAQ */}
       <section className="bg-[#1a1a1a] py-16">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="font-display text-white text-3xl md:text-5xl uppercase mb-10">
+          <h2 className="font-display text-white text-3xl md:text-5xl uppercase mb-3">
             Common <span style={{ color: "#F5D000" }}>Questions</span>
           </h2>
+          <p className="text-white/60 text-base mb-10">Answers to what we hear most often. If your question is not here, just call us.</p>
           <div className="space-y-4">
             {[
               { q: "Do you work on diesel vehicles?", a: "Yes, diesel repair is our specialty. We service diesel trucks and heavy equipment of all makes and models. If it runs on diesel, we have the tools and training to diagnose and fix it." },

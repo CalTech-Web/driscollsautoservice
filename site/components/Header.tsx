@@ -34,15 +34,19 @@ export default function Header() {
 
       {/* Main nav */}
       <nav className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3" aria-label="Driscoll's Auto Service, Home">
           <Image
             src="/logos/logo-hires.png"
-            alt="Driscoll's Auto Service"
-            width={160}
-            height={60}
-            className="h-12 w-auto object-contain"
+            alt=""
+            width={44}
+            height={44}
+            className="h-11 w-auto object-contain flex-shrink-0"
             priority
           />
+          <div className="flex flex-col leading-none">
+            <span className="font-display text-white text-xl uppercase tracking-wider">DRISCOLL&apos;S</span>
+            <span className="font-display text-sm uppercase tracking-widest" style={{ color: "#D14C2B" }}>AUTO SERVICE</span>
+          </div>
         </Link>
 
         {/* Desktop nav */}
