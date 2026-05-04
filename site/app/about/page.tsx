@@ -126,9 +126,10 @@ export default function AboutPage() {
       {/* Memberships / community */}
       <section className="bg-[#F5D000] py-12">
         <div className="max-w-7xl mx-auto px-4">
-          <h3 className="font-display text-[#1a1a1a] text-2xl md:text-3xl uppercase mb-6">
+          <h3 className="font-display text-[#1a1a1a] text-2xl md:text-3xl uppercase mb-3">
             Community Roots
           </h3>
+          <p className="text-[#1a1a1a]/70 text-base mb-6">Kirk was a fixture in East Grand Forks well beyond the shop walls.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-[#1a1a1a] text-white p-6">
               <h4 className="font-display text-[#F5D000] uppercase text-lg mb-2">Masonic Temple #292</h4>

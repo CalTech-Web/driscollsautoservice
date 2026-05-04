@@ -47,12 +47,20 @@ export default function ServicesPage() {
           <p className="text-white/70 text-lg mt-6 max-w-xl leading-relaxed">
             Gas or diesel, domestic or import, we service every vehicle that rolls through our door. East Grand Forks's full-service auto repair shop.
           </p>
-          <a
-            href="tel:2187737809"
-            className="mt-8 inline-flex items-center gap-3 bg-[#F5D000] text-[#1a1a1a] font-display text-2xl px-8 py-4 hover:bg-white transition-colors"
-          >
-            (218) 773-7809
-          </a>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <a
+              href="tel:2187737809"
+              className="inline-flex items-center gap-3 bg-[#F5D000] text-[#1a1a1a] font-display text-2xl px-8 py-4 hover:bg-white transition-colors"
+            >
+              (218) 773-7809
+            </a>
+            <Link
+              href="/contact/"
+              className="border-2 border-white/40 text-white font-display text-lg px-6 py-4 hover:border-[#F5D000] hover:text-[#F5D000] transition-colors uppercase tracking-wider"
+            >
+              Schedule Service
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -70,9 +78,10 @@ export default function ServicesPage() {
       {/* Repair services */}
       <section className="bg-[#1a1a1a] py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="font-display text-white text-4xl md:text-5xl uppercase mb-12">
+          <h2 className="font-display text-white text-4xl md:text-5xl uppercase mb-3">
             Repair <span style={{ color: "#F5D000" }}>Services</span>
           </h2>
+          <p className="text-white/60 text-base mb-12">Every job diagnosed and completed right the first time, gas or diesel, domestic or import.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-[#F5D000]/20">
             {repairs.map((item, i) => (
               <div

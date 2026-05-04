@@ -227,6 +227,7 @@ export default function HomePage() {
               Built on Hard Work<br />
               <span style={{ color: "#F5D000" }}>and Family Values</span>
             </h2>
+            <p className="text-white/60 text-base mt-3">A farming family&apos;s grit. A mechanic&apos;s passion. A community institution built by hand.</p>
             <p className="text-white/70 mt-6 text-lg leading-relaxed">
               Kirk Driscoll grew up farming in East Grand Forks. He built this shop with his hands, his integrity, and a genuine love for the community. He was known not just for his skill, but for his laugh and the way he always had time for a story.
             </p>

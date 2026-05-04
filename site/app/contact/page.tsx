@@ -97,9 +97,10 @@ export default function ContactPage() {
 
           {/* Form */}
           <div className="lg:col-span-2">
-            <h2 className="font-display text-white text-3xl uppercase mb-8">
+            <h2 className="font-display text-white text-3xl uppercase mb-3">
               Send Us a <span style={{ color: "#F5D000" }}>Message</span>
             </h2>
+            <p className="text-white/60 text-base mb-8">We respond quickly. Fill out the form and we will get back to you the same day.</p>
             <ContactForm />
           </div>
         </div>
