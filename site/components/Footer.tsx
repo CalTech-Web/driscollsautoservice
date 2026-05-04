@@ -91,15 +91,15 @@ export default function Footer() {
         <div>
           <h4 className="text-[#F5D000] font-display text-sm uppercase tracking-widest mb-4">Service Areas</h4>
           <ul className="space-y-2 text-sm text-white/70">
-            <li><Link href="/service-areas/" className="hover:text-[#F5D000] transition-colors">East Grand Forks, MN</Link></li>
-            <li><Link href="/service-areas/" className="hover:text-[#F5D000] transition-colors">Grand Forks, ND</Link></li>
-            <li><Link href="/service-areas/" className="hover:text-[#F5D000] transition-colors">Crookston, MN</Link></li>
+            <li>East Grand Forks, MN</li>
+            <li>Grand Forks, ND</li>
+            <li>Crookston, MN</li>
           </ul>
         </div>
 
-        {/* Contact + Company */}
+        {/* Contact */}
         <div>
-          <h4 className="text-[#F5D000] font-display text-sm uppercase tracking-widest mb-4">Contact</h4>
+          <h4 className="text-[#F5D000] font-display text-sm uppercase tracking-widest mb-4">Visit or Call</h4>
           <address className="not-italic text-sm text-white/70 space-y-2">
             <p>622 10th Street NE<br />East Grand Forks, MN 56721</p>
             <p>
@@ -107,23 +107,19 @@ export default function Footer() {
                 (218) 773-7809
               </a>
             </p>
+            <p>
+              <Link href="/#contact" className="text-[#F5D000] hover:text-white transition-colors text-xs uppercase tracking-widest font-bold">
+                Send a Message →
+              </Link>
+            </p>
           </address>
-          <ul className="mt-4 space-y-2 text-sm text-white/70">
-            <li><Link href="/about/" className="hover:text-[#F5D000] transition-colors">About Us</Link></li>
-            <li><Link href="/contact/" className="hover:text-[#F5D000] transition-colors">Contact</Link></li>
-            <li><Link href="/service-areas/" className="hover:text-[#F5D000] transition-colors">Service Areas</Link></li>
-          </ul>
         </div>
       </div>
 
       {/* Legal bar */}
       <div className="border-t border-[#F5D000]/20 px-4 py-4">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/40">
+        <div className="max-w-7xl mx-auto text-center text-xs text-white/40">
           <span>&copy; 2026 Driscoll&apos;s Auto Service. All Rights Reserved.</span>
-          <div className="flex gap-4">
-            <Link href="/privacy-policy/" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms-of-service/" className="hover:text-white transition-colors">Terms of Service</Link>
-          </div>
         </div>
       </div>
     </footer>

@@ -7,9 +7,6 @@ import Image from "next/image";
 const nav = [
   { label: "All Makes & Models", href: "/services/" },
   { label: "Other Services", href: "/specialty-services/" },
-  { label: "Service Areas", href: "/service-areas/" },
-  { label: "About", href: "/about/" },
-  { label: "Contact", href: "/contact/" },
 ];
 
 export default function Header() {

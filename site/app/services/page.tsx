@@ -168,7 +168,7 @@ export default function ServicesPage() {
               (218) 773-7809
             </a>
             <Link
-              href="/contact/"
+              href="/#contact"
               className="border-2 border-white/40 text-white font-display text-lg px-6 py-4 hover:border-[#F5D000] hover:text-[#F5D000] transition-colors uppercase tracking-wider"
             >
               Schedule Service
@@ -288,7 +288,7 @@ export default function ServicesPage() {
               Call (218) 773-7809
             </a>
             <Link
-              href="/contact/"
+              href="/#contact"
               className="border-2 border-white text-white font-display text-lg px-8 py-4 hover:bg-white hover:text-[#D14C2B] transition-colors uppercase tracking-wider"
             >
               Schedule Online
