@@ -1,0 +1,168 @@
+"use client";
+
+import { useState } from "react";
+
+type FormState = "idle" | "submitting" | "success" | "error";
+
+export default function ContactForm() {
+  const [state, setState] = useState<FormState>("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setState("submitting");
+    setErrorMsg("");
+
+    const form = e.currentTarget;
+    const data = {
+      site: "driscollsautoservice.com",
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      vehicle: (form.elements.namedItem("vehicle") as HTMLInputElement).value,
+      service: (form.elements.namedItem("service") as HTMLSelectElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch("https://forms.caltechweb.com/api/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        setState("success");
+      } else {
+        const json = await res.json().catch(() => ({}));
+        setErrorMsg(json?.error || "Something went wrong. Please call us directly at (218) 773-7809.");
+        setState("error");
+      }
+    } catch {
+      setErrorMsg("Network error. Please call us directly at (218) 773-7809.");
+      setState("error");
+    }
+  }
+
+  if (state === "success") {
+    return (
+      <div className="bg-[#0f0f0f] border-2 border-[#F5D000] p-10 text-center">
+        <div className="text-5xl mb-4">✓</div>
+        <h3 className="font-display text-[#F5D000] text-3xl uppercase mb-3">Message Received</h3>
+        <p className="text-white/70 text-lg leading-relaxed">
+          Thank you for reaching out. We will be in touch soon. If you need immediate help, call us at{" "}
+          <a href="tel:2187737809" className="text-[#F5D000] font-bold hover:text-white transition-colors">
+            (218) 773-7809
+          </a>.
+        </p>
+      </div>
+    );
+  }
+
+  const inputClass =
+    "w-full bg-[#0f0f0f] border border-[#F5D000]/30 text-white px-4 py-3 placeholder-white/30 focus:outline-none focus:border-[#F5D000] transition-colors";
+  const labelClass = "block text-white/70 text-sm font-semibold uppercase tracking-wider mb-1";
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div>
+          <label htmlFor="name" className={labelClass}>Full Name *</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="John Smith"
+            className={inputClass}
+          />
+        </div>
+        <div>
+          <label htmlFor="phone" className={labelClass}>Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="(218) 555-0100"
+            className={inputClass}
+          />
+        </div>
+      </div>
+
+      <div>
+        <label htmlFor="email" className={labelClass}>Email Address *</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="you@example.com"
+          className={inputClass}
+        />
+      </div>
+
+      <div>
+        <label htmlFor="vehicle" className={labelClass}>Your Vehicle (Year / Make / Model)</label>
+        <input
+          type="text"
+          id="vehicle"
+          name="vehicle"
+          placeholder="e.g. 2019 Ford F-250 Diesel"
+          className={inputClass}
+        />
+      </div>
+
+      <div>
+        <label htmlFor="service" className={labelClass}>Service Type *</label>
+        <select
+          id="service"
+          name="service"
+          required
+          className={inputClass + " cursor-pointer"}
+          defaultValue=""
+        >
+          <option value="" disabled>Select a service...</option>
+          <option value="Diesel / Heavy Equipment">Diesel / Heavy Equipment</option>
+          <option value="General Repair">General Repair</option>
+          <option value="Routine Maintenance">Routine Maintenance</option>
+          <option value="Remote Start">Remote Start</option>
+          <option value="Ignition Interlock">Ignition Interlock (Breathalyzer)</option>
+          <option value="Aftermarket Electronics">Aftermarket Electronics</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor="message" className={labelClass}>Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows={5}
+          placeholder="Tell us what's going on with your vehicle..."
+          className={inputClass + " resize-y"}
+        />
+      </div>
+
+      {state === "error" && (
+        <div className="border border-[#D14C2B] bg-[#D14C2B]/10 p-4 text-[#D14C2B] text-sm">
+          {errorMsg}
+        </div>
+      )}
+
+      <button
+        type="submit"
+        disabled={state === "submitting"}
+        className="w-full bg-[#F5D000] text-[#1a1a1a] font-display text-xl uppercase tracking-wider py-4 hover:bg-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        {state === "submitting" ? "Sending..." : "Send Message"}
+      </button>
+
+      <p className="text-white/40 text-xs text-center">
+        Or call us directly at{" "}
+        <a href="tel:2187737809" className="text-[#F5D000] hover:text-white transition-colors">
+          (218) 773-7809
+        </a>
+      </p>
+    </form>
+  );
+}

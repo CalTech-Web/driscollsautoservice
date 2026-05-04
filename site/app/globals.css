@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand-yellow: #F5D000;
+  --color-brand-yellow-dark: #A38B00;
+  --color-brand-orange: #D14C2B;
+  --color-brand-charcoal: #1a1a1a;
+  --color-brand-dark: #0f0f0f;
+  --color-brand-mid: #2a2a2a;
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #1a1a1a;
+  color: #ffffff;
+  font-family: var(--font-body), 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), 'Anton', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Hazard stripe pattern */
+.hazard-stripe {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #F5D000 0px,
+    #F5D000 20px,
+    #1a1a1a 20px,
+    #1a1a1a 40px
+  );
+}
+
+.hazard-stripe-orange {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #D14C2B 0px,
+    #D14C2B 20px,
+    #1a1a1a 20px,
+    #1a1a1a 40px
+  );
+}
+
+/* Diagonal divider */
+.diagonal-top {
+  clip-path: polygon(0 0, 100% 4vw, 100% 100%, 0 100%);
+}
+
+.diagonal-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 4vw));
+}
+
+/* Grid overlay effect */
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(245, 208, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 208, 0, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Sticker badge */
+.badge {
+  display: inline-block;
+  background: #F5D000;
+  color: #1a1a1a;
+  font-family: var(--font-display), 'Anton', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  transform: rotate(-2deg);
+  border: 2px solid #1a1a1a;
+}
+
+.badge-orange {
+  background: #D14C2B;
+  color: #ffffff;
+}
+
+/* Phone link */
+a[href^="tel"] {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Polaroid frame */
+.polaroid {
+  background: #1a1a1a;
+  border: 8px solid #2a2a2a;
+  border-bottom: 32px solid #2a2a2a;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #F5D000;
+}
