@@ -264,6 +264,30 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* STATS STRIP */}
+      <section className="bg-[#0f0f0f] border-y border-[#F5D000]/20">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-[#F5D000]/20">
+          {[
+            { value: "10+", label: "Years Serving East Grand Forks" },
+            { value: "3", label: "Cities Covered" },
+            { value: "All", label: "Makes & Models" },
+            { value: "5", label: "Days a Week, Mon–Fri" },
+          ].map((stat) => (
+            <div key={stat.label} className="flex flex-col items-center justify-center py-12 px-6 text-center gap-2">
+              <span
+                className="font-display leading-none"
+                style={{ fontSize: "clamp(3.5rem, 8vw, 6rem)", color: "#F5D000", letterSpacing: "-0.03em" }}
+              >
+                {stat.value}
+              </span>
+              <span className="text-white/60 text-sm uppercase tracking-widest font-semibold max-w-[12ch] leading-snug">
+                {stat.label}
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* WHY DRISCOLL'S */}
       <section className="bg-[#F5D000] py-16">
         <div className="max-w-7xl mx-auto px-4">
