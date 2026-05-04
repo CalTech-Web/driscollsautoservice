@@ -121,3 +121,45 @@ SEO Run #1 is complete. Here's what was shipped:
 ### Commit
 `3956607` — pushed to main on 2026-05-04
 [2026-05-04 10:49:13] Run #2 finished
+Run #2 is complete. Here's what was shipped:
+
+**Canonical URLs (all 7 pages)** — Every page now declares its own canonical URL via `alternates.canonical`. This prevents crawl confusion and reinforces the correct indexable URL for each page.
+
+**Page-specific OpenGraph (7 pages)** — Previously all inner pages inherited the homepage OG card when shared on social or in messaging apps. Each page now has its own URL, title, description, and an appropriate image. The diesel page gets `shop-06-full.jpg`, the services page gets `shop-02-full.jpg`, and specialty gets `shop-03-full.jpg`.
+
+**Service schemas** — Three new `Service` type JSON-LD schemas (services, diesel, specialty) each with `serviceType`, `provider`, `areaServed` (all 3 cities), and a full `hasOfferCatalog` listing individual service offers. This is the structured data Google uses for service-oriented businesses.
+
+**FAQ schemas on diesel and specialty pages** — The diesel FAQ targets high-intent queries like "diesel repair near Crookston MN" and names specific truck brands (Power Stroke, Duramax, Cummins). The specialty FAQ targets "ignition interlock near Grand Forks ND" with the full address in the answer.
+
+**BreadcrumbList schemas (5 inner pages)** — Signals navigation hierarchy to Google for potential breadcrumb display in SERPs.
+
+**3 image alt improvements** — Services repair bays, maintenance banner, and specialty services hero image now have location-specific and service-specific alt text.
+[2026-05-04 10:54:17] Run #2 finished
+[2026-05-04 10:54:22] Run #3 starting (model: sonnet)
+[2026-05-04 10:54:22] Run #3 complete
+
+## SEO Run #3 Summary (2026-05-04)
+
+### Changes Made
+
+**site/app/layout.tsx**
+- Added `founder` (Kirk Driscoll) and `employee` (Kaleb Driscoll) properties to the global `AutoRepair` LocalBusiness schema, strengthening entity associations for Knowledge Graph
+- Added a separate `WebSite` JSON-LD schema establishing canonical site identity at `https://driscollsautoservice.com`
+
+**site/app/about/page.tsx**
+- Added `Person` JSON-LD schema for Kaleb Driscoll with `jobTitle: "Owner and Operator"`, `worksFor` referencing the AutoRepair entity, and `address` pointing to East Grand Forks, MN — signals to Google the named owner entity behind the business
+
+**site/app/contact/page.tsx**
+- Added `ContactPoint` JSON-LD schema (nested under an AutoRepair entity) with telephone, `contactType: "customer service"`, `areaServed` (all 3 cities), `availableLanguage`, and `hoursAvailable` OpeningHoursSpecification — provides machine-readable contact availability distinct from the global LocalBusiness schema
+
+**site/app/service-areas/page.tsx**
+- Added `FAQPage` JSON-LD schema with 5 city-targeted Q&As:
+  - "Do you service customers in Grand Forks, ND?" (with full address in answer)
+  - "Is there a diesel mechanic near Crookston, MN?" (positions Driscoll's as the nearest option, 45 miles north)
+  - "How far is Driscoll's Auto Service from Grand Forks, ND?" (under 10 minutes across the river)
+  - "Do you repair heavy equipment and farm equipment for customers in the Grand Forks area?"
+  - "Where is the nearest auto repair shop to East Grand Forks, MN?"
+
+### Commit
+Pushed to main on 2026-05-04
+[2026-05-04 10:54:22] Run #3 finished

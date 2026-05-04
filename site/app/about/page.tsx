@@ -47,10 +47,29 @@ const aboutBreadcrumb = {
   ],
 };
 
+const kalebrPersonSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Kaleb Driscoll",
+  jobTitle: "Owner and Operator",
+  worksFor: {
+    "@type": "AutoRepair",
+    name: "Driscoll's Auto Service",
+    url: "https://driscollsautoservice.com",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "East Grand Forks",
+    addressRegion: "MN",
+    addressCountry: "US",
+  },
+};
+
 export default function AboutPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutBreadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(kalebrPersonSchema) }} />
       {/* Hero */}
       <section className="relative bg-[#0f0f0f] py-20 overflow-hidden">
         <div className="absolute inset-0 blueprint-grid" />

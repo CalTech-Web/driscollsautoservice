@@ -100,6 +100,23 @@ const localBusinessSchema = {
     { "@type": "City", name: "Crookston", addressRegion: "MN" },
   ],
   priceRange: "$$",
+  founder: {
+    "@type": "Person",
+    name: "Kirk Driscoll",
+    jobTitle: "Founder",
+  },
+  employee: {
+    "@type": "Person",
+    name: "Kaleb Driscoll",
+    jobTitle: "Owner and Operator",
+  },
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Driscoll's Auto Service",
+  url: "https://driscollsautoservice.com",
 };
 
 export default function RootLayout({
@@ -114,6 +131,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
           }}
         />
       </head>

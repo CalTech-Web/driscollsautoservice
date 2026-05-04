@@ -73,10 +73,58 @@ const serviceAreasBreadcrumb = {
   ],
 };
 
+const serviceAreasFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Do you service customers in Grand Forks, ND?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Grand Forks, ND customers regularly make the short drive across the Red River to Driscoll's Auto Service at 622 10th Street NE, East Grand Forks, MN 56721. We provide diesel repair, auto repair, and specialty services for all Grand Forks area vehicles. Call (218) 773-7809.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is there a diesel mechanic near Crookston, MN?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Driscoll's Auto Service in East Grand Forks, MN is the closest diesel specialist to Crookston, MN, approximately 45 miles north. Crookston customers make the drive for diesel truck repair, heavy equipment service, and farm equipment repair. Call (218) 773-7809 to schedule.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How far is Driscoll's Auto Service from Grand Forks, ND?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Driscoll's Auto Service is located just across the Red River from Grand Forks, ND at 622 10th Street NE, East Grand Forks, MN 56721. The drive from downtown Grand Forks is typically under 10 minutes.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you repair heavy equipment and farm equipment for customers in the Grand Forks area?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Driscoll's Auto Service specializes in diesel and heavy equipment repair, serving East Grand Forks MN, Grand Forks ND, and Crookston MN. We service diesel trucks and heavy equipment of all makes and models. Call (218) 773-7809.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Where is the nearest auto repair shop to East Grand Forks, MN?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Driscoll's Auto Service is located at 622 10th Street NE, East Grand Forks, MN 56721. We are a full-service auto and diesel repair shop serving East Grand Forks, Grand Forks ND, and Crookston MN. Call (218) 773-7809.",
+      },
+    },
+  ],
+};
+
 export default function ServiceAreasPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceAreasBreadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceAreasFaqSchema) }} />
       {/* Hero */}
       <section className="relative bg-[#0f0f0f] py-20 overflow-hidden">
         <div className="absolute inset-0 blueprint-grid" />
