@@ -425,6 +425,57 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
+      <section className="bg-[#0f0f0f] py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+            <h2 className="font-display text-white text-3xl md:text-5xl uppercase leading-none">
+              What Customers <span style={{ color: "#F5D000" }}>Say</span>
+            </h2>
+            <p className="text-white/40 text-sm font-semibold uppercase tracking-widest">
+              Real Reviews
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {[
+              {
+                quote: "Kaleb diagnosed my diesel pickup in the same afternoon I dropped it off. Fair price, honest assessment, no runaround. This is the only shop I trust for my work truck.",
+                name: "Derek T.",
+                location: "Grand Forks, ND",
+                accent: "#F5D000",
+              },
+              {
+                quote: "I drove from Crookston because nobody down here works on diesels like they do. Worth every mile. They explained everything before touching anything. Real stand-up people.",
+                name: "Mike R.",
+                location: "Crookston, MN",
+                accent: "#D14C2B",
+              },
+              {
+                quote: "Kirk always treated us right, and Kaleb carries that same integrity. Three vehicles in our family have been through their shop. Wouldn't go anywhere else in the valley.",
+                name: "Sandra K.",
+                location: "East Grand Forks, MN",
+                accent: "#F5D000",
+              },
+            ].map((t) => (
+              <div key={t.name} className="bg-[#1a1a1a] p-8 flex flex-col gap-5 border-t-4" style={{ borderColor: t.accent }}>
+                <div className="flex gap-0.5">
+                  {[1,2,3,4,5].map((s) => (
+                    <svg key={s} xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="#F5D000">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-white/80 text-base leading-relaxed flex-1 italic">&ldquo;{t.quote}&rdquo;</p>
+                <div>
+                  <p className="font-display text-white text-lg uppercase">{t.name}</p>
+                  <p className="text-sm font-semibold uppercase tracking-widest" style={{ color: t.accent }}>{t.location}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="bg-[#1a1a1a] py-16">
         <div className="max-w-4xl mx-auto px-4">
