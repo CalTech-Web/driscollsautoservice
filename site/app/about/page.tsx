@@ -47,11 +47,35 @@ const aboutBreadcrumb = {
   ],
 };
 
+const kirkPersonSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Kirk Richard Driscoll",
+  birthDate: "1961-01-07",
+  deathDate: "2025-10-07",
+  jobTitle: "Founder",
+  description:
+    "Kirk Richard Driscoll founded Driscoll's Auto Service in East Grand Forks, MN. Growing up farming in East Grand Forks, he built the shop into a community institution known for honest work and treating customers like family. He passed away on October 7, 2025, at age 64.",
+  worksFor: {
+    "@type": "AutoRepair",
+    name: "Driscoll's Auto Service",
+    url: "https://driscollsautoservice.com",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "East Grand Forks",
+    addressRegion: "MN",
+    addressCountry: "US",
+  },
+};
+
 const kalebrPersonSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Kaleb Driscoll",
   jobTitle: "Owner and Operator",
+  description:
+    "Kaleb Driscoll is the owner and operator of Driscoll's Auto Service in East Grand Forks, MN, carrying forward the legacy of his father Kirk Driscoll with the same commitment to honest, quality auto and diesel repair.",
   worksFor: {
     "@type": "AutoRepair",
     name: "Driscoll's Auto Service",
@@ -69,6 +93,7 @@ export default function AboutPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutBreadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(kirkPersonSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(kalebrPersonSchema) }} />
       {/* Hero */}
       <section className="relative bg-[#0f0f0f] py-20 overflow-hidden">

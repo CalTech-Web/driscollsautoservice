@@ -91,15 +91,31 @@ const localBusinessSchema = {
       closes: "17:00",
     },
   ],
-  image: "https://driscollsautoservice.com/gallery/shop-01-full.jpg",
-  sameAs: ["https://www.facebook.com/driscollauto/"],
+  image: [
+    "https://driscollsautoservice.com/gallery/shop-01-full.jpg",
+    "https://driscollsautoservice.com/gallery/shop-02-full.jpg",
+    "https://driscollsautoservice.com/gallery/shop-06-full.jpg",
+  ],
+  sameAs: [
+    "https://www.facebook.com/driscollauto/",
+    "https://maps.google.com/maps?cid=1197783825002618747",
+  ],
   hasMap: "https://maps.google.com/maps?cid=1197783825002618747",
+  currenciesAccepted: "USD",
   areaServed: [
     { "@type": "City", name: "East Grand Forks", addressRegion: "MN" },
     { "@type": "City", name: "Grand Forks", addressRegion: "ND" },
     { "@type": "City", name: "Crookston", addressRegion: "MN" },
   ],
   priceRange: "$$",
+  makesOffer: [
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Diesel Truck Repair and Diagnostics" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Heavy Equipment Repair" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Auto Repair, All Makes and Models" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ignition Interlock Installation" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Remote Start Installation" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Oil Change and Routine Maintenance" } },
+  ],
   founder: {
     "@type": "Person",
     name: "Kirk Driscoll",

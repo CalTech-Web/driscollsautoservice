@@ -163,3 +163,54 @@ Run #2 is complete. Here's what was shipped:
 ### Commit
 Pushed to main on 2026-05-04
 [2026-05-04 10:54:22] Run #3 finished
+Run #3 is complete. Here's what shipped:
+
+**layout.tsx — LocalBusiness entity enrichment**
+- Added `founder: Kirk Driscoll` and `employee: Kaleb Driscoll` to the global AutoRepair schema. Google uses these to build entity associations in the Knowledge Graph.
+- Added a `WebSite` schema establishing the canonical site identity.
+
+**about/page.tsx — Person schema for Kaleb Driscoll**
+- `@type: Person` with `jobTitle`, `worksFor` (pointing to the AutoRepair entity), and East Grand Forks address. This links the named owner to the business entity in Google's understanding.
+
+**contact/page.tsx — ContactPoint schema**
+- Nested `ContactPoint` under an AutoRepair entity with phone, `contactType: "customer service"`, areaServed for all 3 cities, and available hours. Distinct from the global LocalBusiness schema — provides machine-readable contact availability on the page where users are most likely to act.
+
+**service-areas/page.tsx — FAQPage schema (5 city-targeted Q&As)**
+- Targets high-intent "near me" and "closest to Crookston" queries directly in structured data, including the 45-miles-north positioning for Crookston and the under-10-minute drive framing for Grand Forks ND customers.
+[2026-05-04 10:57:42] Run #3 finished
+[2026-05-04 10:57:47] Run #4 starting (model: sonnet)
+[2026-05-04 10:57:47] Run #4 complete
+
+## SEO Run #4 Summary (2026-05-04)
+
+### Changes Made
+
+**site/app/sitemap.ts**
+- Removed `/privacy-policy/` and `/terms-of-service/` from the sitemap — legal pages should not be submitted to search engines for indexing
+- Reordered pages to lead with diesel (highest-value page) before services
+- Changed contact and about `changeFrequency` from `yearly` to `monthly` for consistency
+
+**site/app/robots.ts**
+- Added `disallow: ["/privacy-policy/", "/terms-of-service/"]` so crawlers are explicitly told not to index legal pages
+- Retained `allow: "/"` for all content pages and the sitemap reference
+
+**site/app/privacy-policy/page.tsx**
+- Added `robots: { index: false, follow: false }` to metadata — belt-and-suspenders with robots.ts disallow rule
+
+**site/app/terms-of-service/page.tsx**
+- Added `robots: { index: false, follow: false }` to metadata
+
+**site/app/layout.tsx (LocalBusiness schema enrichment)**
+- Changed `image` from a single string to an array of 3 shop images (`shop-01-full.jpg`, `shop-02-full.jpg`, `shop-06-full.jpg`) — Google uses multiple images for richer local listing presentation
+- Added Google Maps CID URL to `sameAs` array (previously only had Facebook) — signals the business's verified Google Maps listing as a same-entity reference
+- Added `currenciesAccepted: "USD"`
+- Added `makesOffer` array with 6 specific service offers (diesel truck repair, heavy equipment, auto repair, ignition interlock, remote start, oil change) — directly links the entity to its services in the Knowledge Graph
+
+**site/app/about/page.tsx**
+- Added `kirkPersonSchema`: a full `Person` JSON-LD schema for Kirk Richard Driscoll with `birthDate: "1961-01-07"`, `deathDate: "2025-10-07"`, `jobTitle: "Founder"`, `description`, `worksFor` (AutoRepair entity), and East Grand Forks address — the About page is the primary page covering his story, so this is the correct place to declare the founder Person entity
+- Added `description` to the existing Kaleb Driscoll `Person` schema
+- Wired `kirkPersonSchema` into the page's JSON-LD output
+
+### Commit
+Pushed to main on 2026-05-04
+[2026-05-04 10:57:47] Run #4 finished

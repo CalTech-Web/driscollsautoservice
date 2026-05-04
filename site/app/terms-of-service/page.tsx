@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: "Terms of service for Driscoll's Auto Service website.",
+  robots: { index: false, follow: false },
 };
 
 export default function TermsOfServicePage() {

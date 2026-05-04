@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Privacy policy for Driscoll's Auto Service website.",
+  robots: { index: false, follow: false },
 };
 
 export default function PrivacyPolicyPage() {
