@@ -19,8 +19,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default:
-      "Driscoll's Auto Service | Grand Forks Diesel & Heavy Equipment Repair",
+    default: "Grand Forks Diesel Repair | Driscoll's Auto Service",
     template: "%s | Driscoll's Auto Service",
   },
   description:

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Grand Forks Auto Repair, All Makes & Models",
+  title: { absolute: "Grand Forks Auto Repair, All Makes & Models" },
   description:
     "Full-service auto repair serving Grand Forks. Engine, transmission, brakes, electrical, steering, suspension, alignments, and routine maintenance. Call (218) 773-7809.",
   keywords: [
@@ -153,9 +153,9 @@ export default function ServicesPage() {
             Full-Service Shop
           </div>
           <h1 aria-label="Grand Forks Auto Repair, All Makes &amp; Models" className="font-display text-white text-5xl md:text-7xl uppercase leading-none">
-            <span className="block" aria-hidden="true">Grand Forks</span>
-            <span className="block" aria-hidden="true" style={{ color: "#E11D2D" }}>Auto Repair</span>
-            <span className="block" aria-hidden="true">All Makes &amp; Models</span>
+            <span className="block" aria-hidden="true">Grand Forks </span>
+            <span className="block" aria-hidden="true" style={{ color: "#E11D2D" }}>Auto Repair </span>
+            <span className="block" aria-hidden="true">All Makes &amp; Models </span>
           </h1>
           <p className="text-white/70 text-lg mt-6 max-w-xl leading-relaxed">
             Gas or diesel, domestic or import, we service every vehicle that rolls through our door. The full-service auto shop serving Greater Grand Forks from East Grand Forks, MN.

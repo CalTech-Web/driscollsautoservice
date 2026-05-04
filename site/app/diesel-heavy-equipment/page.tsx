@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Grand Forks Diesel & Heavy Equipment Repair",
+  title: { absolute: "Grand Forks Diesel & Heavy Equipment Repair" },
   description:
     "Diesel truck and heavy equipment repair specialists serving Grand Forks. Computer diagnostics, engine repair, and drivability solutions for all makes and models. Call (218) 773-7809.",
   keywords: [
@@ -164,9 +164,9 @@ export default function DieselPage() {
             Our Lead Specialty
           </div>
           <h1 aria-label="Grand Forks Diesel &amp; Heavy Equipment Repair" className="font-display text-white leading-none uppercase" style={{ fontSize: "clamp(2.5rem, 7vw, 6.5rem)" }}>
-            <span className="block" aria-hidden="true">Grand Forks</span>
-            <span className="block" aria-hidden="true" style={{ color: "#E11D2D" }}>Diesel &amp; Heavy</span>
-            <span className="block" aria-hidden="true">Equipment Repair</span>
+            <span className="block" aria-hidden="true">Grand Forks </span>
+            <span className="block" aria-hidden="true" style={{ color: "#E11D2D" }}>Diesel &amp; Heavy </span>
+            <span className="block" aria-hidden="true">Equipment Repair </span>
           </h1>
           <p className="text-white/70 text-xl mt-6 max-w-xl leading-relaxed">
             This is what we are built for. When your diesel truck or heavy equipment needs expert care, Driscoll&apos;s is the Grand Forks area shop that knows how to handle it.
@@ -241,8 +241,8 @@ export default function DieselPage() {
           <div>
             <div className="badge mb-6">DIESEL SPECIALIST</div>
             <h2 className="font-display text-white text-4xl md:text-5xl uppercase mt-4 mb-6">
-              Why Diesel Owners<br />
-              <span style={{ color: "#E11D2D" }}>Choose Driscoll&apos;s</span>
+              <span className="block">Why Diesel Owners </span>
+              <span className="block" style={{ color: "#E11D2D" }}>Choose Driscoll&apos;s</span>
             </h2>
             <p className="text-white/70 text-lg leading-relaxed mb-8">
               Most general repair shops are not equipped for diesel. We built this shop around the specialized needs of diesel truck and equipment owners in East Grand Forks and the surrounding communities. Our diagnostic tools, our knowledge, and our hands-on experience are focused on getting diesel right.

@@ -4,7 +4,7 @@ import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Grand Forks Diesel & Heavy Equipment Repair | Driscoll's Auto Service",
+  title: { absolute: "Grand Forks Diesel Repair | Driscoll's Auto Service" },
   description:
     "Diesel and heavy equipment repair in Grand Forks. Family-owned full-service shop in East Grand Forks. Honest diagnostics, fair prices. Call (218) 773-7809.",
   keywords: [
@@ -187,9 +187,9 @@ export default function HomePage() {
               Greater Grand Forks Diesel Specialist
             </div>
             <h1 aria-label="Grand Forks Diesel &amp; Heavy Equipment Repair" className="font-display text-white mb-2" style={{ fontSize: "clamp(3rem, 8vw, 7rem)", lineHeight: "0.95", letterSpacing: "-0.02em" }}>
-              <span className="block" aria-hidden="true">Grand Forks</span>
-              <span className="block" aria-hidden="true" style={{ color: "#E11D2D" }}>Diesel &amp; Heavy</span>
-              <span className="block" aria-hidden="true">Equipment Repair.</span>
+              <span className="block" aria-hidden="true">Grand Forks </span>
+              <span className="block" aria-hidden="true" style={{ color: "#E11D2D" }}>Diesel &amp; Heavy </span>
+              <span className="block" aria-hidden="true">Equipment Repair. </span>
             </h1>
             <p className="sr-only">Grand Forks diesel and heavy equipment repair from Driscoll&apos;s Auto Service in East Grand Forks, MN.</p>
             <p className="font-display text-xl md:text-2xl uppercase tracking-wider mt-6 mb-2 text-white/80">
@@ -320,9 +320,9 @@ export default function HomePage() {
           </div>
           <div>
             <div className="badge mb-6">EST. EAST GRAND FORKS</div>
-            <h2 className="font-display text-white text-4xl md:text-5xl uppercase leading-none mt-4">
-              Built on Hard Work<br />
-              <span style={{ color: "#E11D2D" }}>and Family Values</span>
+            <h2 aria-label="Built on Hard Work and Family Values" className="font-display text-white text-4xl md:text-5xl uppercase leading-none mt-4">
+              <span className="block" aria-hidden="true">Built on Hard Work </span>
+              <span className="block" aria-hidden="true" style={{ color: "#E11D2D" }}>and Family Values </span>
             </h2>
             <p className="text-white/60 text-base mt-3">A farming family&apos;s grit. A mechanic&apos;s passion. A community institution built by hand.</p>
             <p className="text-white/70 mt-6 text-lg leading-relaxed">
@@ -463,8 +463,8 @@ export default function HomePage() {
               Get In Touch
             </div>
             <h2 className="font-display text-white text-4xl md:text-6xl uppercase leading-none">
-              Call, Stop By,<br />
-              <span style={{ color: "#E11D2D" }}>or Send a Message</span>
+              <span className="block">Call, Stop By, </span>
+              <span className="block" style={{ color: "#E11D2D" }}>or Send a Message</span>
             </h2>
             <p className="text-white/60 text-base mt-4 max-w-2xl">
               Tell us what is going on with your vehicle. We will get back to you the same day.
