@@ -6,6 +6,18 @@ export const metadata: Metadata = {
   title: "Diesel & Heavy Equipment Repair | East Grand Forks, MN",
   description:
     "Diesel truck and heavy equipment repair specialists in East Grand Forks, MN. Computer diagnostics, engine repair, drivability solutions for all makes and models. Call (218) 773-7809.",
+  keywords: [
+    "diesel truck repair East Grand Forks MN",
+    "heavy equipment repair Minnesota",
+    "diesel engine repair Grand Forks ND",
+    "farm equipment repair East Grand Forks",
+    "diesel diagnostics East Grand Forks",
+    "diesel mechanic Grand Forks area",
+    "construction equipment repair Minnesota",
+    "diesel drivability repair East Grand Forks",
+    "Crookston diesel repair shop",
+    "diesel specialist East Grand Forks",
+  ],
 };
 
 const capabilities = [
@@ -86,7 +98,7 @@ export default function DieselPage() {
       <div className="w-full h-72 md:h-96 relative overflow-hidden">
         <Image
           src="/gallery/shop-06-full.jpg"
-          alt="Heavy equipment repair at Driscoll's Auto Service"
+          alt="Diesel and heavy equipment repair at Driscoll's Auto Service in East Grand Forks, MN"
           fill
           className="object-cover"
         />
@@ -149,16 +161,16 @@ export default function DieselPage() {
           </div>
           <div className="grid grid-cols-2 gap-3">
             <div className="polaroid">
-              <Image src="/gallery/shop-07-full.jpg" alt="Diesel repair work" width={400} height={300} className="w-full h-52 object-cover" />
+              <Image src="/gallery/shop-07-full.jpg" alt="Diesel truck repair at Driscoll's Auto Service East Grand Forks MN" width={400} height={300} className="w-full h-52 object-cover" />
             </div>
             <div className="polaroid mt-8">
-              <Image src="/gallery/shop-08-full.jpg" alt="Heavy equipment servicing" width={400} height={300} className="w-full h-52 object-cover" />
+              <Image src="/gallery/shop-08-full.jpg" alt="Heavy equipment servicing Minnesota farm and construction equipment" width={400} height={300} className="w-full h-52 object-cover" />
             </div>
             <div className="polaroid">
-              <Image src="/gallery/shop-05-full.jpg" alt="Shop equipment" width={400} height={300} className="w-full h-52 object-cover" />
+              <Image src="/gallery/shop-05-full.jpg" alt="Diesel repair tools and equipment at Driscoll's Auto Service" width={400} height={300} className="w-full h-52 object-cover" />
             </div>
             <div className="polaroid mt-8">
-              <Image src="/gallery/shop-04-full.jpg" alt="Diagnostic work" width={400} height={300} className="w-full h-52 object-cover" />
+              <Image src="/gallery/shop-04-full.jpg" alt="Computer diagnostics diesel vehicle East Grand Forks MN" width={400} height={300} className="w-full h-52 object-cover" />
             </div>
           </div>
         </div>

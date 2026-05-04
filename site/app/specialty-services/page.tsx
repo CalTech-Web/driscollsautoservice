@@ -3,9 +3,21 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Specialty Services | Ignition Interlock, Remote Start & Aftermarket Electronics",
+  title: "Specialty Services | Ignition Interlock, Remote Start & Electronics | East Grand Forks, MN",
   description:
-    "Breathalyzer installation, remote start systems, and aftermarket electronics installation in East Grand Forks, MN. Call Driscoll's Auto Service at (218) 773-7809.",
+    "Breathalyzer and ignition interlock installation, remote start systems, and aftermarket electronics in East Grand Forks, MN. Services most shops don't offer. Call (218) 773-7809.",
+  keywords: [
+    "ignition interlock installation East Grand Forks MN",
+    "breathalyzer installation Minnesota",
+    "remote start installation East Grand Forks",
+    "Astro Start remote starter Grand Forks",
+    "aftermarket electronics installation East Grand Forks",
+    "backup camera installation Minnesota",
+    "trailer wiring East Grand Forks",
+    "ignition interlock service Grand Forks ND",
+    "remote start system Crookston MN",
+    "aftermarket vehicle electronics East Grand Forks",
+  ],
 };
 
 const services = [

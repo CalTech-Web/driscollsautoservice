@@ -4,7 +4,19 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Service Areas | East Grand Forks, Grand Forks & Crookston",
   description:
-    "Driscoll's Auto Service serves East Grand Forks MN, Grand Forks ND, and Crookston MN. The only diesel specialist in the tri-city area. Call (218) 773-7809.",
+    "Driscoll's Auto Service serves East Grand Forks MN, Grand Forks ND, and Crookston MN. Diesel and auto repair for the entire tri-city area. Call (218) 773-7809.",
+  keywords: [
+    "auto repair East Grand Forks MN",
+    "auto repair Grand Forks ND",
+    "diesel repair Crookston MN",
+    "mechanic near Grand Forks",
+    "auto shop East Grand Forks",
+    "diesel repair near Crookston",
+    "car repair Grand Forks area",
+    "heavy equipment repair Crookston MN",
+    "East Grand Forks auto service",
+    "Red River Valley auto repair",
+  ],
 };
 
 const areas = [

@@ -3,9 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Auto Repair, All Makes & Models",
+  title: "Auto Repair, All Makes & Models | East Grand Forks, MN",
   description:
     "Full-service auto repair in East Grand Forks, MN. Engine, transmission, brakes, electrical, steering, suspension, alignments, and routine maintenance. Call (218) 773-7809.",
+  keywords: [
+    "auto repair East Grand Forks MN",
+    "engine repair East Grand Forks",
+    "transmission repair Grand Forks area",
+    "brake repair East Grand Forks",
+    "oil change East Grand Forks MN",
+    "wheel alignment East Grand Forks",
+    "electrical repair auto shop Minnesota",
+    "routine car maintenance East Grand Forks",
+    "full service auto repair Grand Forks ND",
+    "mechanic East Grand Forks",
+  ],
 };
 
 const repairs = [

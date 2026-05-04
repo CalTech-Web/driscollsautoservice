@@ -6,6 +6,18 @@ export const metadata: Metadata = {
   title: "Diesel & Auto Repair | East Grand Forks, MN",
   description:
     "Driscoll's Auto Service: East Grand Forks's trusted diesel and heavy equipment repair shop. Family-owned, full-service, serving Grand Forks ND and Crookston MN. Call (218) 773-7809.",
+  keywords: [
+    "diesel repair East Grand Forks MN",
+    "auto repair East Grand Forks",
+    "heavy equipment repair East Grand Forks",
+    "diesel truck repair Grand Forks ND",
+    "family owned auto repair shop Minnesota",
+    "oil change East Grand Forks",
+    "engine repair East Grand Forks",
+    "ignition interlock installation Minnesota",
+    "remote start installation East Grand Forks",
+    "Driscoll's Auto Service",
+  ],
 };
 
 const services = [
@@ -80,15 +92,66 @@ const whyChoose = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Do you work on diesel vehicles?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, diesel repair is our specialty. We service diesel trucks and heavy equipment of all makes and models. If it runs on diesel, we have the tools and training to diagnose and fix it.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you service all makes and models?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We service gas and diesel vehicles of all makes and models. Whether you drive a domestic truck or an imported car, our technicians have the equipment and expertise to help.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you install remote starters?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We install remote start systems including the Astro Start 2 Way RSS S5225. Call us to ask about scheduling an installation appointment.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are your hours?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Monday through Friday, 8:00 AM to 5:00 PM. Saturday appointments are available by appointment only. We are closed on Sunday.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you serve Grand Forks, ND?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We are located just across the river in East Grand Forks, MN, and we regularly serve customers from Grand Forks, ND and Crookston, MN.",
+      },
+    },
+  ],
+};
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* HERO */}
       <section className="relative bg-[#0f0f0f] overflow-hidden" style={{ minHeight: "85vh", display: "flex", alignItems: "center" }}>
         <div className="absolute inset-0 z-0">
           <Image
             src="/gallery/shop-01-full.jpg"
-            alt="Driscoll's Auto Service shop"
+            alt="Driscoll's Auto Service diesel and auto repair shop in East Grand Forks, MN"
             fill
             className="object-cover"
             style={{ opacity: 0.18 }}
@@ -215,9 +278,14 @@ export default function HomePage() {
       <section className="bg-[#0f0f0f] py-20">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="grid grid-cols-2 gap-3">
-            {[2, 3, 4, 5].map((n, idx) => (
+            {[
+              { n: 2, alt: "Auto repair bays at Driscoll's Auto Service East Grand Forks MN" },
+              { n: 3, alt: "Specialty service work at Driscoll's Auto Service East Grand Forks" },
+              { n: 4, alt: "Vehicle diagnostics at Driscoll's Auto Service Grand Forks area" },
+              { n: 5, alt: "Family-owned auto repair shop in East Grand Forks Minnesota" },
+            ].map(({ n, alt }, idx) => (
               <div key={n} className={`polaroid ${idx % 2 === 1 ? "mt-8" : ""}`}>
-                <Image src={`/gallery/shop-0${n}-full.jpg`} alt={`Driscoll's shop`} width={400} height={300} className="w-full h-48 object-cover" />
+                <Image src={`/gallery/shop-0${n}-full.jpg`} alt={alt} width={400} height={300} className="w-full h-48 object-cover" />
               </div>
             ))}
           </div>
@@ -331,11 +399,15 @@ export default function HomePage() {
           </h2>
           <p className="text-white/60 text-base mb-8">A working shop in East Grand Forks with 10+ years of trusted repairs behind it.</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            {[6, 7, 8].map((n) => (
+            {[
+              { n: 6, alt: "Diesel and heavy equipment repair East Grand Forks MN" },
+              { n: 7, alt: "Heavy equipment servicing at Driscoll's Auto Service Minnesota" },
+              { n: 8, alt: "Driscoll's Auto Service shop exterior East Grand Forks" },
+            ].map(({ n, alt }) => (
               <div key={n} className="aspect-square overflow-hidden">
                 <Image
                   src={`/gallery/shop-0${n}-full.jpg`}
-                  alt={`Driscoll's Auto Service shop photo`}
+                  alt={alt}
                   width={400}
                   height={400}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"

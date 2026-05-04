@@ -2,9 +2,21 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Schedule Service",
+  title: "Contact Us | Schedule Service | East Grand Forks, MN",
   description:
-    "Contact Driscoll's Auto Service in East Grand Forks, MN. Call (218) 773-7809 or send us a message to schedule auto repair, diesel service, or specialty installations.",
+    "Contact Driscoll's Auto Service in East Grand Forks, MN. Call (218) 773-7809 or send a message to schedule auto repair, diesel service, or specialty installations.",
+  keywords: [
+    "contact Driscoll's Auto Service",
+    "schedule auto repair East Grand Forks",
+    "book diesel repair Grand Forks area",
+    "auto shop phone number East Grand Forks",
+    "mechanic appointment East Grand Forks MN",
+    "diesel service appointment Grand Forks",
+    "622 10th Street NE East Grand Forks",
+    "auto repair shop hours East Grand Forks",
+    "get directions auto shop East Grand Forks",
+    "Driscoll's Auto Service contact",
+  ],
 };
 
 export default function ContactPage() {

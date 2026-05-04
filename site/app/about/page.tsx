@@ -3,9 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Us | The Driscoll Family Legacy",
+  title: "About Us | Family-Owned Auto Repair | East Grand Forks, MN",
   description:
-    "Driscoll's Auto Service was founded by Kirk Driscoll, who grew up farming in East Grand Forks. His son Kaleb carries the shop forward with the same integrity and work ethic. Call (218) 773-7809.",
+    "Driscoll's Auto Service is a family-owned auto repair shop in East Grand Forks, MN, founded by Kirk Driscoll and now run by his son Kaleb with the same integrity and work ethic. Call (218) 773-7809.",
+  keywords: [
+    "family owned auto repair East Grand Forks",
+    "Driscoll's Auto Service history",
+    "Kirk Driscoll East Grand Forks",
+    "Kaleb Driscoll auto repair",
+    "local auto shop East Grand Forks MN",
+    "trusted mechanic East Grand Forks",
+    "community auto repair shop Minnesota",
+    "independent auto repair Grand Forks area",
+    "family mechanic East Grand Forks",
+    "honest auto repair shop Minnesota",
+  ],
 };
 
 export default function AboutPage() {
@@ -75,16 +87,16 @@ export default function AboutPage() {
           {/* Photo grid */}
           <div className="grid grid-cols-2 gap-3">
             <div className="polaroid">
-              <Image src="/gallery/shop-01-full.jpg" alt="Driscoll's Auto Service shop" width={400} height={300} className="w-full h-52 object-cover" />
+              <Image src="/gallery/shop-01-full.jpg" alt="Driscoll's Auto Service shop front in East Grand Forks, MN" width={400} height={300} className="w-full h-52 object-cover" />
             </div>
             <div className="polaroid mt-8">
-              <Image src="/gallery/shop-02-full.jpg" alt="Shop interior" width={400} height={300} className="w-full h-52 object-cover" />
+              <Image src="/gallery/shop-02-full.jpg" alt="Interior of Driscoll's Auto Service repair shop East Grand Forks" width={400} height={300} className="w-full h-52 object-cover" />
             </div>
             <div className="polaroid">
-              <Image src="/gallery/shop-03-full.jpg" alt="Work bay" width={400} height={300} className="w-full h-52 object-cover" />
+              <Image src="/gallery/shop-03-full.jpg" alt="Work bay at Driscoll's family-owned auto shop East Grand Forks MN" width={400} height={300} className="w-full h-52 object-cover" />
             </div>
             <div className="polaroid mt-8">
-              <Image src="/gallery/shop-06-full.jpg" alt="Heavy equipment work" width={400} height={300} className="w-full h-52 object-cover" />
+              <Image src="/gallery/shop-06-full.jpg" alt="Heavy equipment repair work at Driscoll's Auto Service Minnesota" width={400} height={300} className="w-full h-52 object-cover" />
             </div>
           </div>
         </div>
@@ -99,16 +111,16 @@ export default function AboutPage() {
           {/* Photos */}
           <div className="grid grid-cols-2 gap-3 order-2 lg:order-1">
             <div className="polaroid">
-              <Image src="/gallery/shop-07-full.jpg" alt="Shop work" width={400} height={300} className="w-full h-52 object-cover" />
+              <Image src="/gallery/shop-07-full.jpg" alt="Kaleb Driscoll continuing the family auto repair legacy East Grand Forks" width={400} height={300} className="w-full h-52 object-cover" />
             </div>
             <div className="polaroid mt-8">
-              <Image src="/gallery/shop-08-full.jpg" alt="Driscoll's shop exterior" width={400} height={300} className="w-full h-52 object-cover" />
+              <Image src="/gallery/shop-08-full.jpg" alt="Driscoll's Auto Service exterior East Grand Forks Minnesota" width={400} height={300} className="w-full h-52 object-cover" />
             </div>
             <div className="polaroid">
-              <Image src="/gallery/shop-04-full.jpg" alt="Shop tools" width={400} height={300} className="w-full h-52 object-cover" />
+              <Image src="/gallery/shop-04-full.jpg" alt="Auto repair tools and equipment at Driscoll's East Grand Forks MN" width={400} height={300} className="w-full h-52 object-cover" />
             </div>
             <div className="polaroid mt-8">
-              <Image src="/gallery/shop-05-full.jpg" alt="Repair work" width={400} height={300} className="w-full h-52 object-cover" />
+              <Image src="/gallery/shop-05-full.jpg" alt="Vehicle repair work at Driscoll's family-owned shop Minnesota" width={400} height={300} className="w-full h-52 object-cover" />
             </div>
           </div>
 
