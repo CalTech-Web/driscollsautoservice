@@ -20,22 +20,22 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     default:
-      "Driscoll's Auto Service | Diesel & Heavy Equipment Repair | East Grand Forks, MN",
+      "Driscoll's Auto Service | Grand Forks Diesel & Heavy Equipment Repair",
     template: "%s | Driscoll's Auto Service",
   },
   description:
-    "East Grand Forks's trusted full-service auto repair shop, specializing in diesel and heavy equipment. Serving Grand Forks ND, East Grand Forks MN, and Crookston MN. Call (218) 773-7809.",
+    "Grand Forks's trusted full-service auto repair shop, specializing in diesel and heavy equipment. Located in East Grand Forks, MN, serving the Greater Grand Forks region. Call (218) 773-7809.",
   keywords: [
-    "diesel repair East Grand Forks",
-    "heavy equipment repair Minnesota",
+    "diesel repair Grand Forks",
+    "heavy equipment repair Grand Forks",
+    "auto repair Grand Forks",
     "auto repair Grand Forks ND",
-    "auto repair East Grand Forks MN",
     "Driscoll's Auto Service",
-    "ignition interlock installation East Grand Forks",
-    "remote start installation Minnesota",
-    "Crookston diesel repair",
-    "family owned auto shop East Grand Forks",
-    "diesel truck repair Grand Forks area",
+    "Grand Forks diesel mechanic",
+    "ignition interlock Grand Forks",
+    "remote start Grand Forks",
+    "family owned auto shop Grand Forks",
+    "diesel truck repair Grand Forks",
   ],
   openGraph: {
     type: "website",
@@ -44,20 +44,20 @@ export const metadata: Metadata = {
     siteName: "Driscoll's Auto Service",
     images: [
       {
-        url: "/gallery/shop-01-full.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Driscoll's Auto Service diesel and auto repair shop in East Grand Forks, MN",
+        url: "/gallery/shop-real-1920.jpg",
+        width: 1920,
+        height: 960,
+        alt: "Driscoll's Auto Service shop, Grand Forks area diesel and auto repair",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Driscoll's Auto Service | Diesel & Heavy Equipment Repair | East Grand Forks, MN",
+      "Driscoll's Auto Service | Grand Forks Diesel & Heavy Equipment Repair",
     description:
-      "East Grand Forks's trusted full-service auto repair shop, specializing in diesel and heavy equipment. Call (218) 773-7809.",
-    images: ["/gallery/shop-01-full.jpg"],
+      "Grand Forks's trusted full-service auto repair shop, specializing in diesel and heavy equipment. Call (218) 773-7809.",
+    images: ["/gallery/shop-real-1920.jpg"],
   },
   metadataBase: new URL("https://driscollsautoservice.com"),
 };
@@ -70,7 +70,7 @@ const localBusinessSchema = {
   alternateName: "Driscoll's Auto",
   foundingDate: "2013",
   description:
-    "East Grand Forks's trusted full-service auto repair shop, specializing in diesel and heavy equipment. Family-owned and operated.",
+    "Grand Forks's trusted full-service auto repair shop, specializing in diesel and heavy equipment. Family-owned and operated, located in East Grand Forks, MN.",
   url: "https://driscollsautoservice.com",
   telephone: "+12187737809",
   address: {
@@ -95,9 +95,8 @@ const localBusinessSchema = {
     },
   ],
   image: [
-    "https://driscollsautoservice.com/gallery/shop-01-full.jpg",
-    "https://driscollsautoservice.com/gallery/shop-02-full.jpg",
-    "https://driscollsautoservice.com/gallery/shop-06-full.jpg",
+    "https://driscollsautoservice.com/gallery/shop-real-1920.jpg",
+    "https://driscollsautoservice.com/gallery/shop-real-1280.jpg",
   ],
   sameAs: [
     "https://www.facebook.com/driscollauto/",
@@ -137,7 +136,7 @@ const websiteSchema = {
   name: "Driscoll's Auto Service",
   url: "https://driscollsautoservice.com",
   description:
-    "East Grand Forks's trusted diesel and auto repair shop. Family-owned, specializing in diesel trucks, heavy equipment, and all makes and models.",
+    "Grand Forks's trusted diesel and auto repair shop. Family-owned, specializing in diesel trucks, heavy equipment, and all makes and models. Located in East Grand Forks, MN.",
 };
 
 export default function RootLayout({

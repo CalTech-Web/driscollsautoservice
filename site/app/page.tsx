@@ -4,19 +4,19 @@ import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Diesel & Auto Repair | East Grand Forks, MN",
+  title: "Grand Forks Diesel & Heavy Equipment Repair | Driscoll's Auto Service",
   description:
-    "Driscoll's Auto Service: East Grand Forks's trusted diesel and heavy equipment repair shop. Family-owned, full-service, serving Grand Forks ND and Crookston MN. Call (218) 773-7809.",
+    "Diesel and heavy equipment repair in Grand Forks. Family-owned full-service shop, located just across the river in East Grand Forks. Honest diagnostics, fair prices. Call (218) 773-7809.",
   keywords: [
-    "diesel repair East Grand Forks MN",
-    "auto repair East Grand Forks",
-    "heavy equipment repair East Grand Forks",
-    "diesel truck repair Grand Forks ND",
-    "family owned auto repair shop Minnesota",
-    "oil change East Grand Forks",
-    "engine repair East Grand Forks",
-    "ignition interlock installation Minnesota",
-    "remote start installation East Grand Forks",
+    "diesel repair Grand Forks",
+    "diesel mechanic Grand Forks ND",
+    "heavy equipment repair Grand Forks",
+    "auto repair Grand Forks",
+    "diesel truck repair Grand Forks",
+    "diesel shop Grand Forks ND",
+    "auto mechanic Grand Forks",
+    "Grand Forks auto service",
+    "Grand Forks diesel specialist",
     "Driscoll's Auto Service",
   ],
   alternates: {
@@ -25,15 +25,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://driscollsautoservice.com",
-    title: "Driscoll's Auto Service | Diesel & Auto Repair | East Grand Forks, MN",
+    title: "Grand Forks Diesel & Heavy Equipment Repair | Driscoll's Auto Service",
     description:
-      "East Grand Forks's trusted diesel and heavy equipment repair shop. Family-owned, full-service. Serving Grand Forks ND and Crookston MN. Call (218) 773-7809.",
+      "Diesel and heavy equipment specialists serving Grand Forks. Family-owned, honest, fair. Located just across the river in East Grand Forks. Call (218) 773-7809.",
     images: [
       {
-        url: "/gallery/shop-01-full.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Driscoll's Auto Service diesel and auto repair shop in East Grand Forks, MN",
+        url: "/gallery/shop-real-1920.jpg",
+        width: 1920,
+        height: 960,
+        alt: "Driscoll's Auto Service shop exterior, serving Grand Forks from East Grand Forks MN",
       },
     ],
   },
@@ -45,14 +45,14 @@ const services = [
     title: "All Makes & Models",
     desc: "Engine, transmission, brakes, electrical, steering, suspension, alignments, and routine maintenance for gas and diesel vehicles, domestic or import.",
     href: "/services/",
-    accent: "#F5D000",
+    accent: "#E11D2D",
   },
   {
     number: "02",
     title: "Other Services",
     desc: "Ignition interlock installation, remote start systems, and aftermarket electronics. Specialty work most shops will not touch.",
     href: "/specialty-services/",
-    accent: "#D14C2B",
+    accent: "#E11D2D",
   },
 ];
 
@@ -167,47 +167,42 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       {/* HERO */}
-      <section className="relative bg-[#0f0f0f] overflow-hidden" style={{ minHeight: "85vh", display: "flex", alignItems: "center" }}>
+      <section className="relative bg-black overflow-hidden" style={{ minHeight: "85vh", display: "flex", alignItems: "center" }}>
         <div className="absolute inset-0 z-0">
           <Image
-            src="/gallery/shop-01-full.jpg"
-            alt="Driscoll's Auto Service diesel and auto repair shop in East Grand Forks, MN"
+            src="/gallery/shop-real-1920.jpg"
+            alt="Driscoll's Auto Service shop exterior, serving Grand Forks from East Grand Forks MN"
             fill
             className="object-cover"
-            style={{ opacity: 0.18 }}
+            style={{ opacity: 0.35 }}
             priority
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40" />
         </div>
-        {/* Blueprint grid overlay */}
-        <div className="absolute inset-0 z-0 blueprint-grid" />
-        {/* Hazard stripe accent right */}
-        <div className="absolute top-0 right-0 w-1/3 h-full z-0 opacity-10 hazard-stripe" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 lg:py-28 w-full">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-[#F5D000] text-[#1a1a1a] px-4 py-1.5 mb-6 font-bold text-xs uppercase tracking-widest">
-              <span className="w-2 h-2 bg-[#1a1a1a] rounded-full" />
-              Est. East Grand Forks, MN
+            <div className="inline-flex items-center gap-2 bg-[#E11D2D] text-white px-4 py-1.5 mb-6 font-bold text-xs uppercase tracking-widest">
+              <span className="w-2 h-2 bg-white rounded-full" />
+              Greater Grand Forks Diesel Specialist
             </div>
             <h1 className="font-display text-white mb-2" style={{ fontSize: "clamp(3rem, 8vw, 7rem)", lineHeight: "0.95", letterSpacing: "-0.02em" }}>
-              DIESEL
+              GRAND FORKS
               <br />
-              <span style={{ color: "#F5D000" }}>&amp; HEAVY</span>
+              <span style={{ color: "#E11D2D" }}>DIESEL &amp; HEAVY</span>
               <br />
-              EQUIPMENT
-              <br />
-              REPAIR.
+              EQUIPMENT REPAIR.
             </h1>
-            <p className="font-display text-xl md:text-2xl uppercase tracking-wider mt-4 mb-2" style={{ color: "#D14C2B" }}>
-              East Grand Forks, MN
+            <p className="font-display text-xl md:text-2xl uppercase tracking-wider mt-6 mb-2 text-white/80">
+              Driscoll&apos;s Auto Service · East Grand Forks, MN
             </p>
             <p className="text-white/70 text-lg md:text-xl max-w-xl mt-4 mb-8 leading-relaxed">
-              Diesel trucks, heavy equipment, and daily drivers. Honest diagnostics and quality repairs for East Grand Forks, Grand Forks, and Crookston.
+              Diesel trucks, heavy equipment, and daily drivers. Honest diagnostics and quality repairs for the Greater Grand Forks region.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-start">
               <a
                 href="tel:2187737809"
-                className="bg-[#F5D000] text-[#1a1a1a] font-display text-2xl md:text-3xl px-8 py-4 hover:bg-white transition-colors inline-flex items-center gap-3"
+                className="bg-[#E11D2D] text-white font-display text-2xl md:text-3xl px-8 py-4 hover:bg-white hover:text-[#E11D2D] transition-colors inline-flex items-center gap-3"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
@@ -216,7 +211,7 @@ export default function HomePage() {
               </a>
               <Link
                 href="/#contact"
-                className="border-2 border-white/40 text-white font-display text-lg px-6 py-4 hover:border-[#F5D000] hover:text-[#F5D000] transition-colors uppercase tracking-wider"
+                className="border-2 border-white/40 text-white font-display text-lg px-6 py-4 hover:border-[#E11D2D] hover:text-[#E11D2D] transition-colors uppercase tracking-wider"
               >
                 Schedule Service
               </Link>
@@ -227,27 +222,27 @@ export default function HomePage() {
       </section>
 
       {/* MARQUEE TICKER */}
-      <div className="bg-[#F5D000] overflow-hidden border-y-4 border-[#1a1a1a]">
+      <div className="bg-[#E11D2D] overflow-hidden border-y-4 border-[#1a1a1a]">
         <div className="marquee-track py-3">
           {[0, 1].map((copy) => (
             <div key={copy} className="flex items-center gap-0 select-none" aria-hidden={copy === 1}>
               {[
-                "Diesel & Heavy Equipment Repair",
+                "Grand Forks Diesel & Heavy Equipment",
                 "All Makes & Models",
                 "Family Owned & Operated",
-                "10+ Years in East Grand Forks",
+                "Serving Greater Grand Forks 10+ Years",
                 "Honest Work, Fair Prices",
                 "Computer Diagnostics",
                 "Remote Start Installation",
                 "Ignition Interlock Service",
                 "Saturday Appointments Available",
-                "Serving Grand Forks ND & Crookston MN",
+                "Just Across the River from Grand Forks ND",
               ].map((item) => (
                 <span key={item} className="flex items-center">
-                  <span className="font-display text-[#1a1a1a] text-sm md:text-base uppercase tracking-widest whitespace-nowrap px-6">
+                  <span className="font-display text-white text-sm md:text-base uppercase tracking-widest whitespace-nowrap px-6">
                     {item}
                   </span>
-                  <span className="text-[#1a1a1a]/40 text-xs" aria-hidden="true">◆</span>
+                  <span className="text-white/40 text-xs" aria-hidden="true">◆</span>
                 </span>
               ))}
             </div>
@@ -260,26 +255,26 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="mb-12">
             <h2 className="font-display text-white text-4xl md:text-6xl uppercase">
-              What We <span style={{ color: "#F5D000" }}>Fix</span>
+              What We <span style={{ color: "#E11D2D" }}>Fix</span>
             </h2>
             <p className="text-white/60 text-base mt-3">From oil changes to full engine rebuilds, we service diesel and gas vehicles of all makes and models.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 border border-[#F5D000]/20">
+          <div className="grid grid-cols-1 md:grid-cols-2 border border-[#E11D2D]/20">
             {services.map((svc, i) => (
               <Link
                 key={svc.number}
                 href={svc.href}
-                className={`group relative p-8 hover:bg-[#0f0f0f] transition-colors flex flex-col gap-4 ${i === 0 ? "border-b border-[#F5D000]/20 md:border-b-0 md:border-r" : ""}`}
+                className={`group relative p-8 hover:bg-[#0f0f0f] transition-colors flex flex-col gap-4 ${i === 0 ? "border-b border-[#E11D2D]/20 md:border-b-0 md:border-r" : ""}`}
               >
                 <span className="font-display text-8xl font-bold leading-none" style={{ color: svc.accent, opacity: 0.15 }}>
                   {svc.number}
                 </span>
                 <div style={{ borderTop: `3px solid ${svc.accent}`, width: "3rem", marginTop: "-3rem" }} />
-                <h3 className="font-display text-white text-2xl md:text-3xl uppercase mt-2 group-hover:text-[#F5D000] transition-colors">
+                <h3 className="font-display text-white text-2xl md:text-3xl uppercase mt-2 group-hover:text-[#E11D2D] transition-colors">
                   {svc.title}
                 </h3>
                 <p className="text-white/60 text-sm leading-relaxed flex-1">{svc.desc}</p>
-                <span className="text-[#F5D000] text-sm font-bold uppercase tracking-widest flex items-center gap-2">
+                <span className="text-[#E11D2D] text-sm font-bold uppercase tracking-widest flex items-center gap-2">
                   View Services
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -297,23 +292,37 @@ export default function HomePage() {
       {/* ABOUT STRIP */}
       <section id="about" className="bg-[#0f0f0f] py-20 scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="grid grid-cols-2 gap-3">
-            {[
-              { n: 2, alt: "Auto repair bays at Driscoll's Auto Service East Grand Forks MN" },
-              { n: 3, alt: "Specialty service work at Driscoll's Auto Service East Grand Forks" },
-              { n: 4, alt: "Vehicle diagnostics at Driscoll's Auto Service Grand Forks area" },
-              { n: 5, alt: "Family-owned auto repair shop in East Grand Forks Minnesota" },
-            ].map(({ n, alt }, idx) => (
-              <div key={n} className={`polaroid ${idx % 2 === 1 ? "mt-8" : ""}`}>
-                <Image src={`/gallery/shop-0${n}-full.jpg`} alt={alt} width={400} height={300} className="w-full h-48 object-cover" />
-              </div>
-            ))}
+          <div className="space-y-4">
+            <div className="polaroid">
+              <Image
+                src="/gallery/kirk-driscoll.jpg"
+                alt="Kirk Driscoll, founder of Driscoll's Auto Service"
+                width={800}
+                height={1200}
+                className="w-full h-80 object-cover object-top"
+              />
+              <p className="text-white/70 text-xs uppercase tracking-widest text-center pt-2 pb-1 font-bold">
+                Kirk Driscoll, 1961 - 2025
+              </p>
+            </div>
+            <div className="polaroid">
+              <Image
+                src="/gallery/shop-real-1280.jpg"
+                alt="Driscoll's Auto Service shop building, East Grand Forks MN"
+                width={1280}
+                height={854}
+                className="w-full h-56 object-cover"
+              />
+              <p className="text-white/70 text-xs uppercase tracking-widest text-center pt-2 pb-1 font-bold">
+                622 10th Street NE
+              </p>
+            </div>
           </div>
           <div>
             <div className="badge mb-6">EST. EAST GRAND FORKS</div>
             <h2 className="font-display text-white text-4xl md:text-5xl uppercase leading-none mt-4">
               Built on Hard Work<br />
-              <span style={{ color: "#F5D000" }}>and Family Values</span>
+              <span style={{ color: "#E11D2D" }}>and Family Values</span>
             </h2>
             <p className="text-white/60 text-base mt-3">A farming family&apos;s grit. A mechanic&apos;s passion. A community institution built by hand.</p>
             <p className="text-white/70 mt-6 text-lg leading-relaxed">
@@ -322,12 +331,12 @@ export default function HomePage() {
             <p className="text-white/70 mt-4 text-lg leading-relaxed">
               Kirk passed away on October 7, 2025. His son Kaleb now carries the shop forward, bringing those same values to every vehicle that comes through the door.
             </p>
-            <p className="mt-4 text-lg font-semibold" style={{ color: "#F5D000" }}>
+            <p className="mt-4 text-lg font-semibold" style={{ color: "#E11D2D" }}>
               Not a chain. Not a franchise. Your neighbor.
             </p>
             <Link
               href="/#contact"
-              className="mt-6 inline-block border-2 border-[#F5D000] text-[#F5D000] font-display uppercase tracking-wider px-6 py-3 hover:bg-[#F5D000] hover:text-[#1a1a1a] transition-colors"
+              className="mt-6 inline-block border-2 border-[#E11D2D] text-[#E11D2D] font-display uppercase tracking-wider px-6 py-3 hover:bg-[#E11D2D] hover:text-[#1a1a1a] transition-colors"
             >
               Get in Touch
             </Link>
@@ -336,27 +345,27 @@ export default function HomePage() {
       </section>
 
       {/* WHY DRISCOLL'S */}
-      <section className="bg-[#F5D000] py-16">
+      <section className="bg-[#0f0f0f] py-16 border-t-4 border-b-4 border-[#E11D2D]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="mb-10">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-3">
-              <h2 className="font-display text-[#1a1a1a] text-3xl md:text-5xl uppercase leading-none">
-                Why Driscoll&apos;s
+              <h2 className="font-display text-white text-3xl md:text-5xl uppercase leading-none">
+                Why <span style={{ color: "#E11D2D" }}>Driscoll&apos;s</span>
               </h2>
-              <p className="text-[#1a1a1a]/70 text-sm font-semibold uppercase tracking-widest">
-                East Grand Forks, MN &bull; Est. 2013
+              <p className="text-white/50 text-sm font-semibold uppercase tracking-widest">
+                Greater Grand Forks &bull; Est. 2013
               </p>
             </div>
-            <p className="text-[#1a1a1a]/70 text-base">Four reasons drivers in East Grand Forks, Grand Forks, and Crookston trust us first.</p>
+            <p className="text-white/60 text-base">Four reasons Grand Forks drivers trust us first.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {whyChoose.map((item) => (
-              <div key={item.title} className="bg-[#1a1a1a] p-6 flex gap-5 group hover:bg-[#0f0f0f] transition-colors">
-                <div className="flex-shrink-0 w-14 h-14 bg-[#F5D000] flex items-center justify-center text-[#1a1a1a]">
+              <div key={item.title} className="bg-[#1a1a1a] p-6 flex gap-5 group hover:bg-black border border-[#E11D2D]/20 hover:border-[#E11D2D] transition-colors">
+                <div className="flex-shrink-0 w-14 h-14 bg-[#E11D2D] flex items-center justify-center text-white">
                   {item.icon}
                 </div>
                 <div>
-                  <h3 className="font-display text-white text-xl uppercase mb-2 group-hover:text-[#F5D000] transition-colors">
+                  <h3 className="font-display text-white text-xl uppercase mb-2 group-hover:text-[#E11D2D] transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
@@ -367,33 +376,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* GALLERY STRIP */}
-      <section className="bg-[#0f0f0f] py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="font-display text-white text-3xl md:text-5xl uppercase mb-3">
-            The <span style={{ color: "#F5D000" }}>Shop</span>
-          </h2>
-          <p className="text-white/60 text-base mb-8">A working shop in East Grand Forks with 10+ years of trusted repairs behind it.</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            {[
-              { n: 6, alt: "Diesel and heavy equipment repair East Grand Forks MN" },
-              { n: 7, alt: "Heavy equipment servicing at Driscoll's Auto Service Minnesota" },
-              { n: 8, alt: "Driscoll's Auto Service shop exterior East Grand Forks" },
-            ].map(({ n, alt }) => (
-              <div key={n} className="aspect-square overflow-hidden">
-                <Image
-                  src={`/gallery/shop-0${n}-full.jpg`}
-                  alt={alt}
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            ))}
-            <div className="aspect-square bg-[#1a1a1a] border border-[#F5D000]/20 flex flex-col items-center justify-center p-6 text-center">
-              <span className="font-display text-[#F5D000] text-4xl">10+</span>
-              <span className="text-white font-bold text-lg mt-2">Years Serving</span>
-              <span className="text-white/60 text-sm mt-1">East Grand Forks</span>
+      {/* SHOP PHOTO BAND */}
+      <section className="bg-black">
+        <div className="relative w-full h-72 md:h-[28rem] overflow-hidden">
+          <Image
+            src="/gallery/shop-real-1920.jpg"
+            alt="Driscoll's Auto Service shop, serving Grand Forks from East Grand Forks MN"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 px-6 md:px-10 pb-6 md:pb-10">
+            <div className="max-w-7xl mx-auto">
+              <p className="text-white/70 text-xs uppercase tracking-widest font-bold">622 10th Street NE</p>
+              <h2 className="font-display text-white text-3xl md:text-5xl uppercase leading-tight">
+                The <span style={{ color: "#E11D2D" }}>Shop</span> in East Grand Forks
+              </h2>
             </div>
           </div>
         </div>
@@ -405,7 +403,7 @@ export default function HomePage() {
           <div className="mb-10">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-3">
               <h2 className="font-display text-white text-3xl md:text-5xl uppercase leading-none">
-                What Customers <span style={{ color: "#F5D000" }}>Say</span>
+                What Customers <span style={{ color: "#E11D2D" }}>Say</span>
               </h2>
               <p className="text-white/40 text-sm font-semibold uppercase tracking-widest">
                 Real Reviews
@@ -419,25 +417,25 @@ export default function HomePage() {
                 quote: "Kaleb diagnosed my diesel pickup in the same afternoon I dropped it off. Fair price, honest assessment, no runaround. This is the only shop I trust for my work truck.",
                 name: "Derek T.",
                 location: "Grand Forks, ND",
-                accent: "#F5D000",
+                accent: "#E11D2D",
               },
               {
                 quote: "I drove from Crookston because nobody down here works on diesels like they do. Worth every mile. They explained everything before touching anything. Real stand-up people.",
                 name: "Mike R.",
                 location: "Crookston, MN",
-                accent: "#D14C2B",
+                accent: "#E11D2D",
               },
               {
                 quote: "Kirk always treated us right, and Kaleb carries that same integrity. Three vehicles in our family have been through their shop. Wouldn't go anywhere else in the valley.",
                 name: "Sandra K.",
                 location: "East Grand Forks, MN",
-                accent: "#F5D000",
+                accent: "#E11D2D",
               },
             ].map((t) => (
               <div key={t.name} className="bg-[#1a1a1a] p-8 flex flex-col gap-5 border-t-4" style={{ borderColor: t.accent }}>
                 <div className="flex gap-0.5">
                   {[1,2,3,4,5].map((s) => (
-                    <svg key={s} xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="#F5D000">
+                    <svg key={s} xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="#E11D2D">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                     </svg>
                   ))}
@@ -461,12 +459,12 @@ export default function HomePage() {
       <section id="contact" className="bg-[#1a1a1a] py-20 scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4">
           <div className="mb-12">
-            <div className="inline-flex items-center gap-2 bg-[#F5D000] text-[#1a1a1a] px-4 py-1 mb-6 font-bold text-xs uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 bg-[#E11D2D] text-[#1a1a1a] px-4 py-1 mb-6 font-bold text-xs uppercase tracking-widest">
               Get In Touch
             </div>
             <h2 className="font-display text-white text-4xl md:text-6xl uppercase leading-none">
               Call, Stop By,<br />
-              <span style={{ color: "#F5D000" }}>or Send a Message</span>
+              <span style={{ color: "#E11D2D" }}>or Send a Message</span>
             </h2>
             <p className="text-white/60 text-base mt-4 max-w-2xl">
               Tell us what is going on with your vehicle. We will get back to you the same day.
@@ -476,19 +474,19 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Contact info column */}
             <div className="lg:col-span-1 space-y-4">
-              <div className="border-2 border-[#F5D000] p-6 bg-[#0f0f0f]">
-                <h3 className="font-display text-[#F5D000] text-sm uppercase tracking-widest mb-3">Call Now</h3>
+              <div className="border-2 border-[#E11D2D] p-6 bg-[#0f0f0f]">
+                <h3 className="font-display text-[#E11D2D] text-sm uppercase tracking-widest mb-3">Call Now</h3>
                 <a
                   href="tel:2187737809"
-                  className="font-display text-white text-3xl hover:text-[#F5D000] transition-colors block"
+                  className="font-display text-white text-3xl hover:text-[#E11D2D] transition-colors block"
                 >
                   (218) 773-7809
                 </a>
                 <p className="text-white/50 text-sm mt-2">Tap to call from your phone.</p>
               </div>
 
-              <div className="border border-[#F5D000]/30 p-6 bg-[#0f0f0f]">
-                <h3 className="font-display text-[#F5D000] text-sm uppercase tracking-widest mb-3">Visit the Shop</h3>
+              <div className="border border-[#E11D2D]/30 p-6 bg-[#0f0f0f]">
+                <h3 className="font-display text-[#E11D2D] text-sm uppercase tracking-widest mb-3">Visit the Shop</h3>
                 <address className="not-italic text-white/80 leading-relaxed">
                   <p className="font-bold text-white">Driscoll&apos;s Auto Service</p>
                   <p>622 10th Street NE</p>
@@ -498,7 +496,7 @@ export default function HomePage() {
                   href="https://maps.google.com/maps?cid=1197783825002618747"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 text-[#F5D000] hover:text-white transition-colors text-sm font-bold uppercase tracking-widest"
+                  className="mt-4 inline-flex items-center gap-2 text-[#E11D2D] hover:text-white transition-colors text-sm font-bold uppercase tracking-widest"
                 >
                   Get Directions
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
@@ -507,8 +505,8 @@ export default function HomePage() {
                 </a>
               </div>
 
-              <div className="border border-[#F5D000]/30 p-6 bg-[#0f0f0f]">
-                <h3 className="font-display text-[#F5D000] text-sm uppercase tracking-widest mb-3">Hours</h3>
+              <div className="border border-[#E11D2D]/30 p-6 bg-[#0f0f0f]">
+                <h3 className="font-display text-[#E11D2D] text-sm uppercase tracking-widest mb-3">Hours</h3>
                 <div className="space-y-1 text-sm">
                   {[
                     { day: "Mon - Fri", time: "8:00 AM - 5:00 PM" },
@@ -519,7 +517,7 @@ export default function HomePage() {
                       <span className="text-white/60">{h.day}</span>
                       <span className={
                         h.time === "Closed" ? "text-white/30" :
-                        h.time === "By Appointment" ? "text-[#D14C2B] font-semibold" :
+                        h.time === "By Appointment" ? "text-[#E11D2D] font-semibold" :
                         "text-white font-semibold"
                       }>{h.time}</span>
                     </div>
@@ -529,16 +527,16 @@ export default function HomePage() {
             </div>
 
             {/* Form column */}
-            <div className="lg:col-span-2 bg-[#0f0f0f] border border-[#F5D000]/30 p-6 md:p-8">
+            <div className="lg:col-span-2 bg-[#0f0f0f] border border-[#E11D2D]/30 p-6 md:p-8">
               <h3 className="font-display text-white text-2xl uppercase mb-6">
-                Send Us a <span style={{ color: "#F5D000" }}>Message</span>
+                Send Us a <span style={{ color: "#E11D2D" }}>Message</span>
               </h3>
               <ContactForm />
             </div>
           </div>
 
           {/* Map */}
-          <div className="mt-8 w-full h-64 md:h-80 relative border border-[#F5D000]/30">
+          <div className="mt-8 w-full h-64 md:h-80 relative border border-[#E11D2D]/30">
             <iframe
               src="https://maps.google.com/maps?q=622+10th+Street+NE,+East+Grand+Forks,+MN+56721&z=15&output=embed"
               width="100%"
@@ -548,7 +546,7 @@ export default function HomePage() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Driscoll's Auto Service location"
-              className="grayscale"
+              className=""
             />
           </div>
         </div>

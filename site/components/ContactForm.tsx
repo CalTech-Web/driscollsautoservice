@@ -49,12 +49,12 @@ export default function ContactForm() {
 
   if (state === "success") {
     return (
-      <div className="bg-[#0f0f0f] border-2 border-[#F5D000] p-10 text-center">
+      <div className="bg-[#0f0f0f] border-2 border-[#E11D2D] p-10 text-center">
         <div className="text-5xl mb-4">✓</div>
-        <h3 className="font-display text-[#F5D000] text-3xl uppercase mb-3">Message Received</h3>
+        <h3 className="font-display text-[#E11D2D] text-3xl uppercase mb-3">Message Received</h3>
         <p className="text-white/70 text-lg leading-relaxed">
           Thank you for reaching out. We will be in touch soon. If you need immediate help, call us at{" "}
-          <a href="tel:2187737809" className="text-[#F5D000] font-bold hover:text-white transition-colors">
+          <a href="tel:2187737809" className="text-[#E11D2D] font-bold hover:text-white transition-colors">
             (218) 773-7809
           </a>.
         </p>
@@ -63,7 +63,7 @@ export default function ContactForm() {
   }
 
   const inputClass =
-    "w-full bg-[#0f0f0f] border border-[#F5D000]/30 text-white px-4 py-3 placeholder-white/30 focus:outline-none focus:border-[#F5D000] transition-colors";
+    "w-full bg-[#0f0f0f] border border-[#E11D2D]/30 text-white px-4 py-3 placeholder-white/30 focus:outline-none focus:border-[#E11D2D] transition-colors";
   const labelClass = "block text-white/70 text-sm font-semibold uppercase tracking-wider mb-1";
 
   return (
@@ -155,7 +155,7 @@ export default function ContactForm() {
       <div className="cf-turnstile" data-sitekey="0x4AAAAAACyy0OTX5mR2xETR" data-theme="dark" />
 
       {state === "error" && (
-        <div className="border border-[#D14C2B] bg-[#D14C2B]/10 p-4 text-[#D14C2B] text-sm">
+        <div className="border border-[#E11D2D] bg-[#E11D2D]/10 p-4 text-[#E11D2D] text-sm">
           {errorMsg}
         </div>
       )}
@@ -163,14 +163,14 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={state === "submitting"}
-        className="w-full bg-[#F5D000] text-[#1a1a1a] font-display text-xl uppercase tracking-wider py-4 hover:bg-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-[#E11D2D] text-white font-display text-xl uppercase tracking-wider py-4 hover:bg-white hover:text-[#E11D2D] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {state === "submitting" ? "Sending..." : "Send Message"}
       </button>
 
       <p className="text-white/40 text-xs text-center">
         Or call us directly at{" "}
-        <a href="tel:2187737809" className="text-[#F5D000] hover:text-white transition-colors">
+        <a href="tel:2187737809" className="text-[#E11D2D] hover:text-white transition-colors">
           (218) 773-7809
         </a>
       </p>

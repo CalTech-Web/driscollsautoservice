@@ -3,20 +3,20 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Specialty Services | Ignition Interlock, Remote Start & Electronics | East Grand Forks, MN",
+  title: "Grand Forks Ignition Interlock, Remote Start & Aftermarket Electronics | Driscoll's Auto Service",
   description:
-    "Breathalyzer and ignition interlock installation, remote start systems, and aftermarket electronics in East Grand Forks, MN. Services most shops don't offer. Call (218) 773-7809.",
+    "Breathalyzer and ignition interlock installation, remote start systems, and aftermarket electronics serving Grand Forks. Services most shops don't offer. Call (218) 773-7809.",
   keywords: [
-    "ignition interlock installation East Grand Forks MN",
-    "breathalyzer installation Minnesota",
-    "remote start installation East Grand Forks",
+    "ignition interlock installation Grand Forks",
+    "breathalyzer installation Grand Forks ND",
+    "remote start installation Grand Forks",
     "Astro Start remote starter Grand Forks",
-    "aftermarket electronics installation East Grand Forks",
-    "backup camera installation Minnesota",
-    "trailer wiring East Grand Forks",
-    "ignition interlock service Grand Forks ND",
-    "remote start system Crookston MN",
-    "aftermarket vehicle electronics East Grand Forks",
+    "aftermarket electronics Grand Forks",
+    "backup camera installation Grand Forks",
+    "trailer wiring Grand Forks",
+    "ignition interlock service Grand Forks",
+    "remote start Grand Forks ND",
+    "Grand Forks specialty auto services",
   ],
   alternates: {
     canonical: "https://driscollsautoservice.com/specialty-services/",
@@ -24,15 +24,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://driscollsautoservice.com/specialty-services/",
-    title: "Specialty Services: Ignition Interlock, Remote Start & Electronics | East Grand Forks, MN",
+    title: "Grand Forks Ignition Interlock, Remote Start & Aftermarket Electronics | Driscoll's Auto Service",
     description:
-      "Ignition interlock installation, Astro Start remote start systems, and aftermarket electronics in East Grand Forks, MN. Services most shops send you elsewhere for. Call (218) 773-7809.",
+      "Ignition interlock installation, Astro Start remote start, and aftermarket electronics serving Grand Forks. Services most shops send you elsewhere for. Call (218) 773-7809.",
     images: [
       {
-        url: "/gallery/shop-03-full.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Specialty automotive services at Driscoll's Auto Service East Grand Forks MN",
+        url: "/gallery/shop-real-1920.jpg",
+        width: 1920,
+        height: 960,
+        alt: "Specialty automotive services at Driscoll's Auto Service, Grand Forks area",
       },
     ],
   },
@@ -153,20 +153,20 @@ export default function SpecialtyServicesPage() {
         <div className="absolute inset-0 blueprint-grid" />
         <div className="absolute top-0 right-0 w-1/3 h-full hazard-stripe-orange opacity-10" />
         <div className="relative z-10 max-w-7xl mx-auto px-4">
-          <div className="inline-flex items-center gap-2 bg-[#D14C2B] text-white px-4 py-1 mb-6 font-bold text-xs uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 bg-[#E11D2D] text-white px-4 py-1 mb-6 font-bold text-xs uppercase tracking-widest">
             Services Others Don&apos;t Offer
           </div>
           <h1 className="font-display text-white text-5xl md:text-7xl uppercase leading-none mb-6">
-            Specialty<br />
-            <span style={{ color: "#F5D000" }}>Services</span>
+            Grand Forks<br />
+            <span style={{ color: "#E11D2D" }}>Specialty Services</span>
           </h1>
           <p className="text-white/70 text-lg max-w-xl leading-relaxed">
-            Ignition interlock installation. Remote start systems. Aftermarket electronics. Services most shops send you somewhere else for. We do them right here.
+            Ignition interlock installation. Remote start systems. Aftermarket electronics. Services most Grand Forks shops send you somewhere else for. We do them right here.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <a
               href="tel:2187737809"
-              className="inline-flex items-center gap-3 bg-[#F5D000] text-[#1a1a1a] font-display text-2xl px-8 py-4 hover:bg-white transition-colors"
+              className="inline-flex items-center gap-3 bg-[#E11D2D] text-white font-display text-2xl px-8 py-4 hover:bg-white hover:text-[#E11D2D] transition-colors"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
@@ -175,7 +175,7 @@ export default function SpecialtyServicesPage() {
             </a>
             <Link
               href="/#contact"
-              className="border-2 border-white/40 text-white font-display text-lg px-6 py-4 hover:border-[#F5D000] hover:text-[#F5D000] transition-colors uppercase tracking-wider"
+              className="border-2 border-white/40 text-white font-display text-lg px-6 py-4 hover:border-[#E11D2D] hover:text-[#E11D2D] transition-colors uppercase tracking-wider"
             >
               Schedule Service
             </Link>
@@ -186,7 +186,7 @@ export default function SpecialtyServicesPage() {
       {/* Shop image */}
       <div className="w-full h-56 md:h-72 relative overflow-hidden">
         <Image
-          src="/gallery/shop-03-full.jpg"
+          src="/gallery/shop-real-1920.jpg"
           alt="Ignition interlock and specialty electronics installation at Driscoll's Auto Service East Grand Forks MN"
           fill
           className="object-cover"
@@ -198,21 +198,21 @@ export default function SpecialtyServicesPage() {
       <section className="bg-[#1a1a1a] py-20">
         <div className="max-w-7xl mx-auto px-4 space-y-0">
           {services.map((svc, i) => (
-            <div key={svc.number} className={`grid grid-cols-1 lg:grid-cols-5 border border-[#F5D000]/20 ${i > 0 ? "border-t-0" : ""}`}>
+            <div key={svc.number} className={`grid grid-cols-1 lg:grid-cols-5 border border-[#E11D2D]/20 ${i > 0 ? "border-t-0" : ""}`}>
               {/* Number + title col */}
-              <div className="lg:col-span-2 p-8 bg-[#0f0f0f] border-b lg:border-b-0 lg:border-r border-[#F5D000]/20 flex flex-col justify-between">
+              <div className="lg:col-span-2 p-8 bg-[#0f0f0f] border-b lg:border-b-0 lg:border-r border-[#E11D2D]/20 flex flex-col justify-between">
                 <div>
-                  <div className="font-display text-6xl font-bold leading-none mb-4" style={{ color: i % 2 === 0 ? "#F5D000" : "#D14C2B", opacity: 0.25 }}>
+                  <div className="font-display text-6xl font-bold leading-none mb-4" style={{ color: i % 2 === 0 ? "#E11D2D" : "#E11D2D", opacity: 0.25 }}>
                     {svc.number}
                   </div>
                   <h2 className="font-display text-white text-2xl md:text-3xl uppercase leading-tight">
                     {svc.title}
                   </h2>
-                  <p className="text-[#F5D000] text-sm font-bold uppercase tracking-widest mt-2">{svc.detail}</p>
+                  <p className="text-[#E11D2D] text-sm font-bold uppercase tracking-widest mt-2">{svc.detail}</p>
                 </div>
                 <a
                   href="tel:2187737809"
-                  className="mt-6 inline-block bg-[#F5D000] text-[#1a1a1a] font-bold uppercase tracking-wider text-sm px-5 py-3 hover:bg-white transition-colors w-fit"
+                  className="mt-6 inline-block bg-[#E11D2D] text-white font-bold uppercase tracking-wider text-sm px-5 py-3 hover:bg-white hover:text-[#E11D2D] transition-colors w-fit"
                 >
                   {svc.cta}
                 </a>
@@ -231,24 +231,24 @@ export default function SpecialtyServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#D14C2B] py-16 text-center">
+      <section className="bg-black py-16 text-center border-t-4 border-[#E11D2D]">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="font-display text-white text-4xl md:text-5xl uppercase mb-4">
             Ready to Schedule?
           </h2>
-          <p className="text-white/90 text-lg mb-8">
+          <p className="text-white/70 text-lg mb-8">
             Call us to ask about availability and pricing. We will get you set up.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:2187737809"
-              className="bg-[#F5D000] text-[#1a1a1a] font-display text-2xl px-8 py-4 hover:bg-white transition-colors"
+              className="bg-[#E11D2D] text-white font-display text-2xl px-8 py-4 hover:bg-white hover:text-[#E11D2D] transition-colors"
             >
               (218) 773-7809
             </a>
             <Link
               href="/#contact"
-              className="border-2 border-white text-white font-display text-lg px-8 py-4 hover:bg-white hover:text-[#D14C2B] transition-colors uppercase tracking-wider"
+              className="border-2 border-white text-white font-display text-lg px-8 py-4 hover:bg-white hover:text-[#E11D2D] transition-colors uppercase tracking-wider"
             >
               Send a Message
             </Link>

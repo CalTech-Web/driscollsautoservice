@@ -3,20 +3,20 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Auto Repair, All Makes & Models | East Grand Forks, MN",
+  title: "Grand Forks Auto Repair, All Makes & Models | Driscoll's Auto Service",
   description:
-    "Full-service auto repair in East Grand Forks, MN. Engine, transmission, brakes, electrical, steering, suspension, alignments, and routine maintenance. Call (218) 773-7809.",
+    "Full-service auto repair serving Grand Forks. Engine, transmission, brakes, electrical, steering, suspension, alignments, and routine maintenance. Call (218) 773-7809.",
   keywords: [
-    "auto repair East Grand Forks MN",
-    "engine repair East Grand Forks",
-    "transmission repair Grand Forks area",
-    "brake repair East Grand Forks",
-    "oil change East Grand Forks MN",
-    "wheel alignment East Grand Forks",
-    "electrical repair auto shop Minnesota",
-    "routine car maintenance East Grand Forks",
-    "full service auto repair Grand Forks ND",
-    "mechanic East Grand Forks",
+    "auto repair Grand Forks",
+    "Grand Forks mechanic",
+    "engine repair Grand Forks",
+    "transmission repair Grand Forks",
+    "brake repair Grand Forks",
+    "oil change Grand Forks",
+    "wheel alignment Grand Forks",
+    "Grand Forks auto shop",
+    "Grand Forks ND auto repair",
+    "full service auto repair Grand Forks",
   ],
   alternates: {
     canonical: "https://driscollsautoservice.com/services/",
@@ -24,15 +24,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://driscollsautoservice.com/services/",
-    title: "Auto Repair, All Makes & Models | Driscoll's Auto Service | East Grand Forks, MN",
+    title: "Grand Forks Auto Repair, All Makes & Models | Driscoll's Auto Service",
     description:
-      "Full-service auto repair in East Grand Forks, MN. Engine, transmission, brakes, electrical, suspension, alignments, and routine maintenance. Call (218) 773-7809.",
+      "Full-service auto repair serving Grand Forks. Engine, transmission, brakes, electrical, suspension, alignments, and routine maintenance. Call (218) 773-7809.",
     images: [
       {
-        url: "/gallery/shop-02-full.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Auto repair bays at Driscoll's Auto Service East Grand Forks MN",
+        url: "/gallery/shop-real-1920.jpg",
+        width: 1920,
+        height: 960,
+        alt: "Driscoll's Auto Service shop in East Grand Forks, serving Grand Forks ND",
       },
     ],
   },
@@ -149,27 +149,27 @@ export default function ServicesPage() {
         <div className="absolute inset-0 blueprint-grid" />
         <div className="absolute top-0 left-0 w-64 h-full hazard-stripe opacity-10" />
         <div className="relative z-10 max-w-7xl mx-auto px-4">
-          <div className="inline-flex items-center gap-2 bg-[#F5D000] text-[#1a1a1a] px-4 py-1 mb-6 font-bold text-xs uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 bg-[#E11D2D] text-white px-4 py-1 mb-6 font-bold text-xs uppercase tracking-widest">
             Full-Service Shop
           </div>
           <h1 className="font-display text-white text-5xl md:text-7xl uppercase leading-none">
-            Auto Repair<br />
-            <span style={{ color: "#F5D000" }}>All Makes</span><br />
-            &amp; Models
+            Grand Forks<br />
+            <span style={{ color: "#E11D2D" }}>Auto Repair</span><br />
+            All Makes &amp; Models
           </h1>
           <p className="text-white/70 text-lg mt-6 max-w-xl leading-relaxed">
-            Gas or diesel, domestic or import, we service every vehicle that rolls through our door. East Grand Forks's full-service auto repair shop.
+            Gas or diesel, domestic or import, we service every vehicle that rolls through our door. The full-service auto shop serving Greater Grand Forks from East Grand Forks, MN.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <a
               href="tel:2187737809"
-              className="inline-flex items-center gap-3 bg-[#F5D000] text-[#1a1a1a] font-display text-2xl px-8 py-4 hover:bg-white transition-colors"
+              className="inline-flex items-center gap-3 bg-[#E11D2D] text-white font-display text-2xl px-8 py-4 hover:bg-white hover:text-[#E11D2D] transition-colors"
             >
               (218) 773-7809
             </a>
             <Link
               href="/#contact"
-              className="border-2 border-white/40 text-white font-display text-lg px-6 py-4 hover:border-[#F5D000] hover:text-[#F5D000] transition-colors uppercase tracking-wider"
+              className="border-2 border-white/40 text-white font-display text-lg px-6 py-4 hover:border-[#E11D2D] hover:text-[#E11D2D] transition-colors uppercase tracking-wider"
             >
               Schedule Service
             </Link>
@@ -180,7 +180,7 @@ export default function ServicesPage() {
       {/* Shop photo */}
       <div className="w-full h-64 md:h-80 relative overflow-hidden">
         <Image
-          src="/gallery/shop-02-full.jpg"
+          src="/gallery/shop-real-1920.jpg"
           alt="Full-service auto repair bays at Driscoll's Auto Service East Grand Forks MN"
           fill
           className="object-cover"
@@ -192,14 +192,14 @@ export default function ServicesPage() {
       <section className="bg-[#1a1a1a] py-20">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="font-display text-white text-4xl md:text-5xl uppercase mb-3">
-            Repair <span style={{ color: "#F5D000" }}>Services</span>
+            Repair <span style={{ color: "#E11D2D" }}>Services</span>
           </h2>
           <p className="text-white/60 text-base mb-12">Every job diagnosed and completed right the first time, gas or diesel, domestic or import.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-[#F5D000]/20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-[#E11D2D]/20">
             {repairs.map((item, i) => (
               <div
                 key={item.title}
-                className={`p-6 bg-[#0f0f0f] border-[#F5D000]/20 ${i % 4 !== 3 ? "border-r" : ""} ${i < 4 ? "border-b" : ""}`}
+                className={`p-6 bg-[#0f0f0f] border-[#E11D2D]/20 ${i % 4 !== 3 ? "border-r" : ""} ${i < 4 ? "border-b" : ""}`}
               >
                 <div className="text-3xl mb-3">{item.icon}</div>
                 <h3 className="font-display text-white text-lg uppercase mb-2">{item.title}</h3>
@@ -218,7 +218,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="font-display text-white text-4xl md:text-5xl uppercase mb-6">
-              Routine <span style={{ color: "#F5D000" }}>Maintenance</span>
+              Routine <span style={{ color: "#E11D2D" }}>Maintenance</span>
             </h2>
             <p className="text-white/70 text-lg leading-relaxed mb-8">
               Staying ahead of maintenance keeps your vehicle safer, more reliable, and worth more. We follow your manufacturer's recommended schedule and keep you informed every step of the way.
@@ -226,7 +226,7 @@ export default function ServicesPage() {
             <ul className="space-y-3">
               {maintenance.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-white/80">
-                  <span className="w-2 h-2 bg-[#F5D000] rounded-full mt-2 flex-shrink-0" />
+                  <span className="w-2 h-2 bg-[#E11D2D] rounded-full mt-2 flex-shrink-0" />
                   {item}
                 </li>
               ))}
@@ -234,7 +234,7 @@ export default function ServicesPage() {
           </div>
           <div className="polaroid">
             <Image
-              src="/gallery/maintenance-banner.jpg"
+              src="/gallery/shop-real-1280.jpg"
               alt="Oil change and routine vehicle maintenance at Driscoll's Auto Service East Grand Forks MN"
               width={600}
               height={400}
@@ -245,13 +245,13 @@ export default function ServicesPage() {
       </section>
 
       {/* Related Services */}
-      <section className="bg-[#0f0f0f] py-10 border-t border-[#F5D000]/20">
+      <section className="bg-[#0f0f0f] py-10 border-t border-[#E11D2D]/20">
         <div className="max-w-7xl mx-auto px-4">
           <p className="text-white/40 text-xs uppercase tracking-widest mb-4 font-bold">Also at Driscoll&apos;s</p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/"
-              className="flex items-center gap-3 border border-[#F5D000]/30 px-5 py-3 text-[#F5D000] hover:bg-[#F5D000] hover:text-[#1a1a1a] transition-colors font-bold uppercase text-sm tracking-wider"
+              className="flex items-center gap-3 border border-[#E11D2D]/30 px-5 py-3 text-[#E11D2D] hover:bg-[#E11D2D] hover:text-white transition-colors font-bold uppercase text-sm tracking-wider"
             >
               Diesel &amp; Heavy Equipment Repair
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
@@ -260,7 +260,7 @@ export default function ServicesPage() {
             </Link>
             <Link
               href="/specialty-services/"
-              className="flex items-center gap-3 border border-[#F5D000]/30 px-5 py-3 text-[#F5D000] hover:bg-[#F5D000] hover:text-[#1a1a1a] transition-colors font-bold uppercase text-sm tracking-wider"
+              className="flex items-center gap-3 border border-[#E11D2D]/30 px-5 py-3 text-[#E11D2D] hover:bg-[#E11D2D] hover:text-white transition-colors font-bold uppercase text-sm tracking-wider"
             >
               Specialty Services
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
@@ -272,24 +272,24 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#D14C2B] py-16 text-center">
+      <section className="bg-black py-16 text-center border-t-4 border-[#E11D2D]">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="font-display text-white text-4xl md:text-5xl uppercase mb-4">
             Need a Repair?
           </h2>
-          <p className="text-white/90 text-lg mb-8">
+          <p className="text-white/70 text-lg mb-8">
             We will evaluate your vehicle, give you an honest assessment, and get you back on the road.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:2187737809"
-              className="bg-[#F5D000] text-[#1a1a1a] font-display text-2xl px-8 py-4 hover:bg-white transition-colors"
+              className="bg-[#E11D2D] text-white font-display text-2xl px-8 py-4 hover:bg-white hover:text-[#E11D2D] transition-colors"
             >
               Call (218) 773-7809
             </a>
             <Link
               href="/#contact"
-              className="border-2 border-white text-white font-display text-lg px-8 py-4 hover:bg-white hover:text-[#D14C2B] transition-colors uppercase tracking-wider"
+              className="border-2 border-white text-white font-display text-lg px-8 py-4 hover:bg-white hover:text-[#E11D2D] transition-colors uppercase tracking-wider"
             >
               Schedule Online
             </Link>
