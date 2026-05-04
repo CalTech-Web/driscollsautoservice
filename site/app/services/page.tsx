@@ -67,16 +67,7 @@ const serviceSchema = {
     "Full-service auto repair for all makes and models in East Grand Forks, MN. Engine repair, transmission service, brake repair, electrical diagnosis, alignments, and routine maintenance.",
   provider: {
     "@type": "AutoRepair",
-    name: "Driscoll's Auto Service",
-    telephone: "+12187737809",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "622 10th Street NE",
-      addressLocality: "East Grand Forks",
-      addressRegion: "MN",
-      postalCode: "56721",
-      addressCountry: "US",
-    },
+    "@id": "https://driscollsautoservice.com/#business",
   },
   areaServed: [
     { "@type": "City", name: "East Grand Forks", addressRegion: "MN" },
@@ -249,6 +240,33 @@ export default function ServicesPage() {
               height={400}
               className="w-full object-cover"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="bg-[#0f0f0f] py-10 border-t border-[#F5D000]/20">
+        <div className="max-w-7xl mx-auto px-4">
+          <p className="text-white/40 text-xs uppercase tracking-widest mb-4 font-bold">Also at Driscoll&apos;s</p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              href="/diesel-heavy-equipment/"
+              className="flex items-center gap-3 border border-[#F5D000]/30 px-5 py-3 text-[#F5D000] hover:bg-[#F5D000] hover:text-[#1a1a1a] transition-colors font-bold uppercase text-sm tracking-wider"
+            >
+              Diesel &amp; Heavy Equipment Repair
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+            <Link
+              href="/specialty-services/"
+              className="flex items-center gap-3 border border-[#F5D000]/30 px-5 py-3 text-[#F5D000] hover:bg-[#F5D000] hover:text-[#1a1a1a] transition-colors font-bold uppercase text-sm tracking-wider"
+            >
+              Specialty Services
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>

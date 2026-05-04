@@ -82,16 +82,7 @@ const specialtyServiceSchema = {
     "Professional ignition interlock (breathalyzer) installation, Astro Start remote start system installation, and aftermarket vehicle electronics installation in East Grand Forks, MN.",
   provider: {
     "@type": "AutoRepair",
-    name: "Driscoll's Auto Service",
-    telephone: "+12187737809",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "622 10th Street NE",
-      addressLocality: "East Grand Forks",
-      addressRegion: "MN",
-      postalCode: "56721",
-      addressCountry: "US",
-    },
+    "@id": "https://driscollsautoservice.com/#business",
   },
   areaServed: [
     { "@type": "City", name: "East Grand Forks", addressRegion: "MN" },

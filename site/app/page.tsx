@@ -110,6 +110,41 @@ const whyChoose = [
   },
 ];
 
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to Get Your Vehicle Repaired at Driscoll's Auto Service",
+  description:
+    "Five steps from your first call to driving away safe at Driscoll's Auto Service in East Grand Forks, MN.",
+  step: [
+    {
+      "@type": "HowToStep",
+      name: "Call or Come In",
+      text: "Call (218) 773-7809 or stop by 622 10th Street NE, East Grand Forks, MN. Describe what is going on with your vehicle.",
+    },
+    {
+      "@type": "HowToStep",
+      name: "Full Evaluation",
+      text: "Our technicians perform a complete inspection using state-of-the-art computer diagnostics to pinpoint the exact problem.",
+    },
+    {
+      "@type": "HowToStep",
+      name: "Honest Assessment",
+      text: "We walk through the diagnostic findings with you. No pressure, no upselling. An honest explanation of what your vehicle actually needs.",
+    },
+    {
+      "@type": "HowToStep",
+      name: "Quality Repair",
+      text: "Work is performed with the best tools and equipment available to restore your vehicle and increase its value.",
+    },
+    {
+      "@type": "HowToStep",
+      name: "Drive Away Safe",
+      text: "You leave with confidence. A safer vehicle, personal service, and the assurance of working with a shop that treats you like family.",
+    },
+  ],
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -176,6 +211,10 @@ const faqSchema = {
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

@@ -49,11 +49,10 @@ const contactBreadcrumb = {
 const contactPointSchema = {
   "@context": "https://schema.org",
   "@type": "AutoRepair",
-  name: "Driscoll's Auto Service",
-  url: "https://driscollsautoservice.com",
+  "@id": "https://driscollsautoservice.com/#business",
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+1-218-773-7809",
+    telephone: "+12187737809",
     contactType: "customer service",
     areaServed: ["East Grand Forks, MN", "Grand Forks, ND", "Crookston, MN"],
     availableLanguage: "English",

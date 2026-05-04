@@ -65,7 +65,10 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "AutoRepair",
+  "@id": "https://driscollsautoservice.com/#business",
   name: "Driscoll's Auto Service",
+  alternateName: "Driscoll's Auto",
+  foundingDate: "2013",
   description:
     "East Grand Forks's trusted full-service auto repair shop, specializing in diesel and heavy equipment. Family-owned and operated.",
   url: "https://driscollsautoservice.com",
@@ -133,6 +136,8 @@ const websiteSchema = {
   "@type": "WebSite",
   name: "Driscoll's Auto Service",
   url: "https://driscollsautoservice.com",
+  description:
+    "East Grand Forks's trusted diesel and auto repair shop. Family-owned, specializing in diesel trucks, heavy equipment, and all makes and models.",
 };
 
 export default function RootLayout({
