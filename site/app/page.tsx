@@ -4,9 +4,9 @@ import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Grand Forks Diesel & Heavy Equipment Repair | Driscoll's Auto Service",
+  title: "Grand Forks Diesel & Heavy Equipment Repair",
   description:
-    "Diesel and heavy equipment repair in Grand Forks. Family-owned full-service shop, located just across the river in East Grand Forks. Honest diagnostics, fair prices. Call (218) 773-7809.",
+    "Diesel and heavy equipment repair in Grand Forks. Family-owned full-service shop in East Grand Forks. Honest diagnostics, fair prices. Call (218) 773-7809.",
   keywords: [
     "diesel repair Grand Forks",
     "diesel mechanic Grand Forks ND",
@@ -186,10 +186,10 @@ export default function HomePage() {
               <span className="w-2 h-2 bg-white rounded-full" />
               Greater Grand Forks Diesel Specialist
             </div>
-            <h1 className="font-display text-white mb-2" style={{ fontSize: "clamp(3rem, 8vw, 7rem)", lineHeight: "0.95", letterSpacing: "-0.02em" }}>
-              <span className="block">Grand Forks</span>
-              <span className="block" style={{ color: "#E11D2D" }}>Diesel &amp; Heavy</span>
-              <span className="block">Equipment Repair.</span>
+            <h1 aria-label="Grand Forks Diesel &amp; Heavy Equipment Repair" className="font-display text-white mb-2" style={{ fontSize: "clamp(3rem, 8vw, 7rem)", lineHeight: "0.95", letterSpacing: "-0.02em" }}>
+              <span className="block" aria-hidden="true">Grand Forks</span>
+              <span className="block" aria-hidden="true" style={{ color: "#E11D2D" }}>Diesel &amp; Heavy</span>
+              <span className="block" aria-hidden="true">Equipment Repair.</span>
             </h1>
             <p className="sr-only">Grand Forks diesel and heavy equipment repair from Driscoll&apos;s Auto Service in East Grand Forks, MN.</p>
             <p className="font-display text-xl md:text-2xl uppercase tracking-wider mt-6 mb-2 text-white/80">

@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Grand Forks Ignition Interlock, Remote Start & Aftermarket Electronics | Driscoll's Auto Service",
+  title: "Grand Forks Ignition Interlock & Remote Start",
   description:
-    "Breathalyzer and ignition interlock installation, remote start systems, and aftermarket electronics serving Grand Forks. Services most shops don't offer. Call (218) 773-7809.",
+    "Ignition interlock installation, remote start systems, and aftermarket electronics serving Grand Forks. Services most shops don't offer. Call (218) 773-7809.",
   keywords: [
     "ignition interlock installation Grand Forks",
     "breathalyzer installation Grand Forks ND",
@@ -156,9 +156,9 @@ export default function SpecialtyServicesPage() {
           <div className="inline-flex items-center gap-2 bg-[#E11D2D] text-white px-4 py-1 mb-6 font-bold text-xs uppercase tracking-widest">
             Services Others Don&apos;t Offer
           </div>
-          <h1 className="font-display text-white text-5xl md:text-7xl uppercase leading-none mb-6">
-            <span className="block">Grand Forks</span>
-            <span className="block" style={{ color: "#E11D2D" }}>Specialty Services</span>
+          <h1 aria-label="Grand Forks Specialty Services" className="font-display text-white text-5xl md:text-7xl uppercase leading-none mb-6">
+            <span className="block" aria-hidden="true">Grand Forks</span>
+            <span className="block" aria-hidden="true" style={{ color: "#E11D2D" }}>Specialty Services</span>
           </h1>
           <p className="text-white/70 text-lg max-w-xl leading-relaxed">
             Ignition interlock installation. Remote start systems. Aftermarket electronics. Services most Grand Forks shops send you somewhere else for. We do them right here.

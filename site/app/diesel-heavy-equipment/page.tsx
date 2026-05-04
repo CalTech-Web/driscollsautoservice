@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Grand Forks Diesel & Heavy Equipment Repair | Driscoll's Auto Service",
+  title: "Grand Forks Diesel & Heavy Equipment Repair",
   description:
-    "Diesel truck and heavy equipment repair specialists serving Grand Forks. Computer diagnostics, engine repair, drivability solutions for all makes and models. Located just across the river. Call (218) 773-7809.",
+    "Diesel truck and heavy equipment repair specialists serving Grand Forks. Computer diagnostics, engine repair, and drivability solutions for all makes and models. Call (218) 773-7809.",
   keywords: [
     "diesel repair Grand Forks",
     "diesel mechanic Grand Forks ND",
@@ -163,10 +163,10 @@ export default function DieselPage() {
             <span className="w-2 h-2 bg-white rounded-full" />
             Our Lead Specialty
           </div>
-          <h1 className="font-display text-white leading-none uppercase" style={{ fontSize: "clamp(2.5rem, 7vw, 6.5rem)" }}>
-            <span className="block">Grand Forks</span>
-            <span className="block" style={{ color: "#E11D2D" }}>Diesel &amp; Heavy</span>
-            <span className="block">Equipment Repair</span>
+          <h1 aria-label="Grand Forks Diesel &amp; Heavy Equipment Repair" className="font-display text-white leading-none uppercase" style={{ fontSize: "clamp(2.5rem, 7vw, 6.5rem)" }}>
+            <span className="block" aria-hidden="true">Grand Forks</span>
+            <span className="block" aria-hidden="true" style={{ color: "#E11D2D" }}>Diesel &amp; Heavy</span>
+            <span className="block" aria-hidden="true">Equipment Repair</span>
           </h1>
           <p className="text-white/70 text-xl mt-6 max-w-xl leading-relaxed">
             This is what we are built for. When your diesel truck or heavy equipment needs expert care, Driscoll&apos;s is the Grand Forks area shop that knows how to handle it.

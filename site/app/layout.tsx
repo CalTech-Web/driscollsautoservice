@@ -59,7 +59,7 @@ export const metadata: Metadata = {
       "Grand Forks's trusted full-service auto repair shop, specializing in diesel and heavy equipment. Call (218) 773-7809.",
     images: ["/gallery/shop-real-1920.jpg"],
   },
-  metadataBase: new URL("https://driscollsautoservice.com"),
+  metadataBase: new URL("https://driscollsautoservice.vercel.app"),
 };
 
 const localBusinessSchema = {
@@ -95,8 +95,8 @@ const localBusinessSchema = {
     },
   ],
   image: [
-    "https://driscollsautoservice.com/gallery/shop-real-1920.jpg",
-    "https://driscollsautoservice.com/gallery/shop-real-1280.jpg",
+    "https://driscollsautoservice.vercel.app/gallery/shop-real-1920.jpg",
+    "https://driscollsautoservice.vercel.app/gallery/shop-real-1280.jpg",
   ],
   sameAs: [
     "https://www.facebook.com/driscollauto/",
