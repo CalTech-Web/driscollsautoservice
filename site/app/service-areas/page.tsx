@@ -52,6 +52,23 @@ export default function ServiceAreasPage() {
           <p className="text-white/70 text-lg mt-6 max-w-xl leading-relaxed">
             Based in East Grand Forks, MN. Serving the greater Grand Forks metro area on both sides of the Red River, and Crookston, MN.
           </p>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <a
+              href="tel:2187737809"
+              className="inline-flex items-center gap-3 bg-[#F5D000] text-[#1a1a1a] font-display text-2xl px-8 py-4 hover:bg-white transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+              </svg>
+              (218) 773-7809
+            </a>
+            <Link
+              href="/contact/"
+              className="border-2 border-white/40 text-white font-display text-lg px-6 py-4 hover:border-[#F5D000] hover:text-[#F5D000] transition-colors uppercase tracking-wider"
+            >
+              Schedule Service
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -75,9 +92,10 @@ export default function ServiceAreasPage() {
       {/* Areas detail */}
       <section className="bg-[#1a1a1a] py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="font-display text-white text-4xl md:text-5xl uppercase mb-12">
+          <h2 className="font-display text-white text-4xl md:text-5xl uppercase mb-3">
             Where We <span style={{ color: "#F5D000" }}>Serve</span>
           </h2>
+          <p className="text-white/60 text-base mb-12">East Grand Forks is home base. Grand Forks and Crookston customers make the drive because there is no closer option for diesel work.</p>
           <div className="space-y-0">
             {areas.map((area, i) => (
               <div key={area.city} className={`grid grid-cols-1 lg:grid-cols-3 border border-[#F5D000]/20 ${i > 0 ? "border-t-0" : ""}`}>

@@ -196,12 +196,20 @@ export default function DieselPage() {
           <p className="text-white/90 text-lg mb-8">
             Bring it to the shop that specializes in exactly this.
           </p>
-          <a
-            href="tel:2187737809"
-            className="bg-[#F5D000] text-[#1a1a1a] font-display text-2xl px-10 py-4 hover:bg-white transition-colors inline-block"
-          >
-            (218) 773-7809
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:2187737809"
+              className="bg-[#F5D000] text-[#1a1a1a] font-display text-2xl px-10 py-4 hover:bg-white transition-colors inline-block"
+            >
+              (218) 773-7809
+            </a>
+            <Link
+              href="/contact/"
+              className="border-2 border-white text-white font-display text-lg px-8 py-4 hover:bg-white hover:text-[#D14C2B] transition-colors uppercase tracking-wider"
+            >
+              Schedule Service
+            </Link>
+          </div>
         </div>
       </section>
     </>
