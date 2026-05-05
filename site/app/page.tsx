@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ContactSection from "@/components/ContactSection";
+import FaqAccordion from "@/components/FaqAccordion";
 
 export const metadata: Metadata = {
   title: { absolute: "Grand Forks Diesel Repair | Driscoll's Auto Service" },
@@ -573,6 +574,9 @@ export default function HomePage() {
         </div>
       </section>
 
+
+      {/* FAQ */}
+      <FaqAccordion />
 
       {/* HAZARD DIVIDER */}
       <div className="hazard-stripe-orange h-6 w-full opacity-60" />
