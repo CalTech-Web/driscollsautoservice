@@ -520,6 +520,45 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* GALLERY GRID */}
+      <section className="bg-[#1a1a1a] py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="mb-10">
+            <h2 className="font-display text-white text-4xl md:text-5xl uppercase leading-none">
+              Inside the <span style={{ color: "#E11D2D" }}>Shop</span>
+            </h2>
+            <p className="text-white/60 text-base mt-3">Real work. Real tools. East Grand Forks, MN.</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
+            {[
+              { src: "/gallery/shop-01-full.jpg", alt: "Driscoll's Auto Service shop interior, East Grand Forks MN" },
+              { src: "/gallery/shop-02-full.jpg", alt: "Vehicle lift and repair bay at Driscoll's Auto Service" },
+              { src: "/gallery/shop-03-full.jpg", alt: "Diesel truck diagnostics at Driscoll's Auto Service" },
+              { src: "/gallery/shop-04-full.jpg", alt: "Auto repair tools and equipment, Driscoll's Auto Service" },
+              { src: "/gallery/shop-05-full.jpg", alt: "Engine repair at Driscoll's Auto Service, Grand Forks area" },
+              { src: "/gallery/shop-06-full.jpg", alt: "Technician working at Driscoll's Auto Service East Grand Forks" },
+              { src: "/gallery/shop-07-full.jpg", alt: "Driscoll's Auto Service shop bay, East Grand Forks MN" },
+              { src: "/gallery/shop-08-full.jpg", alt: "Heavy equipment repair at Driscoll's Auto Service" },
+            ].map((img) => (
+              <div
+                key={img.src}
+                className="relative overflow-hidden group bg-black"
+                style={{ paddingBottom: "75%" }}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  style={{ opacity: 0.85 }}
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* TESTIMONIALS */}
       <section className="bg-[#0f0f0f] py-16">
         <div className="max-w-7xl mx-auto px-4">
