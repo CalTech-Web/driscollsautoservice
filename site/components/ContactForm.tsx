@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Script from "next/script";
 
 type FormState = "idle" | "submitting" | "success" | "error";
@@ -8,6 +8,16 @@ type FormState = "idle" | "submitting" | "success" | "error";
 export default function ContactForm() {
   const [state, setState] = useState<FormState>("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const [widgetBlocked, setWidgetBlocked] = useState(false);
+  const widgetRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const t = setTimeout(() => {
+      const rendered = widgetRef.current?.querySelector("iframe");
+      if (!rendered) setWidgetBlocked(true);
+    }, 6000);
+    return () => clearTimeout(t);
+  }, []);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -151,8 +161,22 @@ export default function ContactForm() {
         strategy="afterInteractive"
         async
         defer
+        onError={() => setWidgetBlocked(true)}
       />
-      <div className="cf-turnstile" data-sitekey="0x4AAAAAACyy0OTX5mR2xETR" data-theme="dark" />
+      <div ref={widgetRef} className="cf-turnstile" data-sitekey="0x4AAAAAACyy0OTX5mR2xETR" data-theme="dark" />
+
+      {widgetBlocked && (
+        <div className="border border-[#E11D2D] bg-[#E11D2D]/10 p-4 text-sm text-white/80 leading-relaxed">
+          <p className="font-bold text-[#E11D2D] uppercase tracking-wider text-xs mb-1">Security check could not load</p>
+          <p>
+            An ad blocker or network filter may be blocking it. Please call us directly at{" "}
+            <a href="tel:2187737809" className="text-[#E11D2D] font-bold hover:text-white transition-colors">
+              (218) 773-7809
+            </a>{" "}
+            and we will take care of you right away.
+          </p>
+        </div>
+      )}
 
       {state === "error" && (
         <div className="border border-[#E11D2D] bg-[#E11D2D]/10 p-4 text-[#E11D2D] text-sm">
@@ -168,9 +192,9 @@ export default function ContactForm() {
         {state === "submitting" ? "Sending..." : "Send Message"}
       </button>
 
-      <p className="text-white/40 text-xs text-center">
-        Or call us directly at{" "}
-        <a href="tel:2187737809" className="text-[#E11D2D] hover:text-white transition-colors">
+      <p className="text-white/60 text-sm text-center">
+        Prefer to talk? Call{" "}
+        <a href="tel:2187737809" className="text-[#E11D2D] font-bold hover:text-white transition-colors">
           (218) 773-7809
         </a>
       </p>

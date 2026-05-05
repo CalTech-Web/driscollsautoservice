@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import ContactForm from "@/components/ContactForm";
+import ContactSection from "@/components/ContactSection";
 
 export const metadata: Metadata = {
   title: { absolute: "Grand Forks Diesel Repair | Driscoll's Auto Service" },
@@ -198,10 +198,10 @@ export default function HomePage() {
             <p className="text-white/70 text-lg md:text-xl max-w-xl mt-4 mb-8 leading-relaxed">
               Diesel trucks, heavy equipment, and daily drivers. Honest diagnostics and quality repairs for the Greater Grand Forks region.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 items-start">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 sm:items-start">
               <a
                 href="tel:2187737809"
-                className="bg-[#E11D2D] text-white font-display text-2xl md:text-3xl px-8 py-4 hover:bg-white hover:text-[#E11D2D] transition-colors inline-flex items-center gap-3"
+                className="w-full sm:w-auto bg-[#E11D2D] text-white font-display text-2xl md:text-3xl px-6 sm:px-8 py-5 sm:py-4 hover:bg-white hover:text-[#E11D2D] transition-colors flex sm:inline-flex items-center justify-center gap-3"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
@@ -210,7 +210,7 @@ export default function HomePage() {
               </a>
               <Link
                 href="/#contact"
-                className="border-2 border-white/40 text-white font-display text-lg px-6 py-4 hover:border-[#E11D2D] hover:text-[#E11D2D] transition-colors uppercase tracking-wider"
+                className="w-full sm:w-auto text-center border-2 border-white/40 text-white font-display text-lg px-6 py-4 hover:border-[#E11D2D] hover:text-[#E11D2D] transition-colors uppercase tracking-wider"
               >
                 Schedule Service
               </Link>
@@ -456,101 +456,7 @@ export default function HomePage() {
       <div className="hazard-stripe-orange h-6 w-full opacity-60" />
 
       {/* CONTACT SECTION */}
-      <section id="contact" className="bg-[#1a1a1a] py-20 scroll-mt-24">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="mb-12">
-            <div className="inline-flex items-center gap-2 bg-[#E11D2D] text-[#1a1a1a] px-4 py-1 mb-6 font-bold text-xs uppercase tracking-widest">
-              Get In Touch
-            </div>
-            <h2 className="font-display text-white text-4xl md:text-6xl uppercase leading-none">
-              <span className="block">Call, Stop By, </span>
-              <span className="block" style={{ color: "#E11D2D" }}>or Send a Message</span>
-            </h2>
-            <p className="text-white/60 text-base mt-4 max-w-2xl">
-              Tell us what is going on with your vehicle. We will get back to you the same day.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* Contact info column */}
-            <div className="lg:col-span-1 space-y-4">
-              <div className="border-2 border-[#E11D2D] p-6 bg-[#0f0f0f]">
-                <h3 className="font-display text-[#E11D2D] text-sm uppercase tracking-widest mb-3">Call Now</h3>
-                <a
-                  href="tel:2187737809"
-                  className="font-display text-white text-3xl hover:text-[#E11D2D] transition-colors block"
-                >
-                  (218) 773-7809
-                </a>
-                <p className="text-white/50 text-sm mt-2">Tap to call from your phone.</p>
-              </div>
-
-              <div className="border border-[#E11D2D]/30 p-6 bg-[#0f0f0f]">
-                <h3 className="font-display text-[#E11D2D] text-sm uppercase tracking-widest mb-3">Visit the Shop</h3>
-                <address className="not-italic text-white/80 leading-relaxed">
-                  <p className="font-bold text-white">Driscoll&apos;s Auto Service</p>
-                  <p>622 10th Street NE</p>
-                  <p>East Grand Forks, MN 56721</p>
-                </address>
-                <a
-                  href="https://maps.google.com/maps?cid=1197783825002618747"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 text-[#E11D2D] hover:text-white transition-colors text-sm font-bold uppercase tracking-widest"
-                >
-                  Get Directions
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-
-              <div className="border border-[#E11D2D]/30 p-6 bg-[#0f0f0f]">
-                <h3 className="font-display text-[#E11D2D] text-sm uppercase tracking-widest mb-3">Hours</h3>
-                <div className="space-y-1 text-sm">
-                  {[
-                    { day: "Mon - Fri", time: "8:00 AM - 5:00 PM" },
-                    { day: "Saturday", time: "By Appointment" },
-                    { day: "Sunday", time: "Closed" },
-                  ].map((h) => (
-                    <div key={h.day} className="flex justify-between border-b border-white/10 py-1.5">
-                      <span className="text-white/60">{h.day}</span>
-                      <span className={
-                        h.time === "Closed" ? "text-white/30" :
-                        h.time === "By Appointment" ? "text-[#E11D2D] font-semibold" :
-                        "text-white font-semibold"
-                      }>{h.time}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Form column */}
-            <div className="lg:col-span-2 bg-[#0f0f0f] border border-[#E11D2D]/30 p-6 md:p-8">
-              <h3 className="font-display text-white text-2xl uppercase mb-6">
-                Send Us a <span style={{ color: "#E11D2D" }}>Message</span>
-              </h3>
-              <ContactForm />
-            </div>
-          </div>
-
-          {/* Map */}
-          <div className="mt-8 w-full h-64 md:h-80 relative border border-[#E11D2D]/30">
-            <iframe
-              src="https://maps.google.com/maps?q=622+10th+Street+NE,+East+Grand+Forks,+MN+56721&z=15&output=embed"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Driscoll's Auto Service location"
-              className=""
-            />
-          </div>
-        </div>
-      </section>
+      <ContactSection />
     </>
   );
 }

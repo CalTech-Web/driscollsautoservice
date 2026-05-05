@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/diesel-heavy-equipment/", priority: 0.9, changeFreq: "monthly" as const },
     { path: "/services/", priority: 0.9, changeFreq: "monthly" as const },
     { path: "/specialty-services/", priority: 0.8, changeFreq: "monthly" as const },
+    { path: "/contact/", priority: 0.7, changeFreq: "monthly" as const },
   ];
 
   return pages.map((p) => ({

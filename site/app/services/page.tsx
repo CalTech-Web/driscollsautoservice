@@ -160,16 +160,16 @@ export default function ServicesPage() {
           <p className="text-white/70 text-lg mt-6 max-w-xl leading-relaxed">
             Gas or diesel, domestic or import, we service every vehicle that rolls through our door. The full-service auto shop serving Greater Grand Forks from East Grand Forks, MN.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+          <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
             <a
               href="tel:2187737809"
-              className="inline-flex items-center gap-3 bg-[#E11D2D] text-white font-display text-2xl px-8 py-4 hover:bg-white hover:text-[#E11D2D] transition-colors"
+              className="w-full sm:w-auto flex sm:inline-flex items-center justify-center gap-3 bg-[#E11D2D] text-white font-display text-2xl px-6 sm:px-8 py-5 sm:py-4 hover:bg-white hover:text-[#E11D2D] transition-colors"
             >
               (218) 773-7809
             </a>
             <Link
-              href="/#contact"
-              className="border-2 border-white/40 text-white font-display text-lg px-6 py-4 hover:border-[#E11D2D] hover:text-[#E11D2D] transition-colors uppercase tracking-wider"
+              href="/contact/"
+              className="w-full sm:w-auto text-center border-2 border-white/40 text-white font-display text-lg px-6 py-4 hover:border-[#E11D2D] hover:text-[#E11D2D] transition-colors uppercase tracking-wider"
             >
               Schedule Service
             </Link>
@@ -250,7 +250,7 @@ export default function ServicesPage() {
           <p className="text-white/40 text-xs uppercase tracking-widest mb-4 font-bold">Also at Driscoll&apos;s</p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/"
+              href="/diesel-heavy-equipment/"
               className="flex items-center gap-3 border border-[#E11D2D]/30 px-5 py-3 text-[#E11D2D] hover:bg-[#E11D2D] hover:text-white transition-colors font-bold uppercase text-sm tracking-wider"
             >
               Diesel &amp; Heavy Equipment Repair
@@ -288,7 +288,7 @@ export default function ServicesPage() {
               Call (218) 773-7809
             </a>
             <Link
-              href="/#contact"
+              href="/contact/"
               className="border-2 border-white text-white font-display text-lg px-8 py-4 hover:bg-white hover:text-[#E11D2D] transition-colors uppercase tracking-wider"
             >
               Schedule Online

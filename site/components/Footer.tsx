@@ -108,7 +108,7 @@ export default function Footer() {
               </a>
             </p>
             <p>
-              <Link href="/#contact" className="text-[#E11D2D] hover:text-white transition-colors text-xs uppercase tracking-widest font-bold">
+              <Link href="/contact/" className="text-[#E11D2D] hover:text-white transition-colors text-xs uppercase tracking-widest font-bold">
                 Send a Message →
               </Link>
             </p>
