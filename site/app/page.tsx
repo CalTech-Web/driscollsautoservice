@@ -42,14 +42,21 @@ export const metadata: Metadata = {
 const services = [
   {
     number: "01",
+    title: "Diesel & Heavy Equipment",
+    desc: "Our specialty from day one. Diesel trucks and heavy equipment of all makes and models, with state-of-the-art computer diagnostics built for diesel engines.",
+    href: "/diesel-heavy-equipment/",
+    accent: "#E11D2D",
+  },
+  {
+    number: "02",
     title: "All Makes & Models",
     desc: "Engine, transmission, brakes, electrical, steering, suspension, alignments, and routine maintenance for gas and diesel vehicles, domestic or import.",
     href: "/services/",
     accent: "#E11D2D",
   },
   {
-    number: "02",
-    title: "Other Services",
+    number: "03",
+    title: "Specialty Services",
     desc: "Ignition interlock installation, remote start systems, and aftermarket electronics. Specialty work most shops will not touch.",
     href: "/specialty-services/",
     accent: "#E11D2D",
@@ -311,12 +318,12 @@ export default function HomePage() {
             </h2>
             <p className="text-white/60 text-base mt-3">From oil changes to full engine rebuilds, we service diesel and gas vehicles of all makes and models.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 border border-[#E11D2D]/20">
+          <div className="grid grid-cols-1 md:grid-cols-3 border border-[#E11D2D]/20">
             {services.map((svc, i) => (
               <Link
                 key={svc.number}
                 href={svc.href}
-                className={`group relative p-8 hover:bg-[#0f0f0f] transition-colors flex flex-col gap-4 ${i === 0 ? "border-b border-[#E11D2D]/20 md:border-b-0 md:border-r" : ""}`}
+                className={`group relative p-8 hover:bg-[#0f0f0f] transition-colors flex flex-col gap-4 ${i < services.length - 1 ? "border-b border-[#E11D2D]/20 md:border-b-0 md:border-r" : ""}`}
               >
                 <span className="font-display text-8xl font-bold leading-none" style={{ color: svc.accent, opacity: 0.15 }}>
                   {svc.number}
