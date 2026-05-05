@@ -499,6 +499,77 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* HOURS & LOCATION */}
+      <section className="bg-[#1a1a1a] py-16 border-t border-[#E11D2D]/20">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 border border-[#E11D2D]/20">
+            {/* Hours */}
+            <div className="p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-[#E11D2D]/20">
+              <div className="badge mb-4">Hours</div>
+              <h2 className="font-display text-white text-3xl md:text-4xl uppercase leading-none mb-8">
+                When We&apos;re <span style={{ color: "#E11D2D" }}>Open</span>
+              </h2>
+              <div className="space-y-0 divide-y divide-white/10">
+                {[
+                  { days: "Monday through Friday", hours: "8:00 AM to 5:00 PM", open: true },
+                  { days: "Saturday", hours: "By Appointment", open: true },
+                  { days: "Sunday", hours: "Closed", open: false },
+                ].map((row) => (
+                  <div key={row.days} className="flex items-center justify-between py-4">
+                    <span className="font-display text-white text-sm md:text-base uppercase tracking-wider">{row.days}</span>
+                    <span className={`font-bold text-sm uppercase tracking-wider ${row.open ? "text-[#E11D2D]" : "text-white/30"}`}>{row.hours}</span>
+                  </div>
+                ))}
+              </div>
+              <a
+                href="tel:2187737809"
+                className="mt-8 inline-flex items-center gap-3 bg-[#E11D2D] text-white font-display text-xl px-6 py-4 hover:bg-white hover:text-[#E11D2D] transition-colors uppercase"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+                </svg>
+                (218) 773-7809
+              </a>
+            </div>
+            {/* Location */}
+            <div className="p-8 md:p-12">
+              <div className="badge mb-4">Location</div>
+              <h2 className="font-display text-white text-3xl md:text-4xl uppercase leading-none mb-8">
+                Where to <span style={{ color: "#E11D2D" }}>Find Us</span>
+              </h2>
+              <address className="not-italic space-y-1 mb-6">
+                <p className="font-display text-white text-2xl md:text-3xl uppercase leading-tight">622 10th Street NE</p>
+                <p className="font-display text-white/60 text-lg uppercase">East Grand Forks, MN 56721</p>
+                <p className="text-white/40 text-sm mt-3 uppercase tracking-wider">Just across the Red River from Grand Forks, ND</p>
+              </address>
+              <div className="grid grid-cols-3 gap-2 mt-8">
+                {[
+                  { city: "East Grand Forks", state: "MN" },
+                  { city: "Grand Forks", state: "ND" },
+                  { city: "Crookston", state: "MN" },
+                ].map((loc) => (
+                  <div key={loc.city} className="bg-black/50 border border-[#E11D2D]/20 px-3 py-4 text-center">
+                    <p className="font-display text-white text-xs md:text-sm uppercase leading-tight">{loc.city}</p>
+                    <p className="text-[#E11D2D] text-xs font-bold uppercase tracking-widest mt-1">{loc.state}</p>
+                  </div>
+                ))}
+              </div>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=622+10th+Street+NE,+East+Grand+Forks,+MN+56721"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center gap-2 border-2 border-[#E11D2D] text-[#E11D2D] font-display uppercase tracking-wider px-6 py-3 hover:bg-[#E11D2D] hover:text-white transition-colors"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg>
+                Get Directions
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SHOP PHOTO BAND */}
       <section className="bg-black">
         <div className="relative w-full h-72 md:h-[28rem] overflow-hidden">
