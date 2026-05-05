@@ -96,6 +96,59 @@ const whyChoose = [
   },
 ];
 
+const steps = [
+  {
+    number: "01",
+    title: "Call or Come In",
+    desc: "Call (218) 773-7809 or stop by 622 10th Street NE in East Grand Forks. Tell us what your vehicle is doing.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
+        <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+      </svg>
+    ),
+  },
+  {
+    number: "02",
+    title: "Full Evaluation",
+    desc: "We perform a complete inspection using state-of-the-art computer diagnostics to find the real problem.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
+        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+      </svg>
+    ),
+  },
+  {
+    number: "03",
+    title: "Honest Assessment",
+    desc: "We walk through the findings with you and recommend the best course of action, no pressure and no surprises.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
+        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+      </svg>
+    ),
+  },
+  {
+    number: "04",
+    title: "Quality Repair",
+    desc: "We use the highest quality tools and equipment to restore your vehicle and leave it in better shape than before.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
+        <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+      </svg>
+    ),
+  },
+  {
+    number: "05",
+    title: "Drive Away Safe",
+    desc: "Leave with a safer, smoother ride and the confidence that comes from working with people who treat you like family.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+      </svg>
+    ),
+  },
+];
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -340,6 +393,33 @@ export default function HomePage() {
             >
               Get in Touch
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section className="bg-[#1a1a1a] py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="mb-12">
+            <h2 className="font-display text-white text-4xl md:text-5xl uppercase leading-none">
+              How It <span style={{ color: "#E11D2D" }}>Works</span>
+            </h2>
+            <p className="text-white/60 text-base mt-3">Five steps from your first call to driving away confident.</p>
+          </div>
+          <div className="relative">
+            <div className="hidden sm:block absolute top-8 left-[5%] right-[5%] h-px bg-[#E11D2D]/25 z-0" />
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-8 sm:gap-0 relative z-10">
+              {steps.map((step) => (
+                <div key={step.number} className="flex flex-col sm:items-center sm:text-center px-2 sm:px-4">
+                  <div className="w-16 h-16 bg-[#E11D2D] flex items-center justify-center text-white mb-5 border-4 border-[#1a1a1a] flex-shrink-0">
+                    {step.icon}
+                  </div>
+                  <div className="text-[#E11D2D] text-xs font-bold uppercase tracking-widest mb-2">Step {step.number}</div>
+                  <h3 className="font-display text-white text-lg uppercase mb-2 leading-tight">{step.title}</h3>
+                  <p className="text-white/60 text-sm leading-relaxed">{step.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
