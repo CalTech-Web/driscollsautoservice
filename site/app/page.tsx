@@ -309,6 +309,41 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* CREDENTIALS BAND */}
+      <section className="blueprint-grid bg-[#0f0f0f] py-14 border-b border-[#E11D2D]/20">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4">
+            {[
+              { number: "10+", label: "Years in the Valley", sub: "Serving Greater Grand Forks" },
+              { number: "3", label: "Cities Served", sub: "EGF · Grand Forks · Crookston" },
+              { number: "Diesel", label: "& Heavy Equipment", sub: "Our specialty from day one" },
+              { number: "6", label: "Days Available", sub: "Mon-Fri + Sat by Appointment" },
+            ].map((item, i) => (
+              <div
+                key={item.number}
+                className={[
+                  "flex flex-col items-center justify-center py-10 px-6 text-center",
+                  i === 0 ? "border-r border-b lg:border-b-0 border-[#E11D2D]/20" : "",
+                  i === 1 ? "border-b lg:border-b-0 lg:border-r border-[#E11D2D]/20" : "",
+                  i === 2 ? "border-r border-[#E11D2D]/20" : "",
+                ].join(" ")}
+              >
+                <span
+                  className="font-display leading-none"
+                  style={{ fontSize: "clamp(3rem, 7vw, 4.5rem)", color: "#E11D2D" }}
+                >
+                  {item.number}
+                </span>
+                <span className="font-display text-white text-sm md:text-base uppercase tracking-wider mt-3">
+                  {item.label}
+                </span>
+                <span className="text-white/40 text-xs uppercase tracking-widest mt-1">{item.sub}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* SERVICES */}
       <section className="bg-[#1a1a1a] py-20">
         <div className="max-w-7xl mx-auto px-4">
